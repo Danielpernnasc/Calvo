@@ -373,6 +373,7 @@ $link-calvo: #000;
 $link-fotter: #fff;
 $img: 100%;
 $font-carousel: 50px;
+$font-carousel_mob: 40px;
 ::placeholder {
   color: $font_calvo_gray;
 }
@@ -625,6 +626,10 @@ body {
 .font-carousel > h1 {
   font-size: $font-carousel;
   margin: 100px 70px;
+}
+.font-carousel_mob > h1 {
+  font-size: $font-carousel_mob;
+  margin: 80px 5px;
 }
 .font-carousel > h2 {
   margin: 0 9%;
@@ -1709,10 +1714,32 @@ body.modal-open {
   margin-top:12%;
   background-repeat: no-repeat;
 }
-
+.bg-image-prog_mob {
+  background-image: url('assets/img/programa/b@2x_mob.png');
+  height: 500px;
+  margin-top:18%;
+  background-repeat: no-repeat;
+}
+.display_prog {
+  @media screen and (max-width: 1500px) {
+    .bg-image-prog {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .bg-image-prog_mob {
+      display: none;
+    }
+  }
+}
 .subt_progra_app {
   @include titulo_white;
   text-align: left;
+}
+.subt_progra_app_mob {
+  @include titulo_white;
+  text-align: left;
+  margin: -25px 5px;
 }
 .titulo_app_prog > h3 {
   @include titulo_black;
@@ -1746,6 +1773,24 @@ body.modal-open {
   margin-top:12%;
   background-repeat: no-repeat;
 }
+.bg-image-dicas_mob {
+  background-image: url('assets/img/dicas/banner@2x_mob.png');
+  height: 500px;
+  margin-top:18%;
+  background-repeat: no-repeat;
+}
+.display_dicas {
+  @media screen and (max-width: 1500px) {
+    .bg-image-dicas {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .bg-image-dicas_mob {
+      display: none;
+    }
+  }
+}
 .font_dicas > h1 {
   @include titulo_white;
 }
@@ -1768,8 +1813,8 @@ body.modal-open {
 .img_book {
    width: 100%;
    position: absolute;
-   margin-top: -400px;
-   padding: 0 10%;
+   margin-top: -375px;
+   padding: 0 15%;
 }
 .bg_gray_book {
   background: $bg_calvo_gray;
