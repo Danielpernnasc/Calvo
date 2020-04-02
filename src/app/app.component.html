@@ -1,0 +1,506 @@
+<div class="container-fluid">
+    <nav class="nav_top">
+      <div class="row header_footercalvo">
+        <div class="col-4">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-4">
+              <span class="yellow_calvo">Fale Conosco</span> &nbsp;<span class="branco_calvo">11 2723.6000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-sm-5 yellow_calvo">
+              <h6>Nossos Aplicativos</h6>
+            </div>
+            <div class="col-sm-1 centro">
+              <svg-icon [src]="apple"></svg-icon>
+            </div>
+            <div class="col-sm-1 centro">
+              <svg-icon [src]="android"></svg-icon>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-sm-4 right branco_calvo">
+             <span class="btn_conta" (click)="openModal('custom-modal-1')">{{conta}}</span>
+            </div>
+            <div class="col-sm-4  yellow_calvo">
+              <span class="btn_conta" (click)="openModal('custom-modal-2')" >Entrar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row background_white_calvo">
+        <div class="col-9">
+          <div class="row justify-content-center topo-fixo">
+            <div class="col-2 close-nav">
+              <span class="color_link  close-nav" [routerLink]="'/'"><img class="logo" [src]="logo"></span>
+            </div>
+            <div class="col-md-5">
+              <div class="row busca_home">
+                <div class="col-md-10">
+                  <input class="input_busca_home" type="text" placeholder="Pesquisa de Produtos">
+                </div>
+                <div id="lupa" class="col-sm-2">
+                  <svg-icon [src]="lupa" [svgStyle]="{ 'width.px':35}"></svg-icon>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="row">
+                <div class="col-sm-8">
+                  <button class="btn_calvo close-nav">Orçamento</button>
+                </div>
+                <div class="central col-sm-4">
+                  <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }"></svg-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="menu_superior_fixed row justify-content-center">
+            <div class="col-md-10 offset-md-2">
+              <div class="row">
+                <div class="col-md-2 font_calvo_black">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <span class="color_link color_link close-nav" [routerLink]="['/home']">Home</span>
+                    </div>
+                    <div class="col-sm-2">
+                      <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 font_calvo_black padding_zero">
+                  <div class="row">
+                    <div class="col-sm-7 padding_zero">
+                      <span class="color_link close-nav close-nav" [routerLink]="['/empresa']">Empresa</span>
+                    </div>
+                    <div class="col-sm-2 padding_zero">
+                      <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 font_calvo_black">
+                  <div class="row" >
+                    <div class="col-sm-7 padding_zero">
+                      <span class="color_link close-nav" [routerLink]="['/atacado']">Atacado</span>
+                    </div>
+                    <div class="campo-submenu col-sm-2 padding_zero">
+                      <span  (click)="onClick_atacado()"  class="btn-invisivel">
+                        <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                      </span>
+                    </div>
+                      <div id="myDropdown_atacado" class="dropdown-content">
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/bebidas']">Bebidas</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/carnes']">Carnes</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/pereciveis']">Frios e Perecíveis</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/higiene']">Higiene</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/limpeza']">Limpeza</a>
+                        <a class="color_link_sub close-nav " [routerLink]="['/atacado/mercearia']">Mercearia</a>
+                        <a class="link-lista close-nav" [routerLink]="['/atacado/lista']">Lista Completa de Produtos</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-2 font_calvo_black">
+                  <div class="row" >
+                    <div class="col-sm-7 padding_zero">
+                      <span class="color_link close-nav" [routerLink]="['/parceiros']">Parceiros</span>
+                    </div>
+                    <div class="col-sm-2 padding_zero">
+                      <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                    </div>
+                  </div>
+                </div>
+                <div class="font_calvo_black col-2">
+                  <div class="row" >
+                    <div class="col-sm-5">
+                      <span class="color_link close-nav" [routerLink]="['/jornal']">Jornal</span>
+                    </div>
+                    <div class="col-sm-2">
+                      <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                    </div>
+                  </div>
+                </div>
+                <div class="font_calvo_black col-2">
+                  <div class="row">
+                    <div class="col-sm-6 padding_zero">
+                      <span class="color_link close-nav" [routerLink]="['/contato']">Contato</span>
+                    </div>
+                    <div class="col-sm-2 padding_zero">
+                      <span  (click)="onClick_contato()" class="btn-invisivel">
+                        <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30}"></svg-icon>
+                      </span>
+                    </div>
+                    <div id="myDropdown_contato"  class="dropdown-content">
+                        <a class="color_link_sub close-nav" [routerLink]="'/contato/fale-conosco'" >Fale Conosco</a>
+                        <a class="color_link_sub close-nav" [routerLink]="'/contato/televendas'">Televendas</a>
+                        <a class="color_link_sub close-nav " [routerLink]="'/contato/trabalhe-conosco'">Trabalhe na Calvo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="close-nav">
+      <router-outlet></router-outlet>
+      <div *ngIf='Footer' class="row newsletter justify-content-center">
+        <div class="col-9">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-sm-12 branco_calvo">
+                  <h4>{{CN}}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="row">
+                <div class="col-sm-12 branco_calvo central_text">
+                  <h4>Siga-nos nas Redes Sociais</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="row">
+                <div class="col-sm-12 branco_calvo ">
+                  <h4>Receba nossas ofertas no seu</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-10">
+                      <form id="esconder_form_footer" [formGroup]="registerForm" (ngSubmit)="onSubmitnews()">
+                        <div class="row">
+                          <div class="col-sm-9">
+                            <input class="newsletter_campo" type="text" placeholder="Digite seu e-mail" formControlName="emailnews" [ngClass]="{'campo-invalido': submitted_news && f.emailnews.errors}">
+                            <div *ngIf="submitted_news && f.emailnews.errors" class="email-invalido">
+                                <div *ngIf="f.emailnews.errors.required">{{need}}</div>
+                                <div *ngIf="f.emailnews.errors.email">{{error}}</div>
+                            </div>
+                          </div>
+                          <div class="col-sm-3">
+                            <button class="btn-cadastrar">Cadastrar</button> 
+                          </div>
+                        </div>
+                      </form>
+                      <div id="sucesso_footer"  class="row">
+                        <div  class="col-sm-12 sucesso_news">
+                            <span>
+                                <svg-icon [src]="ok" [svgStyle]="{'width.px':35}"></svg-icon>
+                            </span>
+                            &nbsp;
+                            <span>{{sucess}}</span>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-sm-4 offset-sm-2  social">
+                  <svg-icon [src]="facebook" [svgStyle]="{ 'width.%':100 }"></svg-icon>
+                </div>
+                <div class="col-sm-4  social">
+                  <svg-icon [src]="instagram" [svgStyle]="{ 'width.%':100 }"></svg-icon>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row">
+                  <div class="col-sm-6 offset-md-2">
+                    <button class="btn_whats">
+                        <span>
+                            <svg-icon [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                        </span>
+                        &nbsp;
+                        <span>WHATSAPP</span>
+                    </button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  *ngIf='Footer' class="row header_footercalvo justify-content-center Footer_desk">
+        <div class="col-md-12 offset-md-1">
+          <div class="row">
+            <div class="col-md-9 offset-md-1 branco_calvo ">
+              <h5>Mapa do Site</h5>
+            </div>
+          </div>
+          <div  class="row">
+            <div class="col-3 offset-md-1 ">
+              <nav>
+                <ul>
+                  <li class="close-nav color_link"><a [routerLink]="'/home'">Home</a></li>
+                  <li class="close-nav color_link"> <a [routerLink]="'/empresa'">Empresa</a> </li>
+                  <li class="close-nav color_link"><a [routerLink]="'/atacado'">Atacado</a></li>
+                  <li class="close-nav color_link"><a [routerLink]="'/parceiros'">Parceiros</a></li>
+                  <li class="close-nav color_link"><a [routerLink]="'/jornal'">Jornal</a></li>
+                  <li class="close-nav color_link"><a [routerLink]="'/contato'">Contado</a></li>
+                  <li class="close-nav color_link"><a [routerLink]="'/newsletter'">Newsletter</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-3">
+              <img class="central" [src]="cartoes" alt="">
+            </div>
+            <div class="col-3">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.903137840245!2d-46.50882804939331!3d-23.571922067792354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6770758a867b%3A0xbdd2c7e9016622c0!2sAv.%20Rio%20das%20Pedras%2C%202118%20-%20Jardim%20Aricanduva%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003452-100!5e0!3m2!1spt-BR!2sbr!4v1582290819582!5m2!1spt-BR!2sbr"
+                width="100%" height="100%" frameborder="0" style="border-radius: 8px;" allowfullscreen="">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row epaco_mag_cal justify-content-center">
+        <div class="col-9">
+              <div class="row">
+                  <div class="col-sm-6 calvoatac">
+                      <p>Calvo Atacadista ® 2020 - Todos os Direitos Reservados</p>
+                  </div>
+                  <div class="col-sm-6 magictv">
+                      <span>Desenvolvido por Magic TV</span>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</div>
+<modal-conta id="custom-modal-1">
+    <div class="row bg-blue-login justify-content-center">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-12 close-login">
+                  <span (click)="closeModal('custom-modal-1')">X</span>
+                </div>
+              </div>
+              <div class="row justify-content-center margin_linha">
+                <div class="col-md-12 titulo_conta">
+                  <h1>{{conta}}</h1>
+                  <span>{{cr}}</span>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row bg-login">
+      <div class="col-md-12">
+          <div class="row justify-content-center">
+            <div class="col-md-5 campo_logo_conta">
+              <img class="logo_login" [src]="logo" alt="">
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row bg-white-login">
+      <div class="col-md-12">
+          <div class="row justify-content-center">
+            <div class="col-9 titulo_conta">
+                <div class="row justify-content-center margin_linha">
+                  <div class="col-sm-4">
+                      <span class="usario">{{user}}</span>
+                  </div>
+                  <div class="col-sm-4">
+                    <span class="login" (click)="openModal('custom-modal-2')" (click)="closeModal('custom-modal-1')">{{l}}</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center margin_linha">
+            <div class="col-8">
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <span>Nome</span>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="col-sm-9">
+                            <input class="campo-input" type="text" formControlName="Name" [ngClass]="{'campo-invalido': submitted && f.Name.errors}">
+                            <div *ngIf="submitted && f.Name.errors" class="invalido_cadastro">
+                                <div *ngIf="f.Name.errors.required">Digite seu Nome!</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <span>Endereço</span>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="col-sm-9">
+                            <input class="campo-input" type="text" formControlName="address" [ngClass]="{'campo-invalido': submitted && f.address.errors}">
+                            <div *ngIf="submitted && f.address.errors" class="invalido_cadastro">
+                                <div *ngIf="f.address.errors.required">Digite seu Endereço!</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <span>E-mail</span>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="col-sm-9">
+                            <input class="campo-input" type="text" formControlName="email" [ngClass]="{'campo-invalido': submitted && f.email.errors}">
+                            <div *ngIf="submitted && f.email.errors" class="invalido_cadastro">
+                                <div *ngIf="f.email.errors.required">Digite seu Email!</div>
+                                <div *ngIf="f.email.errors.email">Precisa ser um e-mail válido</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <span>{{s}}</span>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="col-sm-9">
+                            <input class="campo-input" type="password" maxlength="10" formControlName="password" [ngClass]="{'campo-invalido': submitted && f.password.errors}">
+                            <div *ngIf="submitted && f.password.errors" class="invalido_cadastro">
+                              <div *ngIf="f.password.errors.required">Digite uma senha de 6 a 10 digítos</div>
+                              <div *ngIf="f.password.errors.minlength">A senha precisa ter no mínimo 6 caracteres</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin_linha box_gray_conta">
+                      <div class="col-sm-12 legenda_conta">
+                          <div class="row">
+                            <div class="col-sm-2 campo-legenda">
+                                <span>{{rs}}</span>
+                            </div>
+                            <div class="col-sm-10">
+                              <div class="col-sm-9">
+                                <input class="campo-input" type="password" maxlength="10" formControlName="confirmPassword" [ngClass]="{'campo-invalido': submitted && f.confirmPassword.errors }">
+                                <div *ngIf="submitted && f.confirmPassword.errors" class="invalido_cadastro">
+                                    <div *ngIf="f.confirmPassword.errors.required">Confirme sua senha!</div>
+                                    <div *ngIf="f.confirmPassword.errors.mustMatch">A confirmação da senhar precisa ser igual ao campo senha</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="row justify-content-center margin_linha">
+                    <div class="col-9">
+                        <div class="row justify-content-center">
+                          <div class="col-sm-6">
+                            <button class="btn-enviar_login">ENVIAR</button>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </form>
+           
+            </div>
+          </div>
+      </div>
+    </div>
+</modal-conta>
+<modal-conta id="custom-modal-2">
+    <div class="row bg-blue-login justify-content-center">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-12 close-login">
+                  <span (click)="closeModal('custom-modal-2')">X</span>
+                </div>
+              </div>
+              <div class="row justify-content-center margin_linha">
+                <div class="col-md-12 titulo_conta">
+                  <h1>{{conta}}</h1>
+                  <span>{{cr}}</span>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row bg-login">
+      <div class="col-md-12">
+          <div class="row justify-content-center">
+            <div class="col-md-5 campo_logo_conta">
+              <img class="logo_login" [src]="logo" alt="">
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row bg-white-login">
+      <div class="col-md-12">
+        <div class="row justify-content-center">
+          <div class="col-9 titulo_conta">
+              <div class="row justify-content-center margin_linha">
+                <div class="col-sm-4">
+                    <span class="usario">{{new}}</span>
+                </div>
+                <div class="col-sm-4">
+                  <span class="login" (click)="openModal('custom-modal-1')" (click)="closeModal('custom-modal-2')">{{conta}}</span>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row justify-content-center margin_linha">
+            <div class="col-6">
+              <form action="">
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <span>{{l}}</span>
+                        </div>
+                        <div class="col-sm-10">
+                          <input class="campo-input" type="text">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <span>{{s}}</span>
+                        </div>
+                        <div class="col-sm-10">
+                          <input class="campo-input" type="password" maxlength="10">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+        </div>
+        <div class="row justify-content-center margin_linha">
+          <div class="col-9">
+              <div class="row justify-content-center">
+                <div class="col-sm-6">
+                  <button class="btn-enviar_login">ENTRAR</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</modal-conta>
+

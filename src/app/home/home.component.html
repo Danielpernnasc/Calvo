@@ -1,0 +1,309 @@
+
+   <div class="row justify-content-center">
+        <div class="col-9 image-background-carousel">
+            <div class="row">
+                <div class="col-lg branco_calvo font-carousel">
+                    <h1>O Melhor<br> Atacado da<br> Zona Leste</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <button class="btn-home-saiba">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-9">
+            <div class="row margin_linha">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-sm-12">  
+                            <span class="link_home" [routerLink]="['']">
+                                <img class="central" [src]="fidelidade" alt="">
+                            </span>
+                        </div>
+                    </div>
+                 
+                    <div class="row">
+                        <div class="col-sm-5 branco_calvo text-home">
+                            <h6>{{prog}}<br>{{fid}}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9 offset-sm-1">
+                            <button class="btn_cadastro">Cadastre-se e Saiba Mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="link_home" [routerLink]="['']">
+                                <img [src]="dicas" alt="" class="central">
+                            </span>
+                          
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-sm-5 black_calvo text-home">
+                        <h6>Dicas</h6>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="link_home" [routerLink]="['/receitas']">
+                                <img [src]="receitas" alt="" class="central">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 branco_calvo text-home">
+                            <h6>Receitas</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-9">
+            <div class="row margin_linha">
+                <div class="col-md-8 offset-md-1 centro">
+                    <h2>ENTREGAMOS EM TODA CIDADE DE SÃO PAULO</h2>
+                    <h4>COMPRAS POR CATEGORIAS</h4>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <svg-icon [src]="headphone" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                        </div>
+                        <div class="col-sm-6 centro">
+                            <span>PABX</span><br>
+                            <span>2723-6000</span>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="row margin_linha justify-content-center">
+                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
+                    <img class="central" [src]="frios" alt="">
+                    <h4>Frios e Perecíveis</h4>
+                    <span>Ver Tudo</span>
+                </div>
+                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
+                    <img class="central" [src]="mercearia" alt="">
+                    <h4>Mercearia</h4>
+                    <span>Ver Tudo</span>
+                </div>
+                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
+                    <img class="central" [src]="carnes" alt="">
+                    <h4>Carnes</h4>
+                    <span>Ver Tudo</span>
+                </div>
+                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
+                    <img class="central" [src]="bebidas" alt="">
+                    <h4>Bebidas</h4>
+                    <span>Ver Tudo</span>
+                </div>
+                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
+                    <img class="central" [src]="limpeza" alt="">
+                    <h4>Limpeza</h4>
+                    <span>Ver Tudo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center display">
+        <div class="col-9 margin_linha bg-kit">
+            <div class="row margin-kit">
+                <div class="col-sm-1 offset-sm-2 branco_calvo font-kit">
+                    <h2>Kits Especiais</h2>
+                </div>
+                <div class="col-sm-4 offset-sm-7 cestas_basicas">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img class="central" [src]="kit_um" alt="">
+                        </div>
+                        <div class="col-sm-5">
+                            <img class="central" [src]="kit_dois" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-2">
+                            <button class="btn-home-saiba_arredon">
+                                Saiba Mais
+                            </button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 margin_linha bg-kit_mobile">
+            <img class="img_fundo" [src]="img_fundo" alt="">
+            <div class="row margin-kit">
+                <div class="col-sm-4 offset-sm-2 branco_calvo font-kit_mobile">
+                    <h2>Kits Especiais</h2>
+                </div>
+                <div class="col-sm-4 offset-sm-7 cestas_basicas_mobile">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img class="central-mobile" [src]="kit_um" alt="">
+                        </div>
+                        <div class="col-sm-5">
+                            <img class="central-mobile" [src]="kit_dois" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-2">
+                            <button class="btn-home-saiba_arredon">
+                                Saiba Mais
+                            </button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-9 margin_linha">
+            <div class="row">
+                <div class="col-md-7 offset-md-2 centro espaco_top_bottom" >
+                    <h3>OFERTAS DA SEMANA</h3>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn-tabloide flex">
+                        <div class="col-sm-6 offset-sm-4 legenda-btn-tabloide">
+                            Baixar Tabloide
+                        </div>
+                        <div class="col-sm-3">
+                            <svg-icon [src]="orcamento" [svgStyle]="{'width.px':30 }"></svg-icon>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-9">
+            <div class="row margin_linha">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_a" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_b" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_c" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_d" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin_linha">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_e" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_f" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_g" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-sm-12 border_cinza_produtos">
+                            <img class="central" [src]="oferta_h" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin_linha">
+                <div class="col-md-2 offset-md-5">
+                    <button class="btn-carregar_cinza">
+                        Carregar Mais Ofertas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-9 margin_linha">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-9 posicao_sobre">
+                                    <h4>
+                                        Fale com 
+                                        nossos 
+                                        compradores
+                                    </h4>
+                                </div>
+                            </div>
+                            <img [src]="compradores" alt="" class="central">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <button class="btn-saiba_yellow">Saiba Mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-9 posicao_sobre">
+                            <h4>
+                                    Seja nosso
+                                    fornecedor
+                            </h4>
+                        </div>
+                    </div>
+                    <img [src]="fornecedores" alt="" class="central">                        
+                    <div class="row">
+                    <div class="col-sm-4">
+                        <button class="btn-saiba_yellow">Saiba Mais</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
