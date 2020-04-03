@@ -632,7 +632,7 @@ body {
   margin: 80px 5px;
 }
 .font-carousel > h2 {
-  margin: 0 9%;
+  margin: 0 70px;
 }
 .cestas_basicas {
   margin-top: -250px;
@@ -1022,7 +1022,7 @@ body {
   color: #FFCA00;
   text-align: center;
   margin: 6%;
-  padding: 6%;
+  padding: 6% 0;
   font-size: 14px;
 }
 .link-lista:hover {
@@ -1720,12 +1720,12 @@ body.modal-open {
   background-repeat: no-repeat;
 }
 .display_prog {
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1600px) {
     .bg-image-prog {
       display: none;
     }
   }
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1600px) {
     .bg-image-prog_mob {
       display: none;
     }
@@ -1779,12 +1779,12 @@ body.modal-open {
   background-repeat: no-repeat;
 }
 .display_dicas {
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1700px) {
     .bg-image-dicas {
       display: none;
     }
   }
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1700px) {
     .bg-image-dicas_mob {
       display: none;
     }
@@ -1812,7 +1812,7 @@ body.modal-open {
 .img_book {
    width: 100%;
    position: absolute;
-   margin-top: -385px;
+   margin-top: -375px;
    padding: 0 15%;
 }
 .bg_gray_book {
@@ -1843,4 +1843,11 @@ body.modal-open {
 }
 .tag_left > h5 {
   text-align: center;
+}
+.tamanho {
+  width: 100%;
+  height: 206px;
+}
+.altura {
+  height: 206px;
 }
