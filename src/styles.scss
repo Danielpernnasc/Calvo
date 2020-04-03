@@ -1851,3 +1851,15 @@ body.modal-open {
 .altura {
   height: 206px;
 }
+.campo_btn_whats {
+  @media screen and (max-width: 1300px) {
+    .whats_desk {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    .whats_mob {
+      display:none;
+    }   
+  }
+}
