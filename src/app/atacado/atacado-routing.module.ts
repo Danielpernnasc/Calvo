@@ -9,12 +9,11 @@ import { MerceariaComponent } from './mercearia';
 import { ListaComponent } from './lista';
 
 
-
 const routerOptions: ExtraOptions = {
-    scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled',
-    scrollOffset: [0, 64],
-  };
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+};
 
   const routes: Routes = [
     {path: 'atacado/bebidas', component: BebidasComponent},

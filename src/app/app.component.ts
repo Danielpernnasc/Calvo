@@ -66,13 +66,7 @@ ngOnInit(){
       return;
     }
   }
-  onSubmitnews() {
-    this.submitted_news = true;
-    if(this.registerForm.invalid) {
-      return;
-    }
-    document.getElementById('sucesso_footer').classList.toggle('show_ok');
-  }
+
   openModal(id: string) {
     this.modalService.open(id);
   }

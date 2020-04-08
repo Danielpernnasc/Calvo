@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-atacado',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./atacado.component.scss']
 })
 export class AtacadoComponent implements OnInit {
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+  }
+
   fidelidade: any ="assets/img/home/ID01.png";
   dicas: any ="assets/img/home/ID02.png";
   receitas: any ="assets/img/home/ID03.png";
@@ -32,9 +38,6 @@ export class AtacadoComponent implements OnInit {
   prog="Programa";
   fid = "de Fidelidade";
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+ 
 
 }

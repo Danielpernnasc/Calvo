@@ -6,6 +6,7 @@ import { ProgramaModule } from './programa';
 import { HomeRoutingModule } from './home-routing.module';
 import { ReceitasModule } from './receitas';
 import { DicasModule } from './dicas';
+import { FornecedorModule } from './fornecedor';
 
 
 
@@ -17,6 +18,7 @@ import { DicasModule } from './dicas';
     ProgramaModule,
     ReceitasModule,
     DicasModule,
+    FornecedorModule,
     HomeRoutingModule
 
 

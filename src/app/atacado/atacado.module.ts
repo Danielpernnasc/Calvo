@@ -10,6 +10,7 @@ import { PereciveisModule } from './pereciveis';
 import { MerceariaModule } from './mercearia';
 import { ListaModule } from './lista';
 import { AtacadoRoutingModule } from './atacado-routing.module';
+import { HomeModule } from '../home';
 
 
 
@@ -24,9 +25,10 @@ import { AtacadoRoutingModule } from './atacado-routing.module';
     PereciveisModule,
     MerceariaModule,
     ListaModule,
-
-    AtacadoRoutingModule
+    AtacadoRoutingModule,
+    HomeModule
   ],
   declarations: [AtacadoComponent],
+  exports: [AtacadoComponent]
 })
 export class AtacadoModule { }
