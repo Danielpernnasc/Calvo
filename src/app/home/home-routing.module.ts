@@ -4,6 +4,7 @@ import { ProgramaComponent } from './programa';
 import { DicasComponent } from './dicas';
 import { ReceitasComponent } from './receitas';
 import { FornecedorComponent } from './fornecedor';
+import { KitsComponent } from './kits';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'programa', component: ProgramaComponent},  
   {path: 'dicas', component: DicasComponent},
   {path: 'receitas', component: ReceitasComponent},
-  {path: 'fornecedor', component: FornecedorComponent}
+  {path: 'fornecedor', component: FornecedorComponent},
+  {path: 'kits_especiais', component: KitsComponent}
 ];
 
 @NgModule({

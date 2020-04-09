@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
   fornecedor() {
     this.router.navigateByUrl('fornecedor');
   }
+  kits_especiais() {
+    this.router.navigateByUrl('kits_especiais');
+  }
   fidelidade: any ="assets/img/home/ID01.png";
   dicas: any ="assets/img/home/ID02.png";
   receitas: any ="assets/img/home/ID03.png";

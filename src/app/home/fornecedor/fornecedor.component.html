@@ -73,12 +73,26 @@
                                     <div *ngIf="f.address.errors.required">Digite o Endereço do Local</div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6" >
                                 <label for="">Segmento</label><br>
-                                <input type="text" class="campo_input" formControlName="segmento" [ngClass]="{'campo-invalido': submitted && f.segmento.errors}">
+                                <div class="campo_input_select" >
+                                    <select  id="" class="campo_input select_fornc" formControlName="segmento" [ngClass]="{'campo-invalido': submitted && f.segmento.errors}" >
+                                        <option value="">Bebidas</option>
+                                        <option value="">Carnes</option>
+                                        <option value="">Frios e Perecíveis</option>
+                                        <option value="">Higine</option>
+                                        <option value="">Limpeza</option>
+                                        <option value="">Mercearia</option>
+                                        <option value="">Outros</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="submitted && f.segmento.errors" class="invalidocadastro">
+                                    <div *ngIf="f.segmento.errors.required">Escolha o seu Segmento</div>
+                                </div> 
+                                <!-- <input type="text" class="campo_input" formControlName="segmento" [ngClass]="{'campo-invalido': submitted && f.segmento.errors}">
                                 <div *ngIf="submitted && f.segmento.errors" class="invalidocadastro">
                                     <div *ngIf="f.segmento.errors.required">Digite o seu Segmento</div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="row margin_linha">

@@ -7,6 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { ReceitasModule } from './receitas';
 import { DicasModule } from './dicas';
 import { FornecedorModule } from './fornecedor';
+import { KitsModule } from './kits';
 
 
 
@@ -19,6 +20,7 @@ import { FornecedorModule } from './fornecedor';
     ReceitasModule,
     DicasModule,
     FornecedorModule,
+    KitsModule,
     HomeRoutingModule
 
 

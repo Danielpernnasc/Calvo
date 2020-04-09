@@ -7,6 +7,8 @@ import { JornalComponent } from './jornal';
 import { ContatoComponent } from './contato';
 import { ParceirosComponent } from './parceiros';
 import { NewsletterComponent } from './newsletter';
+import { OrcamentoComponent } from './orcamento';
+
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -27,6 +29,7 @@ const routes: Routes = [
   {path: 'contato', component: ContatoComponent },
   {path: 'parceiros', component: ParceirosComponent},
   {path: 'newsletter', component: NewsletterComponent}, 
+  {path: 'orcamento', component: OrcamentoComponent},
 ];
 
 @NgModule({

@@ -15,6 +15,9 @@ import { NewsletterModule } from './newsletter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from './modal';
+import { OrcamentoModule } from './orcamento';
+
+
 
 
 
@@ -33,6 +36,7 @@ import { ModalModule } from './modal';
     JornalModule,
     ContatoModule,
     HomeModule,
+    OrcamentoModule,
     ClickOutsideModule,
     ModalModule,
     NewsletterModule,

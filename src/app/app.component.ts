@@ -80,6 +80,9 @@ ngOnInit(){
   onClick_contato(){
     document.getElementById("myDropdown_contato").classList.toggle("show");
   };
+  orcamento_produtos() {
+    this.router.navigateByUrl('orcamento');
+  }
 
 
   cartoes:any ="assets/img/ID11.png";
