@@ -1363,17 +1363,28 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc {
 .box_gelo > span {
   border: solid 2px #D4D4D4;
   text-align: center;
-  padding: 14px 10px;
+  padding: 18px 10px;
   width: 100%;
   display: block;
 }
+
 .box_gelo_ > span {
   background: #E8E8E8;
   border: solid 2px #D4D4D4;
   text-align: center;
-  padding: 14px 10px;
+  padding: 17px 10px;
   width: 100%;
   display: block;
+}
+.box_yellow {
+  background:   #FFCA00;
+}
+.box_invisivel {
+  display: none
+}
+.btn_invisivel {
+  background: 0;
+  border: 0;
 }
 .margin_linha_list {
   margin: 0;

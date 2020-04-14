@@ -92,7 +92,7 @@
 </div>
 <div class="row justify-content-center">
     <div class="col-9">
-        <div class="row margin_linha_list">
+        <div class="row margin_linha_list adicionar" id="id1">
             <div class="col-sm-1 box_gelo">
                 <span>01</span>    
             </div>
@@ -110,7 +110,9 @@
             </div>
             <div class="col-sm-2 box_gelo">
                 <div class="icone-lista">
-                    <svg-icon [src]='orcamento' [svgStyle]="{'heigth.%':100}"></svg-icon>
+                    <button class="btn_invisivel" (click)="selecionar(1)">
+                        <svg-icon [src]='orcamento' [svgStyle]="{'heigth.%':100}"></svg-icon>
+                    </button>
                 </div>
             </div>
         </div>
@@ -118,25 +120,28 @@
 </div>
 <div class="row justify-content-center">
     <div class="col-9">
-        <div class="row margin_linha_list">
-            <div class="col-sm-1 box_gelo_">
+        <div class="row margin_linha_list adicionar"  id="id2">
+            <div class="col-sm-1 box_gelo">
                 <span>01</span>    
             </div>
-            <div class="col-sm-2 box_gelo_">
+            <div class="col-sm-2 box_gelo">
                 <span>55814</span>
             </div>
-            <div class="col-sm-3 box_gelo_">
+            <div class="col-sm-3 box_gelo">
                 <span>ABACATE AVOCADO kg</span>
             </div>
-            <div class="col-sm-2 box_gelo_">
+            <div class="col-sm-2 box_gelo">
                 <span>KG</span>
             </div>
-            <div class="col-sm-2 box_gelo_">
+            <div class="col-sm-2 box_gelo">
                 <span>55814</span>
             </div>
             <div class="col-sm-2 box_gelo">
                 <div class="icone-lista">
-                    <svg-icon [src]='orcamento' [svgStyle]="{'heigth.%':100}"></svg-icon>
+                    <button class="btn_invisivel" (click)="selecionar(2)">
+                        <svg-icon [src]='orcamento' [svgStyle]="{'heigth.%':100}"></svg-icon>
+                    </button>
+                    <!-- <svg-icon [src]='orcamento' [svgStyle]="{'heigth.%':100}"></svg-icon> -->
                 </div>
             </div>
         </div>
