@@ -89,33 +89,118 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-8">
-            <div class="row margin_linha justify-content-center">
-                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
-                    <img class="central" [src]="frios" alt="">
-                    <h4>Frios e Perecíveis</h4>
-                    <span>Ver Tudo</span>
+        <div class="col-9">
+            <div class="row margin_linha">
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="mercearia" alt="">
+                            <h4>Mercearia</h4>
+                            <span [routerLink]="['/atacado/mercearia']">Ver Tudo</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
-                    <img class="central" [src]="mercearia" alt="">
-                    <h4>Mercearia</h4>
-                    <span>Ver Tudo</span>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="frios" alt="">
+                            <h4>Perecíveis</h4>
+                            <span [routerLink]="['/atacado/pereciveis']">Ver Tudo</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
-                    <img class="central" [src]="carnes" alt="">
-                    <h4>Carnes</h4>
-                    <span>Ver Tudo</span>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="hortifruit" alt="">
+                            <h4>Hortifruit</h4>
+                            <span [routerLink]="['/atacado/hortifruit']">Ver Tudo</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
-                    <img class="central" [src]="bebidas" alt="">
-                    <h4>Bebidas</h4>
-                    <span>Ver Tudo</span>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="limpeza" alt="">
+                            <h4>Limpeza</h4>
+                            <span [routerLink]="['/atacado/limpeza']">Ver Tudo</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-2 caixa-span font_calvo_black btn-span">
-                    <img class="central" [src]="limpeza" alt="">
-                    <h4>Limpeza</h4>
-                    <span>Ver Tudo</span>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img [src]="higiene" alt="" class="central">
+                            <h4>Higiene</h4>
+                            <span [routerLink]="['/atacado/higiene']">Ver Tudo</span>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img [src]="newdrinks" alt="" class="central">
+                            <h4>Bebidas</h4>
+                            <span  [routerLink]="['/atacado/bebidas']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="row margin_linha">
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="cestas" alt="">
+                            <h4>Cestas Básicas</h4>
+                            <span [routerLink]="['']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="institucional" alt="">
+                            <h4>Institucional</h4>
+                            <span [routerLink]="['/atacado/institucional']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="carnes" alt="">
+                            <h4>Carnes</h4>
+                            <span [routerLink]="['/atacado/carnes']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img class="central" [src]="pet" alt="">
+                            <h4>Pet</h4>
+                            <span [routerLink]="['/atacado/pet']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img [src]="papelaria" alt="" class="central">
+                            <h4>Papelaria</h4>
+                            <span [routerLink]="['/atacado/papelaria']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span">
+                            <img [src]="descartaveis" alt="" class="central">
+                            <h4>Outros</h4>
+                            <span [routerLink]="['/atacado/outros']">Ver Tudo</span>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </div>
     </div>
@@ -161,7 +246,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 offset-sm-2">
-                            <button class="btn-home-saiba_arredon">
+                            <button class="btn-home-saiba_arredon" (click)="kits_especiais()">
                                 Saiba Mais
                             </button>
                         </div>   
@@ -177,7 +262,7 @@
                     <h3>OFERTAS DA SEMANA</h3>
                 </div>
                 <div class="col-md-3">
-                    <button class="btn-tabloide flex">
+                    <button class="btn-tabloide flex" (click)="baixartabloide()">
                         <div class="col-sm-6 offset-sm-4 legenda-btn-tabloide">
                             Baixar Tabloide
                         </div>

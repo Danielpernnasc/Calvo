@@ -386,7 +386,6 @@ $font-carousel_mob: 40px;
 }
 .font-gray-calvo > h5 {
   color: $font_calvo_gray;
-  text-align: $centro;
 }
 .font-red-calvo > h5 {
   color: $font_calvo_red;
@@ -524,9 +523,12 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
-.fixed_color {
-  color: $font_calvo_red;
+.color_link:hover, .color_link:focus {
+  color: $link-calvo;
 }
+// .fixed_color {
+//   color: $font_calvo_red;
+// }
 
 .color_link_sub {
   color: $link-calvo;
@@ -620,9 +622,7 @@ body {
 @media  screen  and (max-width:500px) {
   .Footer_desk {display: none;}
 }
-.form_esconder_footer {
-  display: none;
-}
+
 .header_fixed {
   background: $bg_calvo_red;
   position: fixed;
@@ -674,7 +674,9 @@ body {
   margin-top:12%;
   background-repeat: no-repeat;
 }
-
+// .btn_span {
+//   cursor: pointer;
+// }
 .btn-home-saiba {
  background: #FF0000;
  border: #FC0000;
@@ -731,8 +733,8 @@ body {
   width: 100%;
   padding: 0 10px;
 }
-.central_text{
-  text-align: center;
+.central_right{
+  text-align: right;
 }
 @mixin button_calvo {
   color: $branco_calvo;
@@ -755,9 +757,9 @@ body {
   color: $font-calvo;
   font-weight: bold;
 }
-.font_calvo_black {
-  padding: 0;
-}
+// .font_calvo_black {
+//   padding: 0;
+// }
 
 .black_calvo > h2 {
   color: $font-calvo;
@@ -788,16 +790,7 @@ body {
   color: $font_calvo_red;
   padding: 5px;
 }
-.btn-cadastrar {
-  background: #A2A2A8;
-  border: #D4D4D4;
-  border-radius: 5px;
-  padding: 13px 0;
-  width: 100px;
-  color: #fff;
-  position: absolute;
-  margin: 0 -36px;
-}
+
 .social{
   padding: 0 10%;
 }
@@ -855,6 +848,10 @@ body {
   color: $font_calvo_red;
   font-size:15px;
   font-weight: bold;
+  cursor: pointer
+}
+.btn_span {
+  cursor: pointer
 }
 .caixa-span {
   margin: 0 10px;
@@ -1074,7 +1071,7 @@ body {
   padding-bottom: 2%;
 }
 .linha-acima {
-  margin-top: 200px;
+  margin: 200px 0 0 0;
 }
 //parceiros
 //jornal
@@ -1231,6 +1228,7 @@ body {
   @include titulo_black;
   padding: 0 7px;
   height: 70px;
+  text-align: center;
 }
 .img_produtos {
   width: 100%;
@@ -1355,45 +1353,61 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc {
 .box_gelo {
   border: solid #fff;
   padding: 0;
-}
+
+    @media screen and (max-width: 1500px) {
+      .produto_desk {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1500px) {
+      .produto_mobile {
+        display: none;
+      }
+    }
+    .produto_mobile {
+      font-size: 12px;
+      padding: 19px 0;
+    }
+  }
 .box_gelo_ {
+  border: solid #fff;
+  padding: 0;
+}
+.box_gelo_orc {
   border: solid #fff;
   padding: 0;
 }
 .box_gelo > span {
   border: solid 2px #D4D4D4;
   text-align: center;
-  padding: 18px 10px;
+  padding: 17px 0;
   width: 100%;
   display: block;
 }
+.box_gelo_orc > span {
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
 
 .box_gelo_ > span {
   background: #E8E8E8;
   border: solid 2px #D4D4D4;
   text-align: center;
-  padding: 17px 10px;
+  padding: 17px 0;
   width: 100%;
   display: block;
-}
-.box_yellow {
-  background:   #FFCA00;
-}
-.box_invisivel {
-  display: none
-}
-.btn_invisivel {
-  background: 0;
-  border: 0;
 }
 .margin_linha_list {
   margin: 0;
 }
 .icone-lista {
   text-align: center;
-  padding: 5px 0;
   background: $bg_calvo_blue;
-  border: solid #344887;
+  cursor: pointer;
+
 }
 .btn-work {
   border: solid #B4B4BC;
@@ -1717,6 +1731,16 @@ body.modal-open {
     position: absolute;
     margin-left: -32px;
 }
+.btn-cadastrar_news_footer {
+  background: #A2A2A8;
+  border: #D4D4D4;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 0;
+    width: 100px;
+    color: #fff;
+    position: absolute;
+    margin-left: -32px;
+}
 .newsletter_news {
     height: 165px;
     padding: 50px 0;
@@ -1729,25 +1753,56 @@ body.modal-open {
   color: #3BFF08;
   display: none;
 }
-.sucesso_footer {
+
+.formcontrol {
+  width: 100%;
+  border: 0;
+  background: 0;
+  color: #B4B4BC;
+  padding: 10px 5px;
+  background: #fff;
+  border-radius: 5px;
+}
+.formcontrol.campo_invalido, .was-validated, .formcontrol:invalid {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  border: solid 1px $font_calvo_red;
+  border-radius: 5px;
+  padding: 9px;
+}
+.email_invalido {
+  color: $font_calvo_red;
+  padding: 5px;
+}
+.btn-cadastrar {
+  background: #A2A2A8;
+  border: #D4D4D4;
+  border-radius: 5px;
+  padding: 12px 0;
+  width: 100px;
   color: #fff;
-  display: none;
-  
+  position: absolute;
+  margin: 0 -36px;
 }
 .sucesso_news {
   color: $branco_calvo;
   display: none;
 }
+.show_sucess{
+  display: block;
+}
+.form_new_footer {
+  display:none;
+}
 .show_ok {
   display: block;
   position: absolute;
 }
-.show_footer {
-  display: block;
-}
 .form_esconder {
   display: none;
-} 
+}
 .alert_left {
   padding: 0 10px;
 }
@@ -2073,7 +2128,7 @@ body.modal-open {
 }
 .bg_topo_cesta {
   background: $bg_calvo_blue;
-  padding: 20px 45px;
+  padding: 20px;
 }
 .bg_topo_cesta > h1 {
   @include titulo_white;
@@ -2165,4 +2220,48 @@ modal-kit {
 body.modal_campo {
   /* body overflow is hidden to hide main scrollbar when modal window is open */
   overflow: hidden;
+}
+.campo_ativo_yellow {
+  background: #FFCA00;
+}
+// .icone-lista_h6  {
+//   display: none;
+// }
+.icone-lista_h6 {
+  background: #FFCA00;
+  color: #FF0000;
+  text-align: center;
+  padding: 17px 0 7px 0;
+  display: none;
+
+}
+.icone-lista_h6 > h6 {
+  font-weight: bold;
+}
+.esconder_orc {
+  display:none;
+}
+.mostrar_orc {
+  display:block;
+}
+.campo_ativo_yellow_mostrar {
+  background: #FFCA00;
+  color: #FF0000;
+  font-weight: bold;
+  padding: 19px 0;
+  display: block;
+}
+
+.campo_ativo_yellow_esconder {
+  background: #FFCA00;
+  display:none;
+}
+.campo_ativo_white {
+  background: #ffffff;
+}
+.link_footer {
+ color: $link-fotter;
+}
+.link_footer:hover, .link_footer:focus {
+  color: $link-fotter;
 }

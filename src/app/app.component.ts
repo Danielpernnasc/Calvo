@@ -4,9 +4,6 @@ import { Router, NavigationEnd } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MustMatch } from './validacao/validacao_cadatro';
 
-
-
-
 declare var $: any;
 
 @Component({
@@ -18,8 +15,10 @@ declare var $: any;
 
 export class AppComponent implements OnInit {
   registerForm: FormGroup;
+  registroFormu: FormGroup;
   submitted = false;
-  submitted_news = false;
+  submittednews=false;
+
 
   constructor(private modalService: ModalService, private router: Router, private formBuilder: FormBuilder) { };
   Footer = true;
@@ -43,29 +42,39 @@ ngOnInit(){
   $(this).addClass('fixed_color');
   $('.color_link').val($(this)[0].innerText);
   });
-  
   this.registerForm = this.formBuilder.group({
-    Name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+  }, {
+    validators: MustMatch
+  });
+  this.registroFormu = this.formBuilder.group({
+    name: ['', Validators.required],
     address: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
-    emailnews: ['',[Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
     confirmPassword: ['', Validators.required]
-  }, {
-    validators: MustMatch('password', 'confirmPassword')
+  },{
+     validators: MustMatch('password', 'confirmPassword')
   });
-
 }
-  get f() {return this.registerForm.controls; }
+get f() { return this.registerForm.controls; }
+get g() { return this.registroFormu.controls; }
 
-  onSubmit() {
+onSubmit_newsletter() {
+  this. submittednews = true;
 
-    this.submitted = true;
-
-    if(this.registerForm.invalid) {
-      return;
-    }
+  if (this.registerForm.invalid) {
+    return;
   }
+  document.getElementById('sucesso').classList.toggle("show_ok");
+  document.getElementById('esconder_form').classList.toggle("form_esconder");
+}
+onSubmit() {
+  this.submitted = true;
+  if (this.registroFormu.invalid) {
+    return;
+  }
+}
 
   openModal(id: string) {
     this.modalService.open(id);
@@ -83,7 +92,9 @@ ngOnInit(){
   orcamento_produtos() {
     this.router.navigateByUrl('orcamento');
   }
-
+ whatsapp_btn() {
+   window.open('https://web.whatsapp.com/send?phone=5511985960096&text=')
+ }
 
   cartoes:any ="assets/img/ID11.png";
   logo:any ="assets/img/logo.png";
@@ -108,7 +119,8 @@ ngOnInit(){
   CN = 'Cadastre-se em nossa Newsletter';
   need = "Digite seu e-mail";
   error = "e-mail inválido";
-  sucess ="E-mail cadastrado com sucesso."
+  sucess ="E-mail cadastrado com sucesso.";
+  address_calvo = "Av. Rio das Pedras, 2118 - Jd. Aricanduva - PABX 2723-6000"
   
 
 }

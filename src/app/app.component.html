@@ -36,7 +36,7 @@
         <div class="col-9">
           <div class="row justify-content-center topo-fixo">
             <div class="col-2 close-nav">
-              <span class="color_link  close-nav" [routerLink]="'/'"><img class="logo" [src]="logo"></span>
+              <a class="close-nav" [routerLink]="'.'"><img class="logo" [src]="logo"></a>
             </div>
             <div class="col-md-5">
               <div class="row busca_home">
@@ -65,7 +65,7 @@
                 <div class="col-md-2 font_calvo_black">
                   <div class="row">
                     <div class="col-sm-5">
-                      <span class="color_link color_link close-nav" [routerLink]="['/home']">Home</span>
+                      <a class="color_link" [routerLink]="['/home']">Home</a>
                     </div>
                     <div class="col-sm-2">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -75,7 +75,7 @@
                 <div class="col-md-2 font_calvo_black padding_zero">
                   <div class="row">
                     <div class="col-sm-7 padding_zero">
-                      <span class="color_link close-nav" [routerLink]="['/empresa']">Empresa</span>
+                      <a class="color_link close-nav" [routerLink]="['/empresa']">Empresa</a>
                     </div>
                     <div class="col-sm-2 padding_zero">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -85,7 +85,7 @@
                 <div class="col-md-2 font_calvo_black">
                   <div class="row" >
                     <div class="col-sm-7 padding_zero">
-                      <span class="color_link close-nav" [routerLink]="['/atacado']">Atacado</span>
+                      <a class="color_link close-nav" [routerLink]="['/atacado']">Atacado</a>
                     </div>
                     <div class="campo-submenu col-sm-2 padding_zero">
                       <span  (click)="onClick_atacado()"  class="btn-invisivel">
@@ -95,10 +95,15 @@
                       <div id="myDropdown_atacado" class="dropdown-content">
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/bebidas']">Bebidas</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/carnes']">Carnes</a>
-                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/pereciveis']">Frios e Perecíveis</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/pereciveis']">Perecíveis</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/higiene']">Higiene</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/limpeza']">Limpeza</a>
                         <a class="color_link_sub close-nav " [routerLink]="['/atacado/mercearia']">Mercearia</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/hortifruit']">Hortifruit</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/institucional']">Institucional</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/pet']">Pet</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/papelaria']">Papelaria</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/outros']">Outros</a>
                         <a class="link-lista close-nav" [routerLink]="['/atacado/lista']">Lista Completa de Produtos</a>
                       </div>
                     </div>
@@ -106,7 +111,7 @@
                 <div class="col-md-2 font_calvo_black">
                   <div class="row" >
                     <div class="col-sm-7 padding_zero">
-                      <span class="color_link close-nav" [routerLink]="['/parceiros']">Parceiros</span>
+                      <a class="color_link close-nav" [routerLink]="['/parceiros']">Parceiros</a>
                     </div>
                     <div class="col-sm-2 padding_zero">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -116,7 +121,7 @@
                 <div class="font_calvo_black col-2">
                   <div class="row" >
                     <div class="col-sm-5">
-                      <span class="color_link close-nav" [routerLink]="['/jornal']">Jornal</span>
+                      <a class="color_link close-nav" [routerLink]="['/jornal']">Jornal</a>
                     </div>
                     <div class="col-sm-2">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -126,7 +131,7 @@
                 <div class="font_calvo_black col-2">
                   <div class="row">
                     <div class="col-sm-6 padding_zero">
-                      <span class="color_link close-nav" [routerLink]="['/contato']">Contato</span>
+                      <a class="color_link close-nav" [routerLink]="['/contato']">Contato</a>
                     </div>
                     <div class="col-sm-2 padding_zero">
                       <span  (click)="onClick_contato()" class="btn-invisivel">
@@ -144,7 +149,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </nav>
     <div class="close-nav">
       <router-outlet></router-outlet>
@@ -176,34 +181,34 @@
           <div class="row">
             <div class="col-sm-4">
                 <div class="row">
-                    <div class="col-sm-10">
-                      <form id="esconder_form_footer" [formGroup]="registerForm" (ngSubmit)="onSubmitnews()">
+                  <div class="col-sm-10">
+                    <form id="esconder_form" [formGroup]="registerForm" (ngSubmit)="onSubmit_newsletter()"> 
                         <div class="row">
-                          <div class="col-sm-9">
-                            <input class="newsletter_campo" type="text" placeholder="Digite seu e-mail" formControlName="emailnews" [ngClass]="{'campo-invalido': submitted_news && f.emailnews.errors}">
-                            <div *ngIf="submitted_news && f.emailnews.errors" class="email-invalido">
-                                <div *ngIf="f.emailnews.errors.required">{{need}}</div>
-                                <div *ngIf="f.emailnews.errors.email">{{error}}</div>
+                            <div class="col-sm-9">
+                                <input type="text" formControlName="email" class="formcontrol" [ngClass]="{'campo_invalido': submittednews && f.email.errors }"  />
+                                <div *ngIf="submittednews && f.email.errors" class="email_invalido">
+                                    <div class="alert_left" *ngIf="f.email.errors.required">{{need}}</div>
+                                    <div class="alert_left" *ngIf="f.email.errors.email">{{error}}</div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="col-sm-3">
-                            <button class="btn-cadastrar">Cadastrar</button> 
-                          </div>
+                            <div class="col-sm-2">
+                                <button class="btn-cadastrar_news_footer">Enviar</button>
+                            </div>
                         </div>
-                      </form>
-                      <div id="sucesso_footer"  class="row">
-                        <div  class="col-sm-12 sucesso_news">
+                    </form>
+                    <div class="row">
+                        <div  id="sucesso" class="col-sm-12 sucesso_news">
                             <span>
-                                <svg-icon [src]="ok" [svgStyle]="{'width.px':35}"></svg-icon>
+                                <svg-icon [src]="ok" [svgStyle]="{ 'width.px':35}"></svg-icon>
                             </span>
                             &nbsp;
                             <span>{{sucess}}</span>
                         </div>
-                      </div> 
-                    </div>
-                  </div>
+                    </div>   
+                  </div>  
+                </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="row">
                 <div class="col-sm-4 offset-sm-2  social">
                   <svg-icon [src]="facebook" [svgStyle]="{ 'width.%':100 }"></svg-icon>
@@ -213,10 +218,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 offset-sm-1">
               <div class="row campo_btn_whats">
                   <div class="col-sm-6 offset-md-2 whats_desk">
-                    <button class="btn_whats">
+                    <button class="btn_whats" (click)="whatsapp_btn()">
                         <span>
                             <svg-icon [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                         </span>
@@ -244,21 +249,21 @@
             <div class="col-md-5 offset-md-1 branco_calvo ">
               <h5>Mapa do Site</h5>
             </div>
-            <div class="col-md-5 offset-md-1 branco_calvo ">
-                <h6>Av. Rio das Pedras, 2118 - Jd. Aricanduva - PABX 2723-6000</h6>
+            <div class="col-md-3 offset-md-1 branco_calvo ">
+                <h6>{{address_calvo}}</h6>
               </div>
           </div>
           <div  class="row">
             <div class="col-3 offset-md-1 ">
               <nav>
                 <ul>
-                  <li class="close-nav"><span class="link_footer" [routerLink]="'/home'">Home</span></li>
-                  <li class="close-nav"> <span class="link_footer" [routerLink]="'/empresa'">Empresa</span> </li>
-                  <li class="close-nav"><span class="link_footer" [routerLink]="'/atacado'">Atacado</span></li>
-                  <li class="close-nav"><span class="link_footer" [routerLink]="'/parceiros'">Parceiros</span></li>
-                  <li class="close-nav"><span class="link_footer" [routerLink]="'/jornal'">Jornal</span></li>
-                  <li class="close-nav"><span class="link_footer" [routerLink]="'/contato'">Contado</span></li>
-                  <li class="close-nav"><span class="link_footer" [routerLink]="'/newsletter'">Newsletter</span></li>
+                  <li class="close-nav"><a class="link_footer" [routerLink]="'/home'">Home</a></li>
+                  <li class="close-nav"> <a class="link_footer" [routerLink]="'/empresa'">Empresa</a> </li>
+                  <li class="close-nav"><a class="link_footer" [routerLink]="'/atacado'">Atacado</a></li>
+                  <li class="close-nav"><a class="link_footer" [routerLink]="'/parceiros'">Parceiros</a></li>
+                  <li class="close-nav"><a class="link_footer" [routerLink]="'/jornal'">Jornal</a></li>
+                  <li class="close-nav"><a class="link_footer" [routerLink]="'/contato'">Contado</a></li>
+                  <li class="close-nav"><a class="link_footer" [routerLink]="'/newsletter'">Newsletter</a></li>
                 </ul>
               </nav>
             </div>
@@ -337,7 +342,7 @@
           </div>
           <div class="row justify-content-center margin_linha">
             <div class="col-8">
-              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <form [formGroup]="registroFormu" (ngSubmit)="onSubmit()">
                   <div class="row margin_linha box_gray_conta">
                     <div class="col-sm-12 legenda_conta">
                       <div class="row">
@@ -346,9 +351,9 @@
                         </div>
                         <div class="col-sm-10">
                           <div class="col-sm-9">
-                            <input class="campo-input" type="text" formControlName="Name" [ngClass]="{'campo-invalido': submitted && f.Name.errors}">
-                            <div *ngIf="submitted && f.Name.errors" class="invalido_cadastro">
-                                <div *ngIf="f.Name.errors.required">Digite seu Nome!</div>
+                            <input class="campo-input" type="text" formControlName="name" [ngClass]="{'campo-invalido': submitted && g.name.errors}">
+                            <div *ngIf="submitted && g.name.errors" class="invalido_cadastro">
+                                <div *ngIf="g.name.errors.required">Digite seu Nome!</div>
                             </div>
                           </div>
                         </div>
@@ -363,9 +368,9 @@
                         </div>
                         <div class="col-sm-10">
                           <div class="col-sm-9">
-                            <input class="campo-input" type="text" formControlName="address" [ngClass]="{'campo-invalido': submitted && f.address.errors}">
-                            <div *ngIf="submitted && f.address.errors" class="invalido_cadastro">
-                                <div *ngIf="f.address.errors.required">Digite seu Endereço!</div>
+                            <input class="campo-input" type="text" formControlName="address" [ngClass]="{'campo-invalido': submitted && g.address.errors}">
+                            <div *ngIf="submitted && g.address.errors" class="invalido_cadastro">
+                                <div *ngIf="g.address.errors.required">Digite seu Endereço!</div>
                             </div>
                           </div>
                         </div>
@@ -380,10 +385,10 @@
                         </div>
                         <div class="col-sm-10">
                           <div class="col-sm-9">
-                            <input class="campo-input" type="text" formControlName="email" [ngClass]="{'campo-invalido': submitted && f.email.errors}">
-                            <div *ngIf="submitted && f.email.errors" class="invalido_cadastro">
-                                <div *ngIf="f.email.errors.required">Digite seu Email!</div>
-                                <div *ngIf="f.email.errors.email">Precisa ser um e-mail válido</div>
+                            <input class="campo-input" type="text" formControlName="email" [ngClass]="{'campo-invalido': submitted && g.email.errors}">
+                            <div *ngIf="submitted && g.email.errors" class="invalido_cadastro">
+                                <div *ngIf="g.email.errors.required">Digite seu Email!</div>
+                                <div *ngIf="g.email.errors.email">Precisa ser um e-mail válido</div>
                             </div>
                           </div>
                         </div>
@@ -398,10 +403,10 @@
                         </div>
                         <div class="col-sm-10">
                           <div class="col-sm-9">
-                            <input class="campo-input" type="password" maxlength="10" formControlName="password" [ngClass]="{'campo-invalido': submitted && f.password.errors}">
-                            <div *ngIf="submitted && f.password.errors" class="invalido_cadastro">
-                              <div *ngIf="f.password.errors.required">Digite uma senha de 6 a 10 digítos</div>
-                              <div *ngIf="f.password.errors.minlength">A senha precisa ter no mínimo 6 caracteres</div>
+                            <input class="campo-input" type="password" maxlength="10" formControlName="password" [ngClass]="{'campo-invalido': submitted && g.password.errors}">
+                            <div *ngIf="submitted && g.password.errors" class="invalido_cadastro">
+                              <div *ngIf="g.password.errors.required">Digite uma senha de 6 a 10 digítos</div>
+                              <div *ngIf="g.password.errors.minlength">A senha precisa ter no mínimo 6 caracteres</div>
                             </div>
                           </div>
                         </div>
@@ -416,10 +421,10 @@
                             </div>
                             <div class="col-sm-10">
                               <div class="col-sm-9">
-                                <input class="campo-input" type="password" maxlength="10" formControlName="confirmPassword" [ngClass]="{'campo-invalido': submitted && f.confirmPassword.errors }">
-                                <div *ngIf="submitted && f.confirmPassword.errors" class="invalido_cadastro">
-                                    <div *ngIf="f.confirmPassword.errors.required">Confirme sua senha!</div>
-                                    <div *ngIf="f.confirmPassword.errors.mustMatch">A confirmação da senhar precisa ser igual ao campo senha</div>
+                                <input class="campo-input" type="password" maxlength="10" formControlName="confirmPassword" [ngClass]="{'campo-invalido': submitted && g.confirmPassword.errors }">
+                                <div *ngIf="submitted && g.confirmPassword.errors" class="invalido_cadastro">
+                                    <div *ngIf="g.confirmPassword.errors.required">Confirme sua senha!</div>
+                                    <div *ngIf="g.confirmPassword.errors.mustMatch">A confirmação da senhar precisa ser igual ao campo senha</div>
                                 </div>
                               </div>
                             </div>
@@ -435,7 +440,7 @@
                         </div>
                     </div>
                   </div>
-              </form>
+              </form> 
             </div>
           </div>
       </div>

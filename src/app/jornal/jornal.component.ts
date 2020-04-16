@@ -13,5 +13,11 @@ export class JornalComponent implements OnInit {
 
   ngOnInit() {
   }
+  abrirpdffimsemana() {
+    window.open("https://dashboard-magictv.com.br/calvo/jornalcalvofimsemana/JornalCalvofimsemana394.pdf ")
+  }
+  abrirpdfsemanal() {
+    window.open('https://dashboard-magictv.com.br/calvo/jornalcalvosemanal/JornalCalvoAtacadista961.pdf')
+  }
 
 }
