@@ -16,8 +16,10 @@ declare var $: any;
 export class AppComponent implements OnInit {
   registerForm: FormGroup;
   registroFormu: FormGroup;
+  registerFormLogin: FormGroup;
   submitted = false;
-  submittednews=false;
+  submittednews = false;
+  submittedlogin = false;
 
 
   constructor(private modalService: ModalService, private router: Router, private formBuilder: FormBuilder) { };
@@ -42,6 +44,7 @@ ngOnInit(){
   $(this).addClass('fixed_color');
   $('.color_link').val($(this)[0].innerText);
   });
+
   this.registerForm = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
   }, {
@@ -56,13 +59,19 @@ ngOnInit(){
   },{
      validators: MustMatch('password', 'confirmPassword')
   });
+  this.registerFormLogin = this.formBuilder.group({
+    login: ['', [Validators.required, Validators.email]],
+    senha: ['', Validators.required]
+  }, {
+     validators: MustMatch
+  });
 }
 get f() { return this.registerForm.controls; }
 get g() { return this.registroFormu.controls; }
+get h() { return this.registerFormLogin.controls; }
 
 onSubmit_newsletter() {
   this. submittednews = true;
-
   if (this.registerForm.invalid) {
     return;
   }
@@ -72,6 +81,12 @@ onSubmit_newsletter() {
 onSubmit() {
   this.submitted = true;
   if (this.registroFormu.invalid) {
+    return;
+  }
+}
+onSubmitLogin() {
+  this.submittedlogin = true;
+  if (this.registerFormLogin.invalid) {
     return;
   }
 }

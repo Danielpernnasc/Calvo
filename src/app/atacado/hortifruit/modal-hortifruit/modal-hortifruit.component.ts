@@ -1,28 +1,27 @@
 import { Component, OnInit, ViewEncapsulation, Input, ElementRef } from '@angular/core';
-import { ModalService } from './modal.service'
-
+import { ModalhortifruitService } from './modalhortifruit.service';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
+  selector: 'modal-hortifruit',
+  templateUrl: './modal-hortifruit.component.html',
+  styleUrls: ['./modal-hortifruit.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ModalComponent implements OnInit {
+export class ModalHortifruitComponent implements OnInit {
   @Input() id: string;
-  private element: any
-  constructor(private modalService: ModalService, private el: ElementRef
+  private element: any;
 
-  ) {
-    this.element = el.nativeElement;
-   }
+  constructor(private modalService: ModalhortifruitService, private el: ElementRef) { 
+              this.element = el.nativeElement;
+  }
 
   ngOnInit(): void {
-    if(!this.id) {
-      console.error('Modal precisa de um ID');
-      return
+    if (!this.id) {
+      console.error('O modal precisa de Id');
+      return;
     }
     document.body.appendChild(this.element);
+
     this.element.addEventListener('click', el => {
       if (el.target.className === 'modal_produto') {
         this.close();
@@ -30,6 +29,7 @@ export class ModalComponent implements OnInit {
     });
     this.modalService.add(this);
   }
+
   ngOnDestroy(): void {
     this.modalService.remove(this.id);
     this.element.remove();
@@ -40,7 +40,7 @@ export class ModalComponent implements OnInit {
   }
   close(): void {
     this.element.style.display = 'none';
-    document.body.classList.remove('container_body')
+    document.body.classList.remove('container_body');
   }
 
 }
