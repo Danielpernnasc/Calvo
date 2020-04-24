@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, Input, ElementRef } from '@angular/core';
 import { ModalService } from './modal.service'
-
+// import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-modal',
@@ -12,7 +12,7 @@ export class ModalComponent implements OnInit {
   @Input() id: string;
   private element: any
   constructor(private modalService: ModalService, private el: ElementRef
-
+    // public closeModalRef: BsModalRef
   ) {
     this.element = el.nativeElement;
    }

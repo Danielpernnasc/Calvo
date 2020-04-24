@@ -1,6 +1,6 @@
 
    <div class="row justify-content-center">
-        <div class="col-9 image-background-carousel">
+        <div class="col-9 image-background-carousel desktop">
             <div class="row">
                 <div class="col-lg branco_calvo font-carousel">
                     <h1>O Melhor<br> Atacado da<br> Zona Leste</h1>
@@ -11,6 +11,9 @@
                     <button class="btn-home-saiba">Saiba Mais</button>
                 </div>
             </div>
+        </div>
+        <div class="col-12 margin_top_banner mobile">
+            <img class="central" [src]="banner_mob" alt="">
         </div>
     </div>
     <div class="row justify-content-center">
@@ -30,7 +33,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-9 offset-sm-1">
+                        <div class="col-sm-7 offset-sm-3">
                             <button class="btn_cadastro">Cadastre-se e Saiba Mais</button>
                         </div>
                     </div>
@@ -75,7 +78,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 icones">
                             <svg-icon [src]="headphone" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                         </div>
                         <div class="col-sm-6 centro">
@@ -352,7 +355,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-9 posicao_sobre">
+                                <div class="col-sm-9 posicao_sobre desktop">
                                     <h4>
                                         Fale com 
                                         nossos 
@@ -363,7 +366,7 @@
                             <img [src]="compradores" alt="" class="central">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <button class="btn-saiba_yellow">Saiba Mais</button>
+                                    <button class="btn-saiba_yellow desktop">Saiba Mais</button>
                                 </div>
                             </div>
                         </div>
@@ -371,18 +374,26 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-sm-9 posicao_sobre">
+                        <div class="col-sm-9 posicao_sobre desktop">
                             <h4>
                                     Seja nosso
                                     fornecedor
                             </h4>
                         </div>
+                        <div class="col-sm-12 posicao_sobre mobile">
+                            <h6>Fale com nossos compradores</h6>
+                            <button class="btn_saiba_mais_mobile">Saiba Mais</button>
+                        </div>
                     </div>
                     <img [src]="fornecedores" alt="" class="central">                        
                     <div class="row">
                         <div class="col-sm-4">
-                            <button class="btn-saiba_yellow" (click)="fornecedor()">Saiba Mais</button>
+                            <button class="btn-saiba_yellow desktop" (click)="fornecedor()">Saiba Mais</button>
                         </div>
+                        <div class="col-sm-12 posicao_sobre  mobile">
+                                <h6>Seja nosso fornecedor</h6>
+                                <button class="btn_saiba_mais_mobile">Saiba Mais</button>
+                            </div>
                     </div>
                 </div>
             </div>

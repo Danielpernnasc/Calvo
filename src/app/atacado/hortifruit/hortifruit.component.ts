@@ -1,19 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { ModalhortifruitService } from './modal-hortifruit/modalhortifruit.service';
 
+
+// declare var $: any;
 
 
 @Component({
   selector: 'app-hortifruit',
   templateUrl: './hortifruit.component.html',
-  styleUrls: ['./hortifruit.component.scss']
+  styleUrls: ['./hortifruit.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
+
+
+
 export class HortifruitComponent implements OnInit {
+  constructor(private modalService: ModalhortifruitService) {}
 
-  constructor(private modalService: ModalhortifruitService) { }
+  ngOnInit() {
+      // $(function(){
+      //   $('.page').css('display', 'none');
+      //   $(".page#pag1").addClass('active_page');
+      //   $('.paginacao').on('click', function(e){
+      //     e.preventDefault();
+      //   $("div").removeClass("active_page");
+      //   var id = $(this).attr("href"); 
+      //   $("#"+id+"").addClass("active_page");
+      //   });
+      // })
 
-  ngOnInit(): void {
   }
+  
+
+
   openModal(id: string) {
     this.modalService.open(id);
   }
@@ -21,6 +41,11 @@ export class HortifruitComponent implements OnInit {
     this.modalService.close(id)
   }
 
+  // @NgModule({
+
+  //   imports: [RouterModule.forRoot(routes, routerOptions)],
+  
+  // })
   pesquisar:any ="assets/icones_svg/lupa.svg";
   tomate:any ="assets/img/atacado/hortifruit/tomate.png";
   batata:any ="assets/img/atacado/hortifruit/batata.png";
@@ -47,3 +72,5 @@ export class HortifruitComponent implements OnInit {
   k = "Kg";
   m = "pacote";
 }
+
+

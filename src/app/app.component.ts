@@ -26,6 +26,20 @@ export class AppComponent implements OnInit {
   Footer = true;
 
 ngOnInit(){
+  var dropdown = document.getElementsByClassName("link_mob_btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener('click', function() {
+    this.classList.toggle("active_mob");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+    })
+  }
   this.router.events
   .subscribe((event) => {
     if(event instanceof NavigationEnd) {
@@ -110,7 +124,12 @@ onSubmitLogin() {
  whatsapp_btn() {
    window.open('https://web.whatsapp.com/send?phone=5511985960096&text=')
  }
-
+ openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+ }
+ closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+ }
   cartoes:any ="assets/img/ID11.png";
   logo:any ="assets/img/logo.png";
   lupa:any ="assets/icones_svg/lupa.svg";
@@ -123,6 +142,7 @@ onSubmitLogin() {
   whatsapp:any ="assets/icones_svg/whatsapp.svg";
   degrade_fidel: any ="assets/icones_svg/degrade_fidel.svg";
   ok:any = 'assets/icones_svg/check_icon.svg';
+  seta_baixo:any = 'assets/icones_svg/seta-para-baixo.svg';
 
   new ="Novo Usuário?";
   conta="Criar Conta";

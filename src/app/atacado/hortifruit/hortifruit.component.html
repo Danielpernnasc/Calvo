@@ -52,617 +52,769 @@
 <div class="row justify-content-center">
     <div class="col-9">
         <div class="row margin_linha espaco-left">
-            <div class="col-md-9 padding_zero">
-                <div class="row margin_linha">
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button class="btn_lupa" (click)="openModal('hort1')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
+            <div  class="col-md-9 padding_zero">
+                <div class="row">
+
+                    <div class="page col-sm-12">
+                        <div class="row margin_linha">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button class="btn_lupa" (click)="openModal('hort1')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="cebola" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Cebola</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="cebola" alt="">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort2')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="batata" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Batata</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Cebola</h6>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort3')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="abobrinha" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Abobrinha</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort4')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="cenoura" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Cenoura</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
+                            </div>
+                        </div>
+                        <div class="row margin_linha">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort5')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="beterraba" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Beterraba</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort6')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="agriao" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Agrião</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort7')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="salsa_cebolinha" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Salsa e Cebolinha</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort8')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <img class="central_produto" [src]="couve" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Couve</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin_linha">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort9')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="alface" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Alface Crespa</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort10')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="alface_americana" alt="" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Alface Americana</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort11')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="acelga" alt="" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Acelga</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort12')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="ovo" alt="" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Ovo</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{m}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin_linha">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort13')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="laranja" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Laranja</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort14')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="limao" alt="" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Limão</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort15')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="maca" alt="" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Maçã</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort16')">
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="melancia" alt="" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Melancia</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div  class="row margin_linha">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort17')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="coco" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Coco</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort18')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="maracuja" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Maracujá</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort19')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="manga" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Manga</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort20')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="tomate" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Tomate</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort2')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
+                  
+                    <!-- <div id="pag2" class="page col-sm-12">
+                        <div  class="row margin_linha">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort17')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="coco" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Coco</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="batata" alt="">
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort18')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="maracuja" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Maracujá</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Batata</h6>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort19')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="manga" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Manga</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
+                            <div class="col-sm-3 padding_zero_">
+                                <div class="campo_produtos">
+                                    <div class="row">
+                                        <div class="col-md-12 right_lupa">
+                                            <button  class="btn_lupa" (click)="openModal('hort20')" >
+                                                <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <img [src]="tomate" class="central">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 legenda_produtos">
+                                            <h6>Tomate</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row space-bottom">
+                                        <div class="col-sm-6 centralizar">
+                                            <h6>{{k}}</h6>
+                                        </div>
+                                        <div class="col-sm-6 central_right">
+                                            <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
+                                            </svg-icon>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort3')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="abobrinha" alt="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Abobrinha</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort4')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="cenoura" alt="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Cenoura</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="row margin_linha">
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort5')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="beterraba" alt="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Beterraba</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
+                <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+                <!-- <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="lista_pagina">
+                            <li>
+                                <a class="paginacao" href="pag1">
+                                   <button>
+                                       1
+                                   </button> 
+                                
+                                </a>
+                            </li>
+                            <li>
+                                <a class="paginacao" href="pag2">
+                                        <button>
+                                            2
+                                        </button> 
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort6')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="agriao" alt="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Agrião</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort7')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="salsa_cebolinha" alt="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Salsa e Cebolinha</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort8')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-sm-12">
-                                    <img class="central_produto" [src]="couve" alt="">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Couve</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row margin_linha">
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort9')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="alface" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Alface Crespa</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort10')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="alface_americana" alt="" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Alface Americana</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort11')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="acelga" alt="" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Acelga</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort12')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="ovo" alt="" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Ovo</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{m}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row margin_linha">
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort13')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="laranja" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Laranja</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort14')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="limao" alt="" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Limão</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort15')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="maca" alt="" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Maçã</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort16')">
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="melancia" alt="" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Melancia</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div  class="row margin_linha">
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort17')" >
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="coco" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Coco</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort18')" >
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="maracuja" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Maracujá</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort19')" >
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="manga" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Manga</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 padding_zero_">
-                        <div class="campo_produtos">
-                            <div class="row">
-                                <div class="col-md-12 right_lupa">
-                                    <button  class="btn_lupa" (click)="openModal('hort20')" >
-                                        <svg-icon [src]="pesquisar" [svgStyle]="{'width.px':25}"></svg-icon>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <img [src]="tomate" class="central">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 legenda_produtos">
-                                    <h6>Tomate</h6>
-                                </div>
-                            </div>
-                            <div class="row space-bottom">
-                                <div class="col-sm-6 centralizar">
-                                    <h6>{{k}}</h6>
-                                </div>
-                                <div class="col-sm-6 central_right">
-                                    <svg-icon [src]="orcamento" [svgStyle]="{ 'width.px':50 }">
-                                    </svg-icon>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-3">
                 <div class="row campo_categoria">
@@ -1424,7 +1576,7 @@
         </div>
         <div class="row margin-titulo-modal">
             <div class="col-sm-10 offset-sm-1 titulo_produto">
-                <h3>Coco</h3>
+                <h3>Maracujá</h3>
             </div>
         </div>
         <div class="row margin-titulo-modal">
@@ -1461,7 +1613,7 @@
         </div>
         <div class="row margin-titulo-modal">
             <div class="col-sm-10 offset-sm-1 titulo_produto">
-                <h3>Coco</h3>
+                <h3>Manga</h3>
             </div>
         </div>
         <div class="row margin-titulo-modal">

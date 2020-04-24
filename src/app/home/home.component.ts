@@ -52,6 +52,7 @@ export class HomeComponent implements OnInit {
   pet: any = 'assets/img/home/pet.png';
   papelaria: any = 'assets/img/home/papelaria.png';
   descartaveis: any = 'assets/img/home/descartaveis.png';
+  banner_mob: any = 'assets/img/home/banner1.png';
   prog = "Programa";
   fid = "de Fidelidade";
   
