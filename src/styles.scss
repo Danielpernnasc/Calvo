@@ -2364,7 +2364,6 @@ body.modal-open {
 .close_black {
   @include titulo_black;
   cursor: pointer;
-  text-align: right;
 }
 .border_quant {
   border: solid 1px $font_calvo_gray;
