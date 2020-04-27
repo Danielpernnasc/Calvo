@@ -534,8 +534,8 @@ body {
   color: $link-calvo;
   font-size: 15px;
   font-weight: bold;
-  margin: 6% 8%;
-  padding-bottom: 3%;
+  margin: 5px 10px;
+  padding-bottom: 10px;
   border-bottom: solid #E5E6E8;
 }
 .color_link_sub:hover{
@@ -652,6 +652,11 @@ body {
 .branco_calvo {
   color: $branco_calvo;
   font-weight: bold;
+}
+.blue_calvo {
+  @include titulo_blue;
+  font-weight: bold;
+
 }
 .font-carousel > h1 {
   font-size: $font-carousel;
@@ -796,6 +801,54 @@ body {
   text-align: center;
   padding: 1px;
 }
+.font_branco_mobile > h5 {
+  color: $branco_calvo;
+  margin:-130px 0 0 10px;
+  font-weight: bold;
+}
+.font_branco_mobile_tablet > h3 {
+  color: $branco_calvo;
+  margin:-200px 0 0 20px;
+  font-weight: bold;
+}
+.font_branco_mobile_tablet > h6 {
+  color: $yellow_calvo;
+  font-weight: bold;
+  margin: 20px;
+}
+.font_branco_mobile > h6 {
+  color: $yellow_calvo;
+  font-weight: bold;
+  margin: 20px;
+  margin: 6px 12px;
+  width: 100px;
+}
+.btn-home-saiba-phone {
+  margin: 10px;
+  background: #FF0000;
+  border: 0;
+  color: #fff;
+  padding: 5px;
+  font-weight: bold;
+}
+.btn-home-saiba-table {
+  margin: 20px;
+  background: #FF0000;
+  border: 0;
+  color: #fff;
+  padding: 5px;
+  font-weight: bold;
+}
+@media screen and (max-width:700px){
+  .font_branco_mobile_tablet {
+      display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .font_branco_mobile {
+    display:none;
+  }
+}
 // .active_mob {
 //   background-color: green;
 //   color: white;
@@ -819,7 +872,7 @@ body {
 }
 .central {
   display: $bloco;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 100%;
 }
 .central-mobile {
@@ -941,6 +994,8 @@ body {
 .text-home {
   margin: -53% 5%;
   position: relative;
+  width:100px;
+  height: 30px;
 }
 .btn_cadastro {
   background: #FF0000;
@@ -984,10 +1039,10 @@ body {
   }
 }
 .display {
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1200px) {
     .bg-kit {display: none}
   }
-  @media screen and (min-width: 1490px) {
+  @media screen and (min-width: 1200px) {
     .bg-kit_mobile {display: none}
   }
 }
@@ -1102,17 +1157,17 @@ body {
   background-repeat: no-repeat;
 }
 .produtos_selec_mobile {
-  background: url('assets/img/empresa/b2_mobile.png');
+  background: url('assets/img/empresa/b2.png');
   background-repeat: no-repeat;
 }
-.display_empr {
+ .display_empr {
   @media screen and (max-width: 1500px) {
-      .empr_desk {
+      .produtos_selec {
         display: none;
       }
     }
     @media screen and (min-width: 1500px) {
-      .empr_mobile {
+      .produtos_selec_mobile {
         display: none;
       }
     }
@@ -1137,6 +1192,42 @@ body {
   color: $branco_calvo;
   font-weight: bold;
   font-size: 50px;
+}
+.text_produtos_mobile > h4 {
+  text-align: right;
+  color: $branco_calvo;
+  margin: -120px 10px 100px 0;
+  font-weight: bold;
+}
+.text_produtos_mobile > h5 {
+  text-align: right;
+  color: $yellow_calvo;
+  text-align: right;
+  margin: -65px 10px 10px 0;
+  font-weight: bold;
+}
+.text_produtos_tablet > h2 {
+  color: $branco_calvo;
+  text-align: right;
+  margin: -200px 10px 150px 0;
+  font-weight: bold;
+}
+.text_produtos_tablet > h4 {
+  color: $yellow_calvo;
+  text-align: right;
+  margin: -120px 10px 70px 0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .text_produtos_tablet  {
+    display:none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .text_produtos_mobile {
+    display: none;
+  }
 }
 .text_produtos_y > h3 {
   color: $yellow_calvo;
@@ -1184,11 +1275,16 @@ body {
   text-align:left;
   @include titulo_black;
 }
+.titulo-parc > h4 {
+  text-align:left;
+  @include titulo_black;
+}
 .border-bottom-fino {
   border-bottom: 1px solid #B4B4BC;
   padding-bottom: 2%;
 }
 .linha-acima {
+  padding: 0 10px;
   margin: 200px 0 0 0;
 }
 //parceiros
@@ -1271,10 +1367,15 @@ body {
 .espaco_btn{
   margin: 5% 0;
 }
+.jornal {
+  margin: 0 50px;
+}
 //jornal
 
 .lupa_altura{
-  margin-top: -80px;
+  display: block;
+  margin: -50px 0 0 190px;
+  position: absolute;
 }
 .select_busca {
     width: 100%;
@@ -2000,6 +2101,20 @@ body.modal-open {
 .texto_prog  {
   margin: 20px 8px;
 }
+
+.texto_prog_mob {
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .texto_prog {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .texto_prog_mob {
+    display: none;
+  }
+}
 .bg-image-dicas {
   background-image: url('assets/img/dicas/banner@2x.png');
   height: 500px;
@@ -2106,9 +2221,8 @@ body.modal-open {
     }   
   }
 }
-
-
 .img_rec {
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -2174,9 +2288,15 @@ body.modal-open {
   @include titulo_darkgray;
   text-align: left;
 }
-.btn_next_prev {
+.btn_next {
   background: 0;
   border: 0;
+  float: right;
+}
+.btn_prev {
+  background: 0;
+  border: 0;
+  float: left;
 }
 .btn_invisible {
   cursor: pointer;

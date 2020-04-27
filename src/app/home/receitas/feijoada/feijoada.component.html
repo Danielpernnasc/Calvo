@@ -1,13 +1,13 @@
 <div class="row justify-content-center">
     <div class="col-9">
         <div class="row linha-acima" >
-            <div class="col-sm-1 font-gray-calvo">
+            <div class="font-gray-calvo">
                 <h5>Blog</h5>
             </div>
             <div class="seta_right">
                 <span>></span>
             </div>
-            <div class="col-sm-4 font-red-calvo">
+            <div class="font-red-calvo">
                 <h5>Receitas</h5>
             </div>
         </div>
@@ -126,20 +126,18 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-sm-6">
-            </div>
-            <div class="col-sm-6">
+            <div class="col-md-6 offset-md-6">
                 <div class="row">
                     <div class="col-sm-6 offset-sm-3 titulos_proxima">
                         <h6>Próxima Receita</h6>
                         <h3>{{receita2}}</h3>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="border_seta">
-                            <button class="btn_next_prev" (click)="prev_next()">
+                    <div class="col-sm-2 padding_zero">
+                        <button class="btn_next_prev" (click)="prev_next()">
+                            <div class="border_seta_right border_seta">   
                                 <svg-icon [src]="seta_right" [svgStyle]="{ 'width.px':40 }"></svg-icon>
-                            </button>
-                        </div>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>

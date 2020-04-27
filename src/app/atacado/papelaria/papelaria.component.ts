@@ -11,5 +11,5 @@ export class PapelariaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  pesquisar:any = 'assets/icon_svg/lupa.svg'
+  pesquisar:any ="assets/icones_svg/lupa.svg";
 }
