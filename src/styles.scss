@@ -822,17 +822,27 @@ body {
   margin:-200px 0 0 20px;
   font-weight: bold;
 }
-.font_branco_mobile_tablet > h6 {
-  color: $yellow_calvo;
-  font-weight: bold;
-  margin: 20px;
-}
 .font_branco_mobile > h6 {
   color: $yellow_calvo;
   font-weight: bold;
   margin: 20px;
   margin: 6px 12px;
   width: 100px;
+}
+.font_branco_mobile_tablet > h6 {
+  color: $yellow_calvo;
+  font-weight: bold;
+  margin: 20px;
+}
+@media screen and (max-width:700px) {
+  .font_branco_mobile_tablet {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .font_branco_mobile {
+      display: none;
+  }
 }
 .btn-home-saiba-phone {
   margin: 10px;
@@ -850,12 +860,12 @@ body {
   padding: 5px;
   font-weight: bold;
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
   .font_branco_mobile_tablet {
       display: none;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .font_branco_mobile {
     display:none;
   }
@@ -927,12 +937,12 @@ body {
   height: 100%;
   padding: 50px 0;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .desktop {
       display: none;
   } 
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .mobile {
     display: none;
   }
@@ -1069,7 +1079,7 @@ body {
   padding: 113px 0;
 }
 .font-kit_mobile > h2 {
-  margin-top: -160px;
+  text-align: center;
 }
 .btn-home-saiba_arredon {
   background: #FF0000;
