@@ -479,7 +479,7 @@ $font-carousel_mob: 40px;
   background: #fff;
   border: solid 1px #E5E6E8;
   position: absolute;
-  width: 230px;
+  width: 150px;
   margin-top: 15%;
   z-index: 1;
   display: none;
@@ -526,16 +526,13 @@ body {
 .color_link:hover, .color_link:focus {
   color: $link-calvo;
 }
-// .fixed_color {
-//   color: $font_calvo_red;
-// }
+
 
 .color_link_sub {
   color: $link-calvo;
   font-size: 15px;
   font-weight: bold;
   margin: 5px 10px;
-  padding-bottom: 10px;
   border-bottom: solid #E5E6E8;
 }
 .color_link_sub:hover{
@@ -606,6 +603,20 @@ nav {
   font-size: 20px;
   border: 0;
   color: $font_calvo_gray;
+}
+.input_mobile{
+  width: 100%;
+  background: #fff;
+  border: 0;
+  border-radius: 10px;
+  color: $font_calvo_gray;
+  padding: 10px 38px 10px 5px;
+}
+.lupa_mobile {
+  width: 40px;
+  display: block;
+  margin-left: auto;
+  margin-top: -29px;
 }
 #lupa {
   padding: 0.5% 8%;
@@ -883,6 +894,8 @@ body {
 }
 .central_right{
   text-align: right;
+  display: block;
+  margin-left: auto;
 }
 @mixin button_calvo {
   color: $branco_calvo;
@@ -914,12 +927,12 @@ body {
   height: 100%;
   padding: 50px 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .desktop {
       display: none;
   } 
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .mobile {
     display: none;
   }
@@ -1271,6 +1284,7 @@ body {
 .borda-bottom {
   border: solid #B4B4BC;
 }
+
 .titulo-parc > h2 {
   text-align:left;
   @include titulo_black;
@@ -1430,11 +1444,11 @@ body {
 }
 
 .centralizar > h6 {
-  margin: 15% 0;
+  margin: 15px 0;
 }
 .space-bottom {
-    height: 50px;
     margin: 0;
+    padding: 0 5px;
 }
 // .space-bottom {
 //   margin: 16px 0 0 10px;
@@ -1452,12 +1466,20 @@ body {
   width: 100%;
   height: 100%;
 }
+.centralizar {
+  padding:0;
+}
 .centralizar > p {
   font-size: 15px;
   margin: 10% 0;
 }
 .right_lupa {
   text-align: right;
+}
+@media screen and (max-width:700px) {
+  .right_lupa {
+    display: none;
+  }
 }
 .btn_lupa {
   background: 0;
@@ -1649,7 +1671,7 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, moda
   padding-top: 5px;
 }
 .btn-sale_text > span {
-  font-size: 20px;
+  font-size: 15px;
   color: $font_calvo_red;
   font-weight: bold;
 }
@@ -1665,23 +1687,42 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, moda
 }
 .subt_tel_cont > span {
   color: $font_calvo_red;
-  font-size: 20px;
 }
 .fone_cont {
   @include titulo_red;
 }
 .subt_email_cont {
   @include titulo_blue;
-  font-size: 17px;
-  text-align: left;
+  text-align: right;
+}
+.endereco_fale_mob {
+  text-align: center;
+  @include titulo_red;
+}
+.email_fale_mob {
+  text-align: center;
+  @include titulo_blue;
+}
+@media screen and (max-width: 800px) {
+  .desktop_800px {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .mobile_800px {
+    display: none;
+  }
 }
 .endereco_calvo > p {
+  font-size: 15px;
+}
+.endereco_calvo_mob > p {
+  text-align: center;
   font-size: 15px;
 }
 .box_input {
   border: solid #B4B4BC;
   height: 100%;
-  padding: 20px;
 }
 .box_input_work {
   border: solid #B4B4BC;
@@ -1718,9 +1759,7 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, moda
 label {
 color: #a9abae;
 }
-.padding_marg_cont {
-    padding: 20px;
-}
+
 .padding_cont {
   padding: 20px 0;
 }

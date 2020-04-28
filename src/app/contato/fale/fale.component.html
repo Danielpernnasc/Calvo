@@ -27,7 +27,7 @@
     </div>
 </div>
 <div class="row justify-content-center margin_linha">
-    <div class="col-9 titulo-parc">
+    <div class="col-9 titulo-parc padding_zero">
         <div class="row">
             <div class="col-md-6 titulo-parc">
                 <h2>Fale Conosco</h2>
@@ -72,17 +72,31 @@
                         </iframe>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row desktop_800px">
                     <div class="col-sm-12 endereco_calvo">
                         <p>{{address_calvo}}</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mobile_800px">
+                    <div class="col-sm-12 endereco_calvo_mob">
+                        <p>{{address_calvo}}</p>
+                    </div>
+                </div>
+                <div class="row desktop_800px">
                     <div class="col-sm-6 subt_tel_cont">
                         <span>Tel:</span>
                         <span class="fone_cont">{{telefone_calvo}}</span>
                     </div>
                     <div class="col-sm-6 subt_email_cont">
+                        <span>{{email_calvo}}</span>
+                    </div>
+                </div>
+                <div class="row mobile_800px">
+                    <div class="col-sm-12 endereco_fale_mob">
+                        <span>Tel:</span>
+                        <span class="fone_cont">{{telefone_calvo}}</span>
+                    </div>
+                    <div class="col-sm-12 email_fale_mob">
                         <span>{{email_calvo}}</span>
                     </div>
                 </div>
@@ -111,6 +125,11 @@
                             <div class="col-sm-12">
                                 <label for="">Mensagem</label><br>
                                 <textarea class="campo_input" name="" id="" cols="30" rows="12"></textarea>
+                            </div>
+                        </div>
+                        <div class="row margin_linha">
+                            <div class="col-sm-6">
+                                <button class="btn-enviar">ENVIAR</button>
                             </div>
                         </div>
                     </div>

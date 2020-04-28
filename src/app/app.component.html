@@ -63,6 +63,14 @@
                               <a class="close-nav" [routerLink]="'.'"><img class="logo" [src]="logo"></a>
                             </div>
                         </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" class="input_mobile">
+                            <div class="lupa_mobile">
+                              <svg-icon [src]="lupa" [svgStyle]="{ 'width.px':20}"></svg-icon>
+                            </div> 
+                          </div>
+                        </div>
                     </div>
                   </div>
                       <a class="link_mob" [routerLink]="['/home']">
@@ -73,10 +81,9 @@
                             Empresa
                         </span>
                       </a>
-                       <span class="link_mob_btn"  [routerLink]="['/atacado']">Atacado
+                      <span class="link_mob_btn"  [routerLink]="['/atacado']">Atacado
                           <svg-icon [src]="seta_baixo" [svgStyle]="{ 'width.px':30 }"></svg-icon>
-                        </span> 
-                        
+                      </span> 
                       <div class="dropdown-container">
                           <a class="sub_link_mob" [routerLink]="['/atacado/bebidas']">
                               <span (click)="closeNav()">
@@ -152,23 +159,23 @@
                       <span class="link_mob_btn"  [routerLink]="['/contato']">Contato
                           <svg-icon [src]="seta_baixo" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                       </span>
-                        <div class="dropdown-container">
-                            <a class="sub_link_mob" [routerLink]="['/contato/fale-conosco']">
-                              <span (click)="closeNav()">
-                                Fale Conosco
-                              </span>
-                            </a>
-                            <a class="sub_link_mob" [routerLink]="['/contato/televendas']">
-                              <span (click)="closeNav()">
-                                  Televendas
-                              </span>
-                            </a>
-                            <a class="sub_link_mob" [routerLink]="['/contato/trabalhe-conosco']">
-                              <span (click)="closeNav()">
-                                Trabalhe na Calvo
-                              </span>
-                            </a>
-                        </div>    
+                      <div class="dropdown-container">
+                          <a class="sub_link_mob" [routerLink]="['/contato/fale-conosco']">
+                            <span (click)="closeNav()">
+                              Fale Conosco
+                            </span>
+                          </a>
+                          <a class="sub_link_mob" [routerLink]="['/contato/televendas']">
+                            <span (click)="closeNav()">
+                                Televendas
+                            </span>
+                          </a>
+                          <a class="sub_link_mob" [routerLink]="['/contato/trabalhe-conosco']">
+                            <span (click)="closeNav()">
+                              Trabalhe na Calvo
+                            </span>
+                          </a>
+                      </div>    
         
                   <div class="row justify-content-center">
                       <div class="col-10">
