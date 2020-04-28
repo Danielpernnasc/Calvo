@@ -1284,7 +1284,6 @@ body {
   padding-bottom: 2%;
 }
 .linha-acima {
-  padding: 0 10px;
   margin: 200px 0 0 0;
 }
 //parceiros
@@ -1673,8 +1672,8 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, moda
 }
 .subt_email_cont {
   @include titulo_blue;
-  text-align: right;
   font-size: 17px;
+  text-align: left;
 }
 .endereco_calvo > p {
   font-size: 15px;
@@ -1745,11 +1744,10 @@ color: #a9abae;
 }
 .img_vendas_intercalvo {
   width: 100%;
-  padding: 0 30px;
+  display: block;
+  margin: 0 auto 10px auto;
 }
-.campo-imagem-vendas-inter {
-  padding: 0 20px 0 0;
-}
+
 .campo_regras > h3 {
   padding: 0 20px 0 30px;
   @include titulo_blue;
@@ -2090,7 +2088,7 @@ body.modal-open {
   border-radius: 100%;
   padding: 30px 25px;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .bg_red_circulo_ {
   padding: 20px;

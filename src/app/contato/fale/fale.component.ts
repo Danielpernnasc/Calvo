@@ -13,6 +13,6 @@ export class FaleComponent implements OnInit {
   }
   tel_sale: any = 'assets/icones_svg/contato/telefone_vendas.svg';
   address_calvo = "Av. Rio das Pedras, 2118 - Jd. Aricanduva, São Paulo (SP)";
-  telefone_calvo = "Tel:11 2723-6000";
+  telefone_calvo = "11 2723-6000";
   email_calvo = 'calvo@calvoatac.com.br';
 }
