@@ -922,7 +922,7 @@ width: 200px;
 }
 .central {
   display: $bloco;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 100%;
 }
 .central-mobile {
@@ -2681,19 +2681,26 @@ body.modal_campo {
   background: $bg_calvo_red;
 }
 /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.transition {
+  transition: all 0.3s ease-in-out !important;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+.carousel-indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 30px;
+  border: radius;
+  border-radius: 100%;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #FF0000;
+  /* background-clip: padding-box; */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease;
+} 
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}

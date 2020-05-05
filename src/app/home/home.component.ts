@@ -9,32 +9,16 @@ import { Router } from '@angular/router';
 })
 
 export class HomeComponent implements OnInit {
-  constructor(private router: Router) { }
-  
+  title = 'NgxCarouselLibrary'
+  public innerWidth: any
+  products: any
+  options1: any
+  constructor(private router: Router) {
+ 
+  }
 
   ngOnInit() { 
-}
-//  selecionar(n) {
-//     var slideIndex
-//     slideIndex = 1;
-//     ShowDivs(slideIndex = n);
-//     function ShowDivs(n) {
-//       var i;
-//       var x = document.getElementsByClassName('icone-lista');
-//       var dots = document.getElementsByClassName('adicionar');
-//       if (n > x.length) {slideIndex = 1}
-//       if(n < 1 ) {slideIndex = x.length}
-//       for (i = 0; i < x.length; i++) {
-//         x[i].classList.toggle("none");
-//       }
-//       for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", " ");
-//       }
-//       x[slideIndex-1].classList.toggle('block');
-//       dots[slideIndex-1].className += " active";
-//     }
-//   }
-
+  }
 
   fornecedor() {
     this.router.navigateByUrl('fornecedor');
@@ -45,6 +29,8 @@ export class HomeComponent implements OnInit {
   baixartabloide() {
     window.open('https://dashboard-magictv.com.br/calvo/jornalcalvosemanal/JornalCalvoAtacadista961.pdf')
   }
+
+
   fidelidade: any ="assets/img/home/ID01.png";
   dicas: any ="assets/img/home/ID02.png";
   receitas: any ="assets/img/home/ID03.png";

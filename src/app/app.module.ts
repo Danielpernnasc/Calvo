@@ -16,11 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModalModule } from './modal';
 import { OrcamentoModule } from './orcamento';
-
-
-
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -41,7 +37,9 @@ import { OrcamentoModule } from './orcamento';
     ClickOutsideModule,
     ModalModule,
     NewsletterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+
   ],
       declarations: [  
         AppComponent
