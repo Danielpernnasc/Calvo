@@ -143,6 +143,7 @@ onSubmitLogin() {
   degrade_fidel: any ="assets/icones_svg/degrade_fidel.svg";
   ok:any = 'assets/icones_svg/check_icon.svg';
   seta_baixo:any = 'assets/icones_svg/seta-para-baixo.svg';
+  icone_orca:any = "assets/icones_svg/orcamento_list.svg";
 
   new ="Novo Usuário?";
   conta="Criar Conta";

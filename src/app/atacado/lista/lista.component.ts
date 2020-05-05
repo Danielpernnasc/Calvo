@@ -11,7 +11,7 @@ export class ListaComponent implements OnInit {
   // slideIndex = true;
   ngOnInit() {
   }
-  // selecionar(n) {
+  // selecionar_(n) {
   //   var slideIndex
   //   slideIndex = 1;
   //   ShowDivs(slideIndex = n);

@@ -1,47 +1,100 @@
 
    <div class="row justify-content-center">
-        <div class="col-9 image-background-carousel desktop">
-            <div class="row">
+       <div class="col-10 margintop_carrossel">
+         <div class="col-12">
+            <img class="central border_radius" [src]="maesday" alt="">
+         </div>
+         <div class="col-12">
+            <img class="central border_radius" [src]="banner_empresa" alt="">
+         </div>
+         <div class="col-12">
+            <img class="central border_radius" [src]="program_fidel" alt="">
+            <div class="row titulo_absolute">
+                <div class="col-lg branco_calvo font-25px">
+                    <h1>{{prog}}<br>{{fid}}</h1>
+                </div>
+            </div>
+            <div class="row titulo_absolute_abaixo">
+                <div class="col-12 subt_progra_app_">
+                    <h2>{{down}}</h2>
+                </div>
+            </div>
+            <div class="row icones_app">
+                <div class="col-6">
+                    <svg-icon [src]="apple_desktop" ></svg-icon>
+                </div>
+                <div class="col-6">
+                    <svg-icon [src]="android_desktop"></svg-icon>
+                </div>
+            </div>
+         </div>
+         <div class="col-12">
+            <img [src]="newbanner_desk"  class="central border_radius" alt="">
+            <!-- <div class="row">
                 <div class="col-lg branco_calvo font-carousel">
                     <h1>O Melhor<br> Atacado da<br> Zona Leste</h1>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-2">
                     <button class="btn-home-saiba">Saiba Mais</button>
                 </div>
             </div>
-        </div>
+         </div>
+         <div class="col-12">
+            <img class="central border_radius"[src]="bannerdicas" alt="">
+            <div class="row titulo_absolute">
+                <div class="col-12">
+                    <div class="col-lg branco_calvo font-carousel">
+                        <h1>{{D}}</h1>
+                    </div>
+                    <div class="col-lg branco_calvo font-carousel">
+                        <h2>{{busniess}}</h2>
+                    </div>
+                </div>
+            </div>
+         </div>
+       </div>
         <div class="col-12 margin_top_banner mobile">
-            <img class="central" [src]="banner_mob" alt="">
+            <img class="central" [src]="newbanner_mob" alt="">
             <div class="row">
                 <div class="col-sm-12 font_branco_mobile_tablet">
-                    <h3>O Melhor<br> Atacado da<br> Zona Leste</h3>
+                    <!-- <h3>O Melhor<br> Atacado da<br> Zona Leste</h3> -->
                     <button class="btn-home-saiba-table">Saiba Mais</button>
                 </div>
                 <div class="col-sm-12 font_branco_mobile">
-                    <h5>O Melhor<br> Atacado da<br> Zona Leste</h5>
+                    <!-- <h5>O Melhor<br> Atacado da<br> Zona Leste</h5> -->
                     <button class="btn-home-saiba-phone">Saiba Mais</button>
                 </div>
-            </div>   
+            </div>
+        </div>
+        <div class="row justify-content-center margin_linha">
+            <div class="co-8 centro">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
     </div>
+ 
     <div class="row justify-content-center">
-        <div class="col-9">
+        <div class="col-8 padding_zero">
             <div class="row margin_linha">
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-sm-12">  
-                            <span class="link_home" [routerLink]="['/programa']">
+                            <a class="link_home" [routerLink]="['/programa']">
                                 <img class="central" [src]="fidelidade" alt="">
-                            </span>
+                            </a>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-5 branco_calvo text-home">
                             <h6>{{prog}}<br>{{fid}}</h6>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-sm-7 offset-sm-1">
                             <button class="btn_cadastro">Cadastre-se e Saiba Mais</button>
@@ -56,11 +109,11 @@
                             </span>
                         </div>
                     </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-sm-5 black_calvo text-home">
                         <h6>Dicas</h6>
                     </div>
-                </div>
+                </div> -->
                 </div>
                 <div class="col-md-4">
                     <div class="row">
@@ -70,17 +123,17 @@
                             </span>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-5 branco_calvo text-home">
                             <h6>Receitas</h6>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-9">
+        <div class="col-8 padding_zero">
             <div class="row margin_linha">
                 <div class="col-md-8 offset-md-1 centro">
                     <h2>ENTREGAMOS EM TODA CIDADE DE SÃO PAULO</h2>
@@ -91,7 +144,7 @@
                         <div class="col-sm-2 icones">
                             <svg-icon [src]="headphone" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                         </div>
-                        <div class="col-sm-6 centro">
+                        <div class="col-sm-6 centro font-20px">
                             <span>PABX</span><br>
                             <span>2723-6000</span>
                         </div>
@@ -102,7 +155,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-9">
+        <div class="col-8 padding_zero">
             <div class="row margin_linha">
                 <div class="col-sm-2">
                     <div class="row">
@@ -218,7 +271,7 @@
         </div>
     </div>
     <div class="row justify-content-center display">
-        <div class="col-9 margin_linha bg-kit">
+        <div class="col-8 margin_linha bg-kit">
             <div class="row margin-kit">
                 <div class="col-sm-1 offset-sm-2 branco_calvo font-kit">
                     <h2>Kits Especiais</h2>
@@ -269,7 +322,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-9 margin_linha">
+        <div class="col-8 padding_zero margin_linha">
             <div class="row">
                 <div class="col-md-7 offset-md-2 centro espaco_top_bottom" >
                     <h3>OFERTAS DA SEMANA</h3>
@@ -288,7 +341,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-9">
+        <div class="col-8 padding_zero">
             <div class="row margin_linha">
                 <div class="col-md-3">
                     <div class="row">
@@ -359,12 +412,12 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-9 margin_linha">
+        <div class="col-8 margin_linha">
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-sm-9 posicao_sobre desktop">
                                     <h4>
                                         Fale com 
@@ -372,7 +425,7 @@
                                         compradores
                                     </h4>
                                 </div>
-                            </div>
+                            </div> -->
                             <img [src]="compradores" alt="" class="central">
                             <div class="row">
                                 <div class="col-sm-4">
@@ -383,7 +436,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-9 posicao_sobre desktop">
                             <h4>
                                     Seja nosso
@@ -394,16 +447,16 @@
                             <h6>Fale com nossos compradores</h6>
                             <button class="btn_saiba_mais_mobile">Saiba Mais</button>
                         </div>
-                    </div>
+                    </div> -->
                     <img [src]="fornecedores" alt="" class="central">                        
                     <div class="row">
                         <div class="col-sm-4">
                             <button class="btn-saiba_yellow desktop" (click)="fornecedor()">Saiba Mais</button>
                         </div>
                         <div class="col-sm-12 posicao_sobre  mobile">
-                                <h6>Seja nosso fornecedor</h6>
-                                <button class="btn_saiba_mais_mobile">Saiba Mais</button>
-                            </div>
+                            <h6>Seja nosso fornecedor</h6>
+                            <button class="btn_saiba_mais_mobile">Saiba Mais</button>
+                        </div>
                     </div>
                 </div>
             </div>

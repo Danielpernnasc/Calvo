@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class ProgramaComponent implements OnInit {
 
   constructor() { }
-
+  slidexIndex = true;
   ngOnInit(): void {
+  }
+
+  clickdots(n) {
+    var slideIndex 
+    slideIndex = 1;
+    showDivs(slideIndex = n);
+    function showDivs(n) {
+      
+    }
   }
   prog= 'Programa';
   fid= 'de Fidelidade';

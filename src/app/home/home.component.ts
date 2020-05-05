@@ -1,15 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
-  ngOnInit() {
-  }
+  
+
+  ngOnInit() { 
+}
+//  selecionar(n) {
+//     var slideIndex
+//     slideIndex = 1;
+//     ShowDivs(slideIndex = n);
+//     function ShowDivs(n) {
+//       var i;
+//       var x = document.getElementsByClassName('icone-lista');
+//       var dots = document.getElementsByClassName('adicionar');
+//       if (n > x.length) {slideIndex = 1}
+//       if(n < 1 ) {slideIndex = x.length}
+//       for (i = 0; i < x.length; i++) {
+//         x[i].classList.toggle("none");
+//       }
+//       for (i = 0; i < dots.length; i++) {
+//         dots[i].className = dots[i].className.replace(" active", " ");
+//       }
+//       x[slideIndex-1].classList.toggle('block');
+//       dots[slideIndex-1].className += " active";
+//     }
+//   }
+
+
   fornecedor() {
     this.router.navigateByUrl('fornecedor');
   }
@@ -53,8 +79,19 @@ export class HomeComponent implements OnInit {
   papelaria: any = 'assets/img/home/papelaria.png';
   descartaveis: any = 'assets/img/home/descartaveis.png';
   banner_mob: any = 'assets/img/home/banner1.png';
-  prog = "Programa";
-  fid = "de Fidelidade";
+  newbanner_mob: any = 'assets/img/home/newbanner1.png';
+  newbanner_desk: any = 'assets/img/home/newbanner1.png';
+  maesday:any="assets/img/home/campanha_dia_maes.png";
+  program_fidel: any = 'assets/img/programa/b@2x.png';
+  apple_desktop: any = 'assets/icones_svg/apple_desktop.svg';
+  android_desktop: any = 'assets/icones_svg/android_desktop.svg';
+  banner_empresa: any = 'assets/img/home/banner_empresa.png';
+  bannerdicas: any ='assets/img/dicas/banner@2x.png';
+  D = 'Dicas';
+  busniess = 'para o seu negócio';
+  prog= 'Programa';
+  fid= 'de Fidelidade';
+  down= "Baixe nosso aplicativo";
   
 
 }

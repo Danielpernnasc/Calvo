@@ -10,8 +10,6 @@ import { FornecedorModule } from './fornecedor';
 import { KitsModule } from './kits';
 
 
-
-
 @NgModule({
   imports: [
     CommonModule,
@@ -22,7 +20,6 @@ import { KitsModule } from './kits';
     FornecedorModule,
     KitsModule,
     HomeRoutingModule
-
 
   ],
   declarations: [HomeComponent],
