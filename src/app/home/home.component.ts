@@ -71,6 +71,8 @@ export class HomeComponent implements OnInit {
   program_fidel: any = 'assets/img/programa/b@2x.png';
   apple_desktop: any = 'assets/icones_svg/apple_desktop.svg';
   android_desktop: any = 'assets/icones_svg/android_desktop.svg';
+  apple: any = 'assets/icones_svg/apple.svg';
+  android: any = 'assets/icones_svg/android.svg';
   banner_empresa: any = 'assets/img/home/banner_empresa.png';
   bannerdicas: any ='assets/img/dicas/banner@2x.png';
   D = 'Dicas';

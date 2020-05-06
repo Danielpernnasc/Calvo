@@ -1,83 +1,133 @@
 
-     <div class="row justify-content-center">
-        <div class="col-10 margintop_carrossel">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                        <!-- Indicators -->
-                        <ul class="carousel-indicators">
-                          <li data-target="#demo" data-slide-to="0" class="active"></li>
-                          <li data-target="#demo" data-slide-to="1"></li>
-                          <li data-target="#demo" data-slide-to="2"></li>
-                          <li data-target="#demo" data-slide-to="3"></li>
-                          <li data-target="#demo" data-slide-to="4"></li>
-                        </ul>
-                        
-                        <!-- The slideshow -->
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                                <div class="col-12 ">
-                                    <img class="central border_radius" [src]="maesday" alt="">
+    <div class="row justify-content-center">
+        <div class="col-10 margintop_carrossel desktop">
+            <div id="slide_desk" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="col-12 ">
+                            <img class="central border_radius" [src]="maesday" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div  class="col-12">
+                            <img [src]="newbanner_desk"  class="central border_radius" alt="">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button class="btn-home-saiba">Saiba Mais</button>
                                 </div>
-                          </div>
-                          <div class="carousel-item">
-                                <div  class="col-12">
-                                    <img [src]="newbanner_desk"  class="central border_radius" alt="">
-                                    <!-- <div class="row">
-                                        <div class="col-lg branco_calvo font-carousel">
-                                            <h1>O Melhor<br> Atacado da<br> Zona Leste</h1>
-                                        </div>
-                                    </div> -->
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <button class="btn-home-saiba">Saiba Mais</button>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div  class="col-12">
+                            <img class="central border_radius" [src]="banner_empresa" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div  class="col-12">
+                            <img class="central border_radius" [src]="program_fidel" alt="">
+                            <div class="row titulo_absolute">
+                                <div class="col-lg branco_calvo font-25px">
+                                    <h1>{{prog}}<br>{{fid}}</h1>
                                 </div>
-                          </div>
-                          <div class="carousel-item">
-                                <div  class="col-12">
-                                    <img class="central border_radius" [src]="banner_empresa" alt="">
+                            </div>
+                            <div class="row titulo_absolute_abaixo">
+                                <div class="col-12 subt_progra_app_">
+                                    <h2>{{down}}</h2>
                                 </div>
-                          </div>
-                          <div class="carousel-item">
-                                <div  class="col-12">
-                                    <img class="central border_radius" [src]="program_fidel" alt="">
-                                    <div class="row titulo_absolute">
-                                        <div class="col-lg branco_calvo font-25px">
-                                            <h1>{{prog}}<br>{{fid}}</h1>
-                                        </div>
+                            </div>
+                            <div class="row icones_app">
+                                <div class="col-6">
+                                    <svg-icon [src]="apple_desktop" ></svg-icon>
+                                </div>
+                                <div class="col-6">
+                                    <svg-icon [src]="android_desktop"></svg-icon>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div  class="col-12">
+                            <img class="central border_radius"[src]="bannerdicas" alt="">
+                            <div class="row titulo_absolute">
+                                <div class="col-12">
+                                    <div class="col-lg branco_calvo font-carousel">
+                                        <h1>{{D}}</h1>
                                     </div>
-                                    <div class="row titulo_absolute_abaixo">
-                                        <div class="col-12 subt_progra_app_">
-                                            <h2>{{down}}</h2>
-                                        </div>
-                                    </div>
-                                    <div class="row icones_app">
-                                        <div class="col-6">
-                                            <svg-icon [src]="apple_desktop" ></svg-icon>
-                                        </div>
-                                        <div class="col-6">
-                                            <svg-icon [src]="android_desktop"></svg-icon>
-                                        </div>
-                                    </div>
-                                    </div>
-                          </div>
-                          <div class="carousel-item">
-                                <div  class="col-12">
-                                    <img class="central border_radius"[src]="bannerdicas" alt="">
-                                    <div class="row titulo_absolute">
-                                        <div class="col-12">
-                                            <div class="col-lg branco_calvo font-carousel">
-                                                <h1>{{D}}</h1>
-                                            </div>
-                                            <div class="col-lg branco_calvo font-carousel">
-                                                <h2>{{busniess}}</h2>
-                                            </div>
-                                        </div>
+                                    <div class="col-lg branco_calvo font-carousel">
+                                        <h2>{{busniess}}</h2>
                                     </div>
                                 </div>
-                          </div>
-                        </div>      
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+                <ul class="carousel-indicators">
+                    <li data-target="#slide_desk" data-slide-to="0" class="active"></li>
+                    <li data-target="#slide_desk" data-slide-to="1"></li>
+                    <li data-target="#slide_desk" data-slide-to="2"></li>
+                    <li data-target="#slide_desk" data-slide-to="3"></li>
+                    <li data-target="#slide_desk" data-slide-to="4"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 mobile margintop_carrossel_mob">
+            <div id="slide_mobile" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class=" ">
+                        <div class="col-12 ">
+                            <img class="central border_radius" [src]="maesday" alt="">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div  class="col-12">
+                            <img [src]="newbanner_desk"  class="central border_radius" alt="">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button class="btn-home-saiba">Saiba Mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div  class="col-12">
+                            <img class="central border_radius" [src]="banner_empresa" alt="">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div  class="col-12">
+                            <img class="central border_radius" [src]="program_fidel" alt="">
+                            <div class="row margin_top_mobile_fidel_home">
+                                <div class="col-10 branco_calvo font-carousel_mob">
+                                    <h5>{{prog}}<br>{{fid}}</h5>
+                                    <h6>{{down}}</h6>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: -50px;">
+                                <div class="col-1 offset-1 icones_app_mobile">
+                                    <svg-icon [src]="apple"></svg-icon>
+                                </div>
+                                <div class="col-1 icones_app_mobile">
+                                    <svg-icon [src]="android"></svg-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div  class="col-12">
+                            <img class="central border_radius"[src]="bannerdicas" alt="">
+                            
+                        </div>
+                    </div>
+                </div>        
+                <ul class="carousel-indicators">
+                    <li data-target="#slide_mobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#slide_mobile" data-slide-to="1"></li>
+                    <li data-target="#slide_mobile" data-slide-to="2"></li>
+                    <li data-target="#slide_mobile" data-slide-to="3"></li>
+                    <li data-target="#slide_mobile" data-slide-to="4"></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row justify-content-center">
@@ -418,15 +468,6 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-sm-12">
-                            <!-- <div class="row">
-                                <div class="col-sm-9 posicao_sobre desktop">
-                                    <h4>
-                                        Fale com 
-                                        nossos 
-                                        compradores
-                                    </h4>
-                                </div>
-                            </div> -->
                             <img [src]="compradores" alt="" class="central">
                             <div class="row">
                                 <div class="col-sm-4">
@@ -437,26 +478,13 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <!-- <div class="row">
-                        <div class="col-sm-9 posicao_sobre desktop">
-                            <h4>
-                                    Seja nosso
-                                    fornecedor
-                            </h4>
-                        </div>
-                        <div class="col-sm-12 posicao_sobre mobile">
-                            <h6>Fale com nossos compradores</h6>
-                            <button class="btn_saiba_mais_mobile">Saiba Mais</button>
-                        </div>
-                    </div> -->
                     <img [src]="fornecedores" alt="" class="central">                        
                     <div class="row">
                         <div class="col-sm-4">
                             <button class="btn-saiba_yellow desktop" (click)="fornecedor()">Saiba Mais</button>
                         </div>
                         <div class="col-sm-12 posicao_sobre  mobile">
-                            <h6>Seja nosso fornecedor</h6>
-                            <button class="btn_saiba_mais_mobile">Saiba Mais</button>
+                            <button class="btn_saiba_mais_mobile" (click)="fornecedor()">Saiba Mais</button>
                         </div>
                     </div>
                 </div>

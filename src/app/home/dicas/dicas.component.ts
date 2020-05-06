@@ -11,6 +11,7 @@ export class DicasComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  d
   D = 'Dicas';
   busniess = 'para o seu negócio';
   mais_sucesso = 'A CALVO ATACADISTA PREPAROU UM CONTEÚDO EXCLUSIVO PARA AUXILIÁ-LO(A) A TER MAIS SUCESSO NO SEU NEGÓCIO.';
@@ -20,4 +21,5 @@ export class DicasComponent implements OnInit {
   book_2: any = 'assets/img/dicas/L2@2x.png';
   book_3: any = 'assets/img/dicas/L3@2x.png';
   book_4: any = 'assets/img/dicas/L4@2x.png';
+  dicas: any = 'assets/img/dicas/banner@2x.png'
 }
