@@ -65,7 +65,7 @@
         <div class="row margin_linha espaco-left">
             <div  class="col-md-9 padding_zero">
                 <div class="row">
-                    <div class="page col-sm-12">
+                    <div class="page col-sm-12" *ngFor="let item of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" >
                         <div class="row margin_linha">
                             <div class="col-sm-3">
                                 <div class="campo_produtos">
@@ -554,6 +554,8 @@
                                 </div>
                             </div>
                         </div>  
+                    </div>
+                    <div class="page col-sm-12" *ngFor="let item of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" >
                         <div  class="row margin_linha">
                             <div class="col-sm-3">
                                 <div class="campo_produtos">
@@ -677,6 +679,7 @@
                             </div>
                         </div>
                     </div>
+                    <ngb-pagination [collectionSize]="items.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
                   
                     <!-- <div id="pag2" class="page col-sm-12">
                         <div  class="row margin_linha">
@@ -838,7 +841,7 @@
                             <li>
                                 <div class="row">
                                     <div class="col-sm-12 font-red-calvo">
-                                        <h5>Hortifruit</h5>
+                                        <h5>Bebidas</h5>
                                     </div>
                                 </div>
                             </li>

@@ -13,7 +13,7 @@
                             <img [src]="newbanner_desk"  class="central border_radius" alt="">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <button class="btn-home-saiba">Saiba Mais</button>
+                                    <span class="btn-home-saiba" [routerLink]="['/empresa']">Saiba Mais</span>
                                 </div>
                             </div>
                         </div>
@@ -74,37 +74,37 @@
         <div class="col-12 mobile margintop_carrossel_mob">
             <div id="slide_mobile" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class=" ">
+                    <div class="carousel-item active">
                         <div class="col-12 ">
                             <img class="central border_radius" [src]="maesday" alt="">
                         </div>
                     </div>
-                    <div class="">
+                    <div class="carousel-item">
                         <div  class="col-12">
                             <img [src]="newbanner_desk"  class="central border_radius" alt="">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <button class="btn-home-saiba">Saiba Mais</button>
+                            <div class="row margin_linha_btn_atacado">
+                                <div class="col-md-1">
+                                    <span class="btn-home-saiba_mobile" [routerLink]="['/empresa']">Saiba Mais</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="carousel-item">
                         <div  class="col-12">
                             <img class="central border_radius" [src]="banner_empresa" alt="">
                         </div>
                     </div>
-                    <div class="">
+                    <div class="carousel-item">
                         <div  class="col-12">
                             <img class="central border_radius" [src]="program_fidel" alt="">
                             <div class="row margin_top_mobile_fidel_home">
-                                <div class="col-10 branco_calvo font-carousel_mob">
+                                <div class="col-10 branco_calvo font-carousel_mob_home_fidel">
                                     <h5>{{prog}}<br>{{fid}}</h5>
                                     <h6>{{down}}</h6>
                                 </div>
                             </div>
-                            <div class="row" style="margin-top: -50px;">
-                                <div class="col-1 offset-1 icones_app_mobile">
+                            <div class="row linha_app_mobile_fidel">
+                                <div class="col-2 icones_app_mobile">
                                     <svg-icon [src]="apple"></svg-icon>
                                 </div>
                                 <div class="col-1 icones_app_mobile">
@@ -113,10 +113,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="carousel-item">
                         <div  class="col-12">
                             <img class="central border_radius"[src]="bannerdicas" alt="">
-                            
+                            <div class="row margin_top_mobile_dicas">
+                                <div class="col-5 branco_calvo font-carousel_mob">
+                                    <h5>{{D}}</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 subt_progra_app_mob">
+                                    <h6>{{busniess}}</h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>        
@@ -136,7 +145,7 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-sm-12">  
-                            <a class="link_home" [routerLink]="['/programa']">
+                            <a class="link_home">
                                 <img class="central" [src]="fidelidade" alt="">
                             </a>
                         </div>
@@ -147,8 +156,8 @@
                         </div>
                     </div> -->
                     <div class="row">
-                        <div class="col-sm-7 offset-sm-1">
-                            <button class="btn_cadastro">Cadastre-se e Saiba Mais</button>
+                        <div class="col-6 margin_btn_cdtro">
+                            <span class="btn_cadastro" [routerLink]="['/programa']">Cadastre-se e Saiba Mais</span>
                         </div>
                     </div>
                 </div>
@@ -205,7 +214,7 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center desktop">
         <div class="col-8 padding_zero">
             <div class="row margin_linha">
                 <div class="col-sm-2">
@@ -321,6 +330,136 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center mobile">
+        <div class="col-9 padding_zero">
+            <div id="carousel_products" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="mercearia" alt="">
+                                <h4>Mercearia</h4>
+                                <span [routerLink]="['/atacado/mercearia']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="frios" alt="">
+                                <h4>Perecíveis</h4>
+                                <span [routerLink]="['/atacado/pereciveis']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="hortifruit" alt="">
+                                <h4>Hortifruit</h4>
+                                <span [routerLink]="['/atacado/hortifruit']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="limpeza" alt="">
+                                <h4>Limpeza</h4>
+                                <span [routerLink]="['/atacado/limpeza']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                        <div class="col-sm-12 font_calvo_black btn-span centro">
+                            <img [src]="higiene" alt="" class="central">
+                            <h4>Higiene</h4>
+                            <span [routerLink]="['/atacado/higiene']">Ver Tudo</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img [src]="newdrinks" alt="" class="central">
+                                <h4>Bebidas</h4>
+                                <span  [routerLink]="['/atacado/bebidas']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="cestas" alt="">
+                                <h4>Cestas Básicas</h4>
+                                <span [routerLink]="['']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="institucional" alt="">
+                                <h4>Institucional</h4>
+                                <span [routerLink]="['/atacado/institucional']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="carnes" alt="">
+                                <h4>Carnes</h4>
+                                <span [routerLink]="['/atacado/carnes']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img class="central" [src]="pet" alt="">
+                                <h4>Pet</h4>
+                                <span [routerLink]="['/atacado/pet']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img [src]="papelaria" alt="" class="central">
+                                <h4>Papelaria</h4>
+                                <span [routerLink]="['/atacado/papelaria']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-12 font_calvo_black btn-span centro">
+                                <img [src]="descartaveis" alt="" class="central">
+                                <h4>Outros</h4>
+                                <span [routerLink]="['/atacado/outros']">Ver Tudo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="carousel-indicators">
+                    <li data-target="#carousel_products" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_products" data-slide-to="1"></li>
+                    <li data-target="#carousel_products" data-slide-to="2"></li>
+                    <li data-target="#carousel_products" data-slide-to="3"></li>
+                    <li data-target="#carousel_products" data-slide-to="4"></li>
+                    <li data-target="#carousel_products" data-slide-to="5"></li>
+                    <li data-target="#carousel_products" data-slide-to="6"></li>
+                    <li data-target="#carousel_products" data-slide-to="7"></li>
+                    <li data-target="#carousel_products" data-slide-to="8"></li>
+                    <li data-target="#carousel_products" data-slide-to="9"></li>
+                    <li data-target="#carousel_products" data-slide-to="10"></li>
+                    <li data-target="#carousel_products" data-slide-to="11"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-center display">
         <div class="col-8 margin_linha bg-kit">
             <div class="row margin-kit">
@@ -354,12 +493,10 @@
                 </div>
                 <div class="col-sm-4 offset-sm-7 cestas_basicas_mobile">
                     <div class="row">
-                        <div class="col-sm-5">
-                            <img class="central-mobile" [src]="kit_um" alt="">
+                        <div class="col-12 padding_zero">
+                            <img [src]="kit_especial_mob" alt="" class="central-mobile border_radius">
                         </div>
-                        <div class="col-sm-5">
-                            <img class="central-mobile" [src]="kit_dois" alt="">
-                        </div>
+        
                     </div>
                     <div class="row">
                         <div class="col-sm-6 offset-sm-2">
@@ -380,10 +517,10 @@
                 </div>
                 <div class="col-md-3">
                     <button class="btn-tabloide flex" (click)="baixartabloide()">
-                        <div class="col-sm-6 offset-sm-4 legenda-btn-tabloide">
+                        <div class="col-8 legenda-btn-tabloide">
                             Baixar Tabloide
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-3">
                             <svg-icon [src]="orcamento" [svgStyle]="{'width.px':30 }"></svg-icon>
                         </div>
                     </button>

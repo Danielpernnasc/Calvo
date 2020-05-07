@@ -16,7 +16,15 @@ import { ModalhortifruitService } from './modal-hortifruit/modalhortifruit.servi
 
 
 export class HortifruitComponent implements OnInit {
-  constructor(private modalService: ModalhortifruitService) {}
+  name = 'Hortifruit';
+  page = 1;
+  pageSize = 1;
+  items = []
+  constructor(private modalService: ModalhortifruitService) {
+    for(let i = 1; i <= 72; i++) {
+      this.items.push({ Name:  + i});
+    }
+  }
 
   ngOnInit() {
       // $(function(){
@@ -29,11 +37,8 @@ export class HortifruitComponent implements OnInit {
       //   $("#"+id+"").addClass("active_page");
       //   });
       // })
-
   }
   
-
-
   openModal(id: string) {
     this.modalService.open(id);
   }
