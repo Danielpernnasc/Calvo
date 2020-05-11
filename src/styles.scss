@@ -746,7 +746,7 @@ width: 200px;
 }
 .margin_linha_btn_atacado {
   position: absolute;
-  margin: -45px 0;
+  margin: -45px 3px;
 }
 .btn-home-saiba_mobile {
   background: #FF0000;
@@ -961,7 +961,8 @@ width: 200px;
   margin: 25px 10px;
 }
 .linha_app_mobile_fidel {
-  margin: -50px 0 10px 0;
+  position: absolute;
+  margin: -45px 0;
 }
 .icones_app_mobile {
   text-align: center;
@@ -1094,6 +1095,9 @@ width: 200px;
   position: relative;
   width:100px;
   height: 30px;
+}
+.text-left {
+  text-align: left
 }
 .margin_btn_cdtro {
   margin: -25px 10px;
@@ -1257,9 +1261,9 @@ width: 200px;
   margin: 8px 0;
 }
 .produtos_selec {
-  background: url('assets/img/empresa/b2.png');
   height: 419px;
   background-repeat: no-repeat;
+  border-radius: 10px;
 }
 .produtos_selec_mobile {
   background: url('assets/img/empresa/b2.png');
@@ -2194,10 +2198,10 @@ body.modal-open {
 }
 .icones_app {
   position: absolute;
-  margin: -150px 100px;
+  margin: -100px 0 0 150px;
 }
 .bg-image-prog {
-  background-image: url('assets/img/programa/b@2x.png');
+  background-image: url('assets/img/programa/newbannerfidel.png');
   height: 600px;
   margin-top:12%;
   background-repeat: no-repeat;
@@ -2284,19 +2288,14 @@ body.modal-open {
   }
 }
 .bg-image-dicas {
-  background-image: url('assets/img/dicas/banner@2x.png');
-  height: 500px;
+  background-image: url('assets/img/dicas/new_banner_dica.png');
+  height: 600px;
   margin-top:12%;
   background-repeat: no-repeat;
   border: solid #fff;
   border-radius: 10px;
 }
-.bg-image-dicas_mob {
-  background-image: url('assets/img/dicas/banner@2x_mob.png');
-  height: 500px;
-  margin-top:18%;
-  background-repeat: no-repeat;
-}
+
 .display_dicas {
   @media screen and (max-width: 1700px) {
     .bg-image-dicas {
@@ -2559,9 +2558,11 @@ body.modal-open {
 .text_itens {
   color: $font_calvo_gray;
 }
+.padding_top_70px {
+  padding-top: 70px;
+}
 .campo_kits_especiais {
-  height: 600px;
-  margin-top:12%;
+  margin-top:180px;
 }
 .bg_topo_cesta {
   background: $bg_calvo_blue;
@@ -2571,9 +2572,44 @@ body.modal-open {
   @include titulo_white;
   text-align: right;
 }
+.bg_topo_cesta > h2 {
+  @include titulo_white;
+
+}
 .bg_topo_cesta > h3 {
   color: $branco_calvo;
   text-align: right;
+}
+.bg_topo_cesta_mobile {
+  background: $bg_calvo_blue;
+  margin: 20px 0;
+  // margin: 40px 0;
+}
+.bg_topo_cesta_mobile > h2 {
+  @include titulo_white;
+  text-align: right
+
+}
+.bg_topo_cesta_mobile > h3 {
+  color: $branco_calvo;
+  text-align: right;
+}
+.bg_topo_cesta_mobile{
+  @include titulo_white;
+  text-align: right;
+}
+.margin_top_kit_mobile {
+  margin: -88px 0 0 -25px;
+}
+.lista_mobile_kit {
+  font-size: 12px;
+  ul li {
+    list-style: none;
+    text-align: left;
+    padding: 10px 0;
+ 
+
+  }
 }
 .caixa_cestas {
   padding: 0 25px;
@@ -2620,7 +2656,7 @@ modal-kit {
   .modal-body-kit {
     background: #fff;
     padding: 30px 0;
-    margin: 10% 25%;
+    margin: 10%;
     border-radius: 10px;
   }
   .kit-modal-background {
@@ -2639,12 +2675,13 @@ modal-kit {
     z-index: 900;
 }
 .btn-avancar {
-  width: 100%;
+  width: 200px;
   padding: 10px;
   background: 0;
   border: solid #B4B4BC;
   border-radius: 5px;
-  margin: 30px 0;
+  display: block;
+  margin: 30px auto;
   color: $font_calvo_gray;
 }
 .campo_ifood > h6 {
@@ -2652,6 +2689,7 @@ modal-kit {
 }
 .campo_padding {
   padding: 0 40px;
+  text-align: right;
 }
 }
 body.modal_campo {
@@ -2714,7 +2752,7 @@ body.modal_campo {
 .btn_saiba_mais_mobile {
   border: 0;
   display: block;
-  margin: -66px auto 0 auto;
+  margin: -50px auto 0 auto;
   background: #FFCA00;
   border-radius: 5px;
 }

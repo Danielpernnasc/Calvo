@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
   fornecedor() {
     this.router.navigateByUrl('fornecedor');
   }
+  uscompradores() {
+    this.router.navigateByUrl('comprador');
+  }
   kits_especiais() {
     this.router.navigateByUrl('kits_especiais');
   }
@@ -54,7 +57,7 @@ export class HomeComponent implements OnInit {
   oferta_f: any ="assets/img/home/f.png";
   oferta_g: any ="assets/img/home/g.png";
   oferta_h: any ="assets/img/home/h.png";
-  compradores: any ="assets/img/home/ID09@2x.png";
+  comprador: any ="assets/img/home/ID09@2x.png";
   fornecedores: any ="assets/img/home/ID10.png";
   img_fundo: any = 'assets/img/home/banner2.png';
   hortifruit: any = 'assets/img/home/hortifruit.png';
@@ -68,13 +71,14 @@ export class HomeComponent implements OnInit {
   newbanner_mob: any = 'assets/img/home/newbanner1.png';
   newbanner_desk: any = 'assets/img/home/newbanner1.png';
   maesday:any="assets/img/home/campanha_dia_maes.png";
-  program_fidel: any = 'assets/img/programa/b@2x.png';
+  program_fidel: any = 'assets/img/home/new_banner_fidel_to_home.png';
+  program_fidel_mob: any = 'assets/img/home/prog_fidel_mob_to_home.png';
   apple_desktop: any = 'assets/icones_svg/apple_desktop.svg';
   android_desktop: any = 'assets/icones_svg/android_desktop.svg';
-  apple: any = 'assets/icones_svg/apple.svg';
-  android: any = 'assets/icones_svg/android.svg';
+  apple_mobile: any = 'assets/icones_svg/apple_mobile.svg';
+  android_mobile: any = 'assets/icones_svg/android_mobile.svg';
   banner_empresa: any = 'assets/img/home/banner_empresa.png';
-  bannerdicas: any ='assets/img/dicas/banner@2x.png';
+  bannerdicas: any ='assets/img/dicas/new_banner_dica.png';
   kit_especial_mob: any ='assets/img/home/kit_especial_mob.png'
   D = 'Dicas';
   busniess = 'para o seu negócio';

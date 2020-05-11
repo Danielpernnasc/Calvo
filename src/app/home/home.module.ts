@@ -8,6 +8,7 @@ import { ReceitasModule } from './receitas';
 import { DicasModule } from './dicas';
 import { FornecedorModule } from './fornecedor';
 import { KitsModule } from './kits';
+import { FaleCompradorModule } from './fale-comprador';
 
 
 
@@ -19,6 +20,7 @@ import { KitsModule } from './kits';
     ProgramaModule,
     ReceitasModule,
     DicasModule,
+    FaleCompradorModule,
     FornecedorModule,
     KitsModule,
     HomeRoutingModule,

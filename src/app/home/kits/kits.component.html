@@ -1,18 +1,18 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center desktop">
     <div class="col-9 campo_kits_especiais">
        <div class="row">
-           <div class="col-md-6 caixa_cestas">
+           <div class="col-6 caixa_cestas">
                <div class="row">
-                   <div class="col-sm-12 bg_topo_cesta">
+                   <div class="col-12 bg_topo_cesta">
                        <h1>Cesta Escritório</h1>
                        <h3>Kit Café</h3>
                    </div>
                </div>
                <div class="row">
-                   <div class="col-sm-6 padding_zero cestas_kits">
+                   <div class="col-6 padding_zero cestas_kits">
                        <img [src]="cafe" class="image" alt="">
                    </div>
-                   <div class="col-sm-6 lista_item_kit">
+                   <div class="col-6 lista_item_kit">
                         <h4>Descrição</h4>
                         <ul class="lista_kit">
                             <li>1 Pacote de Café 3 Corações Tradicional</li>
@@ -24,7 +24,7 @@
                    </div>
                </div>
            </div>
-           <div class="col-md-6 caixa_cestas">
+           <div class="col-6 caixa_cestas">
                 <div class="row">
                     <div class="col-sm-12 bg_topo_cesta">
                         <h1>Cesta Escritório</h1>
@@ -48,7 +48,7 @@
                 </div>
            </div>
        </div>
-       <div class="row">
+       <div class="row desktop">
            <div class="col-md-6">
                <div class="row">
                    <div class="col-sm-4">
@@ -72,9 +72,65 @@
        </div>
     </div>
 </div>
+<div class="row justify-content-center padding_top_70px  mobile">
+    <div class="col-10 caixa_cestas bg_topo_cesta_mobile">
+        <h3>Cesta Escritório</h3>
+        <h4>Kit Café</h4>
+        <div class="row">
+            <div class="col-7 margin_top_kit_mobile">
+                <img [src]="cafe" class="central" alt="">
+            </div>
+            <div class="col-5 lista_mobile_kit padding_zero text-left">
+                <h5>Descrição</h5>
+                <ul class="padding_zero">
+                    <li>1 Pacote de Café 3 Corações Tradicional</li>
+                    <li>1 Pacote de Açúcar Refinado União</li>
+                    <li>1 Adoçante Zero Cal</li>
+                    <li>1 Pacote de Bolacha de Água e Sal Renata</li>
+                    <li>1 Pacote de Bolacha de Maisena Bauducco</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <button class="btn_comprar" (click)="openModal('kitespecial')">COMPRAR</button>
+            </div>
+            <div class="col-md-6">
+                <h1>R$ 00,00</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-10 caixa_cestas bg_topo_cesta_mobile">
+        <h3>Cesta Escritório</h3>
+        <h4>Kit Higiene</h4>
+        <div class="row">
+            <div class="col-7 margin_top_kit_mobile">
+                <img [src]="higiene" class="central" alt="">
+            </div>
+            <div class="col-5 lista_mobile_kit padding_zero text-left">
+                <h5>Descrição</h5>
+                <ul class="padding_zero">
+                    <li>1 Pacote de Papel Higiênico Kitchen com 4 rolos</li>
+                    <li>1 Sabonete Jhonson's</li>
+                    <li>1 Pacote de Papel Toalha com 2 rolos</li>
+                    <li>1 Álcool Zulu</li>
+                    <li>1 Limpol Bombril</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <button class="btn_comprar" (click)="openModal('kitespecial')">COMPRAR</button>
+            </div>
+            <div class="col-md-6">
+                <h1>R$ 00,00</h1>
+            </div>
+        </div>
+    </div>
+</div>
 <modal-kit id="kitespecial">
         <div class="row">
-                <div class="col-md-2 offset-md-10 close_black campo_padding">
+                <div class="col-12 close_black campo_padding">
                     <span (click)="closeModal('kitespecial')">X</span>
                 </div>
             </div>
@@ -90,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4 offset-sm-4">
+                                <div class="col-12">
                                     <button class="btn-avancar">AVANÇAR</button>
                                 </div>
                             </div>

@@ -22,6 +22,7 @@ export class EmpresaComponent implements OnInit {
   banner_mob:any="assets/img/empresa/b1.png";
   banner_mob_baixo:any="assets/img/empresa/b2.png";
   banner_empresa: any = 'assets/img/empresa/banner_empresa.png';
+  banner_desk_baixo: any="assets/img/empresa/b2.png";
 
 
 
