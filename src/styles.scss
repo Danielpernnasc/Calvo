@@ -456,7 +456,9 @@ $font-carousel_mob: 40px;
   .campo_direitos_mob {display:none}
 
 }
-
+.bold > h1, .bold > h2, .bold > h3, .bold > h4, .bold > h5, .bold > h6 {
+  font-weight: bold;
+}
 .epaco_mag_cal {
   background: $bg_calvo_red;
   padding: 17px 0;
@@ -2583,6 +2585,7 @@ body.modal-open {
 .bg_topo_cesta_mobile {
   background: $bg_calvo_blue;
   margin: 20px 0;
+  padding: 0 4px;
   // margin: 40px 0;
 }
 .bg_topo_cesta_mobile > h2 {
@@ -2599,7 +2602,11 @@ body.modal-open {
   text-align: right;
 }
 .margin_top_kit_mobile {
-  margin: -88px 0 0 -25px;
+  margin: -89px 0 0 31px;
+}
+.margin_top_btn_kit_mobile {
+  position: absolute;
+  margin-top: 236px;
 }
 .lista_mobile_kit {
   font-size: 12px;
@@ -2823,4 +2830,13 @@ body.modal_campo {
 .margin_vertical_10px{
   margin: 10px 0;
 }
-
+.padding_laterais_30px {
+  padding: 0 30px;
+}
+.compras_categorias > h3 {
+ @include titulo_darkgray;
+ font-weight: bold;
+}
+.margin_top_20px_valor_mobile {
+  margin-top:-20px
+}
