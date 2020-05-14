@@ -115,7 +115,7 @@
                               Mercearia
                             </span>
                           </a>
-                          <a class="sub_link_mob" [routerLink]="['/atacado/hortifruit']">
+                          <a class="sub_link_mob" [routerLink]="['/atacado/hortifruti']">
                             <span (click)="closeNav()">
                               Hortifruti
                             </span>
@@ -284,7 +284,7 @@
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/higiene']">Higiene</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/limpeza']">Limpeza</a>
                         <a class="color_link_sub close-nav " [routerLink]="['/atacado/mercearia']">Mercearia</a>
-                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/hortifruit']">Hortifruti</a>
+                        <a class="color_link_sub close-nav" [routerLink]="['/atacado/hortifruti']">Hortifruti</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/institucional']">Institucional</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/pet']">Pet</a>
                         <a class="color_link_sub close-nav" [routerLink]="['/atacado/papelaria']">Papelaria</a>
@@ -339,184 +339,209 @@
     <div class="close-nav">
       <router-outlet></router-outlet>
       <div *ngIf='Footer' class="row newsletter">
-        <div class="col-8 offset-2 desktop">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="row">
-                <div class="col-sm-12 branco_calvo">
-                  <h4>{{CN}}</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="row">
-                <div class="col-sm-12 branco_calvo center">
-                  <h4>Siga-nos nas Redes Sociais</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="row">
-                <div class="col-sm-12 branco_calvo center">
-                  <h4>Receba nossas ofertas no seu</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
+          <div class="col-8 offset-2 desktop">
+            <div class="row">
+              <div class="col-md-4">
                 <div class="row">
-                  <div class="col-sm-10">
-                    <form id="esconder_form" [formGroup]="registerForm" (ngSubmit)="onSubmit_newsletter()"> 
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <input type="text" formControlName="email" class="formcontrol" [ngClass]="{'campo_invalido': submittednews && f.email.errors }"  />
-                                <div *ngIf="submittednews && f.email.errors" class="email_invalido">
-                                    <div class="alert_left" *ngIf="f.email.errors.required">{{need}}</div>
-                                    <div class="alert_left" *ngIf="f.email.errors.email">{{error}}</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <button class="btn-cadastrar_news_footer">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="row">
-                        <div  id="sucesso" class="col-sm-12 sucesso_news">
-                            <span>
-                                <svg-icon [src]="ok" [svgStyle]="{ 'width.px':35}"></svg-icon>
-                            </span>
-                            &nbsp;
-                            <span>{{sucess}}</span>
-                        </div>
-                    </div>   
-                  </div>  
-                </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="row">
-                <div class="col-sm-4 offset-sm-4  social">
-                  <svg-icon [src]="facebook" [svgStyle]="{ 'width.%':100 }"></svg-icon>
-                </div>
-                <div class="col-sm-4  social">
-                  <svg-icon [src]="instagram" [svgStyle]="{ 'width.%':100 }"></svg-icon>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 offset-sm-1">
-              <div class="row campo_btn_whats">
-                  <div class="col-sm-6 offset-md-3 whats_desk">
-                    <button class="btn_whats" (click)="whatsapp_btn()">
-                        <span>
-                            <svg-icon [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
-                        </span>
-                        &nbsp;
-                        <span>WHATSAPP</span>
-                    </button>
+                  <div class="col-sm-12 branco_calvo">
+                    <h4>{{CN}}</h4>
                   </div>
-                  <div class="col-sm-6 offset-md-1 whats_mob">
-                    <button class="btn_whats">
-                        <span>
-                            <svg-icon [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
-                        </span>
-                        &nbsp;
-                        <span>WHATSAPP</span>
-                    </button>
-                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 mobile">
-           <div class="row justify-content-center">
-              <div class="col-9 mobile_newsletter">
-                <h6>Cadastre-se em Nossa Newsletter</h6>
-                <input type="text"  class="formcontrol"/>
-                  <button class="btn_mobile_enviar">Enviar</button>
-              </div>
-           </div>
-           <div class="row">
-              <div class="col-sm-12 mobile_newsletter">
-                <h6>Siga nas redes sociais</h6>
+              <div class="col-md-4">
                 <div class="row">
-                  <div class="col-sm-12 flex">
-                      <span>
-                          <svg-icon class="social_mob" [src]="facebook" [svgStyle]="{ 'width.px':30 }"></svg-icon>
-                      </span>
-                      <span>
-                          <svg-icon class="social_mob" [src]="instagram" [svgStyle]="{ 'width.px':30 }"></svg-icon>
-                      </span>
+                  <div class="col-sm-12 branco_calvo center">
+                    <h4>Siga-nos nas Redes Sociais</h4>
                   </div>
                 </div>
               </div>
-           </div>
-           <div class="row">
-             <div class="col-sm-12 mobile_newsletter center">
-                <h6>Receba nossas ofertas no seu</h6>
-                <button class="btn_whats" (click)="whatsapp_btn()">
-                    <span>
-                      <svg-icon>
-                          <svg-icon class="social_mob_what" [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
-                      </svg-icon>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-sm-12 branco_calvo center">
+                    <h4>Receba nossas ofertas no seu</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <form id="esconder_form" [formGroup]="registerForm" (ngSubmit)="onSubmit_newsletter()"> 
+                          <div class="row">
+                              <div class="col-sm-9">
+                                  <input type="text" formControlName="email" class="formcontrol" [ngClass]="{'campo_invalido': submittednews && f.email.errors }"  />
+                                  <div *ngIf="submittednews && f.email.errors" class="email_invalido">
+                                      <div class="alert_left" *ngIf="f.email.errors.required">{{need}}</div>
+                                      <div class="alert_left" *ngIf="f.email.errors.email">{{error}}</div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-2">
+                                  <button class="btn-cadastrar_news_footer">Enviar</button>
+                              </div>
+                          </div>
+                      </form>
+                      <div class="row">
+                          <div  id="sucesso" class="col-sm-12 sucesso_news">
+                              <span>
+                                  <svg-icon [src]="ok" [svgStyle]="{ 'width.px':35}"></svg-icon>
+                              </span>
+                              &nbsp;
+                              <span>{{sucess}}</span>
+                          </div>
+                      </div>   
+                    </div>  
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="row">
+                  <div class="col-sm-4 offset-sm-4  social">
+                    <span class="btn_social" (click)="facebooksocial()">
+                        <svg-icon [src]="facebook" [svgStyle]="{ 'width.%':100 }"></svg-icon>
                     </span>
-                    <span>Whatsapp</span>
-                </button>
-             </div>
-           </div>
-        </div>
-      </div>
-      <div  *ngIf='Footer' class="row header_footercalvo justify-content-center">
-        <div class="col-11 offset-1 Footer_desk">
-          <div class="row">
-            <div class="col-md-5 offset-md-1 branco_calvo ">
-              <h5>Mapa do Site</h5>
-            </div>
-            <div class="col-md-3 offset-md-1 branco_calvo ">
-                <h6>{{address_calvo}}</h6>
-              </div>
-          </div>
-          <div  class="row">
-            <div class="col-3 offset-md-1 ">
-              <nav>
-                <ul>
-                  <li class="close-nav"><a class="link_footer" [routerLink]="'/home'">Home</a></li>
-                  <li class="close-nav"> <a class="link_footer" [routerLink]="'/empresa'">Empresa</a> </li>
-                  <li class="close-nav"><a class="link_footer" [routerLink]="'/atacado'">Atacado</a></li>
-                  <li class="close-nav"><a class="link_footer" [routerLink]="'/parceiros'">Parceiros</a></li>
-                  <li class="close-nav"><a class="link_footer" [routerLink]="'/jornal'">Jornal</a></li>
-                  <li class="close-nav"><a class="link_footer" [routerLink]="'/contato'">Contado</a></li>
-                  <li class="close-nav"><a class="link_footer" [routerLink]="'/newsletter'">Newsletter</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="col-3">
-              <img class="central tamanho" [src]="cartoes" alt="">
-            </div>
-            <div class="col-3 altura">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.903137840245!2d-46.50882804939331!3d-23.571922067792354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6770758a867b%3A0xbdd2c7e9016622c0!2sAv.%20Rio%20das%20Pedras%2C%202118%20-%20Jardim%20Aricanduva%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003452-100!5e0!3m2!1spt-BR!2sbr!4v1582290819582!5m2!1spt-BR!2sbr"
-                width="100%" height="100%" frameborder="0"  allowfullscreen="">
-              </iframe>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 Footer_mobile">
-              <div class="row">
-                  <img class="central tamanho_real" [src]="cartoes" alt="">
-              </div>
-              <div class="row google_maps_mobile">
-                  <div class="col-sm-12 padddin_zero">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.903137840245!2d-46.50882804939331!3d-23.571922067792354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6770758a867b%3A0xbdd2c7e9016622c0!2sAv.%20Rio%20das%20Pedras%2C%202118%20-%20Jardim%20Aricanduva%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003452-100!5e0!3m2!1spt-BR!2sbr!4v1582290819582!5m2!1spt-BR!2sbr"
-                        width="100%" height="100%" frameborder="0"  allowfullscreen="">
-                       </iframe>
                   </div>
-                
+                  <div class="col-sm-4  social">
+                    <span class="btn_social" (click)="instagramsocial()">
+                        <svg-icon [src]="instagram" [svgStyle]="{ 'width.%':100 }"></svg-icon>
+                    </span>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 offset-sm-1">
+                <div class="row campo_btn_whats">
+                    <div class="col-sm-6 offset-md-3 whats_desk">
+                      <button class="btn_whats" (click)="whatsapp_btn()">
+                          <span>
+                              <svg-icon [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                          </span>
+                          &nbsp;
+                          <span>WHATSAPP</span>
+                      </button>
+                    </div>
+                    <div class="col-sm-6 offset-md-1 whats_mob">
+                      <button class="btn_whats">
+                          <span>
+                              <svg-icon [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                          </span>
+                          &nbsp;
+                          <span>WHATSAPP</span>
+                      </button>
+                    </div>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="col-12 mobile">
+             <div class="row justify-content-center">
+                <div class="col-9 mobile_newsletter">
+                  <h6>Cadastre-se em Nossa Newsletter</h6>
+                  <input type="text"  class="formcontrol"/>
+                    <button class="btn_mobile_enviar">Enviar</button>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-sm-12 mobile_newsletter">
+                  <h6>Siga nas redes sociais</h6>
+                  <div class="row">
+                    <div class="col-sm-12 flex">
+                        <span class="btn-social" (click)="facebooksocial()">
+                            <svg-icon class="social_mob" [src]="facebook" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                        </span>
+                        <span class="btn-social" (click)="instagramsocial()">
+                            <svg-icon class="social_mob" [src]="instagram" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                        </span>
+                    </div>
+                  </div>
+                </div>
+             </div>
+             <div class="row">
+               <div class="col-sm-12 mobile_newsletter center">
+                  <h6>Receba nossas ofertas no seu</h6>
+                  <button class="btn_whats" (click)="whatsapp_btn()">
+                      <span>
+                        <svg-icon>
+                            <svg-icon class="social_mob_what" [src]="whatsapp" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+                        </svg-icon>
+                      </span>
+                      <span>Whatsapp</span>
+                  </button>
+               </div>
+             </div>
+          </div>
         </div>
-      </div>
+        <div  *ngIf='Footer' class="row header_footercalvo justify-content-center">
+          <div class="col-11 offset-1 Footer_desk">
+            <div class="row">
+              <div class="col-md-5 offset-md-1 branco_calvo ">
+                <h5>Mapa do Site</h5>
+              </div>
+              <div class="col-md-4 branco_calvo text-right">
+                  <h6>{{address_calvo}}</h6>
+                </div>
+            </div>
+            <div  class="row">
+              <div class="col-3 offset-md-1 ">
+                <nav>
+                  <ul>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'/home'">Home</a></li>
+                    <li class="close-nav"> <a class="link_footer" [routerLink]="'/empresa'">Empresa</a> </li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'/atacado'">Atacado</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'/parceiros'">Parceiros</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'/jornal'">Jornal</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'/contato'">Contado</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'/newsletter'">Newsletter</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-3">
+                <img class="central tamanho" [src]="cartoes" alt="">
+              </div>
+              <div class="col-3 altura">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.903137840245!2d-46.50882804939331!3d-23.571922067792354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6770758a867b%3A0xbdd2c7e9016622c0!2sAv.%20Rio%20das%20Pedras%2C%202118%20-%20Jardim%20Aricanduva%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003452-100!5e0!3m2!1spt-BR!2sbr!4v1582290819582!5m2!1spt-BR!2sbr"
+                  width="100%" height="100%" frameborder="0"  allowfullscreen="">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12 Footer_mobile">
+                <div class="row">
+                    <img class="central tamanho_real" [src]="cartoes" alt="">
+                </div>
+                <div class="row google_maps_mobile">
+                    <div class="col-sm-12 padddin_zero">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.903137840245!2d-46.50882804939331!3d-23.571922067792354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6770758a867b%3A0xbdd2c7e9016622c0!2sAv.%20Rio%20das%20Pedras%2C%202118%20-%20Jardim%20Aricanduva%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003452-100!5e0!3m2!1spt-BR!2sbr!4v1582290819582!5m2!1spt-BR!2sbr"
+                          width="100%" height="100%" frameborder="0"  allowfullscreen="">
+                         </iframe>
+                    </div>
+                  
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row epaco_mag_cal justify-content-center">
+          <div class="col-9">
+                <div class="row campo_direitos">
+                  <div class="col-sm-6 calvoatac">
+                      <p>Calvo Atacadista ® 2020 - Todos os Direitos Reservados</p>
+                  </div>
+                  <div class="col-sm-6 magictv">
+                      <span>Desenvolvido por Magic TV</span>
+                  </div>
+                </div>
+                <div class="row campo_direitos_mob">
+                    <div class="col-sm-6 calvoatac_mob">
+                        <p>Calvo Atacadista ® 2020 - Todos os Direitos Reservados</p>
+                    </div>
+                    <div class="col-sm-6 magictv_mob">
+                        <span>Desenvolvido por Magic TV</span>
+                    </div>
+                </div>
+          </div>
+        </div>
       <div class="row epaco_mag_cal justify-content-center">
         <div class="col-9">
               <div class="row campo_direitos">

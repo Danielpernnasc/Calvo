@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
   comprador: any ="assets/img/home/ID09@2x.png";
   fornecedores: any ="assets/img/home/ID10.png";
   img_fundo: any = 'assets/img/home/banner2.png';
-  hortifruit: any = 'assets/img/home/hortifruit.png';
+  hortifruti: any = 'assets/img/home/hortifruti.png';
   higiene: any = 'assets/img/home/newhigienepessoal.png';
   cestas: any = 'assets/img/home/cesta_basicas.png';
   institucional: any = 'assets/img/home/institucional.png';
@@ -70,7 +70,7 @@ export class HomeComponent implements OnInit {
   banner_mob: any = 'assets/img/home/banner1.png';
   newbanner_mob: any = 'assets/img/home/newbanner1.png';
   newbanner_desk: any = 'assets/img/home/newbanner1.png';
-  maesday:any="assets/img/home/campanha_dia_maes.png";
+  maesday:any ="assets/img/home/campanha_dia_maes.png";
   program_fidel: any = 'assets/img/home/new_banner_fidel_to_home.png';
   program_fidel_mob: any = 'assets/img/home/prog_fidel_mob_to_home.png';
   apple_desktop: any = 'assets/icones_svg/apple_desktop.svg';

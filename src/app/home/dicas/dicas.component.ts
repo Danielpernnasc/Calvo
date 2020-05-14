@@ -21,5 +21,6 @@ export class DicasComponent implements OnInit {
   book_2: any = 'assets/img/dicas/L2@2x.png';
   book_3: any = 'assets/img/dicas/L3@2x.png';
   book_4: any = 'assets/img/dicas/L4@2x.png';
-  dicas: any = 'assets/img/dicas/new_banner_dica.png'
+  dicas: any = 'assets/img/dicas/new_banner_dica.png';
+  bgimagedicas: any ='assets/img/dicas/new_banner_dica.png';
 }

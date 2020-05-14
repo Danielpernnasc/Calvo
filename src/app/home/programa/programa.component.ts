@@ -33,5 +33,6 @@ export class ProgramaComponent implements OnInit {
   promocao: any = 'assets/icones_svg/programa/promocao.svg';
   mapa: any = 'assets/icones_svg/programa/mapa.svg';
   banner_mob: any = 'assets/img/programa/newbannerfidel.png';
+  bgimageprog: any="assets/img/programa/newbannerfidel.png";
 
 }

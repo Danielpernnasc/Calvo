@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalFriosService } from './modal-frios';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pereciveis',
@@ -8,17 +9,49 @@ import { ModalFriosService } from './modal-frios';
 })
 export class PereciveisComponent implements OnInit {
 
-  constructor(private modalService: ModalFriosService) { }
+  constructor(private modalService: ModalFriosService, private router: Router) { }
 
   ngOnInit() {
     
   }
-
   openModal(id: string) {
     this.modalService.open(id);
   }
   closeModal(id: string) {
     this.modalService.close(id);
+  }
+  link_categorias_bebidas() {
+    this.router.navigateByUrl('atacado/bebidas');
+  }
+  link_categorias_carnes() {
+    this.router.navigateByUrl('atacado/carnes');
+  }
+  link_categorias_pereciveis() {
+    this.router.navigateByUrl('atacado/pereciveis');
+  }
+  link_categorias_higiene() {
+    this.router.navigateByUrl('atacado/higiene');
+  }
+  link_categorias_limpeza() {
+    this.router.navigateByUrl('atacado/limpeza');
+  }
+  link_categorias_mercearia() {
+    this.router.navigateByUrl('atacado/mercearia');
+  }
+  link_categorias_hortifruti() {
+    this.router.navigateByUrl('atacado/hortifruti');
+  }
+  link_categorias_institucional() {
+    this.router.navigateByUrl('atacado/institucional');
+  }
+  link_categorias_pet() {
+    this.router.navigateByUrl('atacado/pet');
+  }
+  link_categorias_papelaria() {
+    this.router.navigateByUrl('atacado/papelaria');
+  }
+  link_categorias_outros() {
+    this.router.navigateByUrl('atacado/outros');
   }
     orcamento: any = 'assets/icones_svg/icone_comprar.svg';
     pesquisar:any ="assets/icones_svg/lupa.svg";

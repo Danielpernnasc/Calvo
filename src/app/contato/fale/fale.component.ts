@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fale',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaleComponent implements OnInit {
   public mask = ['(',/[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/,/\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  trabalhe_conosco(){
+    this.router.navigateByUrl('/contato/trabalhe-conosco');
+  }
+  televendas(){
+    this.router.navigateByUrl('/contato/televendas');
   }
   tel_sale: any = 'assets/icones_svg/contato/telefone_vendas.svg';
   address_calvo = "Av. Rio das Pedras, 2118 - Jd. Aricanduva, São Paulo (SP)";

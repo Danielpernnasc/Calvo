@@ -389,6 +389,7 @@ $font-carousel_mob: 40px;
 }
 .font-red-calvo > h5 {
   color: $font_calvo_red;
+  cursor: pointer;
 }
 @mixin titulo_red {
   color: $font_calvo_red;
@@ -1102,7 +1103,7 @@ width: 200px;
   text-align: left
 }
 .margin_btn_cdtro {
-  margin: -25px 10px;
+  margin: -25px 5px;
 }
 .btn_cadastro {
   background: #FF0000;
@@ -1227,7 +1228,7 @@ width: 200px;
 .image-background-carousel-empresa {
   background-image: url('assets/img/empresa/bannerempresa.png');
   height: 600px;
-  margin-top:12%;
+  margin-top:190px;
   background-repeat: no-repeat;
   border-radius: 10px;
 }
@@ -1498,7 +1499,7 @@ width: 200px;
 
 .lupa_altura{
   display: block;
-  margin: 23px 0 0 195px;
+  margin: 23px 0 0 150px;
   position: absolute;
 }
 .select_busca {
@@ -1512,7 +1513,7 @@ width: 200px;
   height: 50px;
 }
 .campo {
-  width: 100%;
+  width: 150px;
   margin: 3% 0;
   height: 60px;
   padding: 0 5px;
@@ -1599,7 +1600,7 @@ width: 200px;
   margin: 0;
   
 }
-app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, modal-hortifruit {
+app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, modal-hortifruti {
   display: none;
   .modal_produto {
     position: fixed; /* Stay in place */
@@ -2202,13 +2203,8 @@ body.modal-open {
   position: absolute;
   margin: -100px 0 0 150px;
 }
-.bg-image-prog {
-  background-image: url('assets/img/programa/newbannerfidel.png');
-  height: 600px;
-  margin-top:12%;
-  background-repeat: no-repeat;
-  border: solid #fff;
-  border-radius: 10px;
+.margin_top_190px {
+  margin-top: 190px;
 }
 .bg-image-prog_mob {
   background-image: url('assets/img/programa/b@2x_mob.png');
@@ -2266,7 +2262,7 @@ body.modal-open {
   margin: 10px auto;
 }
 .bg_red_circulo_ {
-  padding: 20px;
+  padding: 19px;
 }
 .texto_prog > span {
   font-weight: bold;

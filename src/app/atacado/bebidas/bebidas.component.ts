@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalService } from './modal'
+import { Router } from '@angular/router';
 
 
 
@@ -10,7 +11,7 @@ import { ModalService } from './modal'
   styleUrls: ['./bebidas.component.scss']
 })
 export class BebidasComponent implements OnInit {
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService, private router: Router) { }
   // modalRef: BsModalRef;
 
   // constructor(private modalService: BsModalService) {}
@@ -25,7 +26,39 @@ export class BebidasComponent implements OnInit {
   closeModal(id: string) {
     this.modalService.close(id)
   }
-
+  link_categorias_bebidas() {
+    this.router.navigateByUrl('atacado/bebidas');
+  }
+  link_categorias_carnes() {
+    this.router.navigateByUrl('atacado/carnes');
+  }
+  link_categorias_pereciveis() {
+    this.router.navigateByUrl('atacado/pereciveis');
+  }
+  link_categorias_higiene() {
+    this.router.navigateByUrl('atacado/higiene');
+  }
+  link_categorias_limpeza() {
+    this.router.navigateByUrl('atacado/limpeza');
+  }
+  link_categorias_mercearia() {
+    this.router.navigateByUrl('atacado/mercearia');
+  }
+  link_categorias_hortifruti() {
+    this.router.navigateByUrl('atacado/hortifruti');
+  }
+  link_categorias_institucional() {
+    this.router.navigateByUrl('atacado/institucional');
+  }
+  link_categorias_pet() {
+    this.router.navigateByUrl('atacado/pet');
+  }
+  link_categorias_papelaria() {
+    this.router.navigateByUrl('atacado/papelaria');
+  }
+  link_categorias_outros() {
+    this.router.navigateByUrl('atacado/outros');
+  }
   // openModal_bebida_1() {
   //   this.modalRef = this.modalService.show(ModalComponent);
   //  }
@@ -52,7 +85,7 @@ export class BebidasComponent implements OnInit {
   orcamento: any = 'assets/icones_svg/icone_comprar.svg';
 
   litro_5 = '1,5 litros';
-  ml_500 = '500 ml';
+  ml_500 = '500 ml';    
   ml_965 = '965 ml';
   caixa = 'Caixa';
   ml_960 = '960 ml';

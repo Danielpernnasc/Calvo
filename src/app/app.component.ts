@@ -130,6 +130,12 @@ onSubmitLogin() {
  closeNav() {
   document.getElementById("mySidenav").style.width = "0";
  }
+ facebooksocial() {
+  window.open('https://www.facebook.com/calvoatac')
+}
+instagramsocial() {
+  window.open('https://www.instagram.com/calvoatacadista/')
+}
   cartoes:any ="assets/img/ID11.png";
   logo:any ="assets/img/logo.png";
   lupa:any ="assets/icones_svg/lupa.svg";
