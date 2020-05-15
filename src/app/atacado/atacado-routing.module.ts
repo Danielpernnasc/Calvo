@@ -7,7 +7,6 @@ import { HigieneComponent } from './higiene';
 import { LimpezaComponent } from './limpeza';
 import { MerceariaComponent } from './mercearia';
 import { ListaComponent } from './lista';
-import { HortifruitComponent } from './hortifruit';
 import { HortifrutiComponent } from './hortifruti';
 import { InstitucionalComponent } from './institucional';
 import { PetComponent } from './pet';
@@ -29,7 +28,6 @@ const routerOptions: ExtraOptions = {
     {path: 'atacado/limpeza', component: LimpezaComponent},
     {path: 'atacado/mercearia', component: MerceariaComponent },
     {path: 'atacado/lista', component: ListaComponent},
-    {path: 'atacado/hortifruit', component: HortifruitComponent},
     {path: 'atacado/hortifruti', component: HortifrutiComponent},
     {path: 'atacado/institucional', component: InstitucionalComponent},
     {path: 'atacado/pet', component: PetComponent},

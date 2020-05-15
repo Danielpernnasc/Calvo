@@ -79,7 +79,8 @@ export class HomeComponent implements OnInit {
   android_mobile: any = 'assets/icones_svg/android_mobile.svg';
   banner_empresa: any = 'assets/img/home/banner_empresa.png';
   bannerdicas: any ='assets/img/dicas/new_banner_dica.png';
-  kit_especial_mob: any ='assets/img/home/kit_especial_mob.png'
+  kit_especial_mob: any ='assets/img/home/kit_especial_mob.png';
+  bg_kit: any ='assets/img/home/banner2.png';
   D = 'Dicas';
   busniess = 'para o seu negócio';
   prog= 'Programa';

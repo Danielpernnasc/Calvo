@@ -427,7 +427,9 @@ $font-carousel_mob: 40px;
   font-weight: bold;
 }
 .border_gray {
-  border: $border-gray;
+  border: solid #B4B4BC 1px;
+  margin: 6% 0;
+  height: 50px;
 }
 .magictv{
   text-align: right;
@@ -1499,7 +1501,8 @@ width: 100%;
 
 .lupa_altura{
   display: block;
-  margin: 23px 0 0 150px;
+  margin-top:23px;
+  margin-left: 75%;
   position: absolute;
 }
 .select_busca {
@@ -1507,17 +1510,13 @@ width: 100%;
     margin: 14px 0;
     border: 0;
 }
-.border-gray{
-  border: solid 1px #B4B4BC;
-  margin: 6% 0;
-  height: 50px;
-}
+
 .campo {
-  width: 150px;
+  width: 100%;
   margin: 3% 0;
   height: 60px;
   padding: 0 5px;
-  border: 0
+  border: solid #B4B4BC;
 }
 .margin-paragrafo > p {
   padding-top: 30px;
@@ -2598,7 +2597,7 @@ body.modal-open {
   text-align: right;
 }
 .margin_top_kit_mobile {
-  margin: -89px 0 0 31px;
+  margin: -89px 0 0 30px;
 }
 .margin_top_btn_kit_mobile {
   position: absolute;
@@ -2606,12 +2605,11 @@ body.modal-open {
 }
 .lista_mobile_kit {
   font-size: 12px;
+  color: $font_calvo_gray;
   ul li {
     list-style: none;
     text-align: left;
     padding: 10px 0;
- 
-
   }
 }
 .caixa_cestas {
