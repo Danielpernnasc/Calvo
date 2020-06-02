@@ -81,7 +81,7 @@
                             Empresa
                         </span>
                       </a>
-                      <span class="link_mob_btn"  [routerLink]="['/atacado']">Atacado
+                      <span class="link_mob_btn"  [routerLink]="['atacado']">Atacado
                           <svg-icon [src]="seta_baixo" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                       </span> 
                       <div class="dropdown-container">
@@ -146,17 +146,17 @@
                             </span>
                           </a>
                       </div>
-                      <a class="link_mob" [routerLink]="['/parceiros']">
+                      <a class="link_mob" [routerLink]="['parceiros']">
                         <span (click)="closeNav()">
                           Parceiros
                         </span>
                       </a>
-                      <a href="" class="link_mob" [routerLink]="['/jornal']">
+                      <a href="" class="link_mob" [routerLink]="['jornal']">
                         <span (click)="closeNav()">
                           Jornal
                         </span>
                       </a>
-                      <span class="link_mob_btn"  [routerLink]="['/contato']">Contato
+                      <span class="link_mob_btn"  [routerLink]="['contato']">Contato
                           <svg-icon [src]="seta_baixo" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                       </span>
                       <div class="dropdown-container">
@@ -250,7 +250,7 @@
                 <div class="col-md-2 font_calvo_black">
                   <div class="row">
                     <div class="col-sm-5">
-                      <a class="color_link" [routerLink]="['/home']">Home</a>
+                      <a class="color_link" [routerLink]="['/home']" routerLinkActive="active_link">Home</a>
                     </div>
                     <div class="col-sm-2">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -260,7 +260,7 @@
                 <div class="col-md-2 font_calvo_black padding_zero">
                   <div class="row">
                     <div class="col-sm-7 padding_zero">
-                      <a class="color_link close-nav" [routerLink]="['/empresa']">Empresa</a>
+                      <a class="color_link close-nav" [routerLink]="['/empresa']" routerLinkActive="active_link">Empresa</a>
                     </div>
                     <div class="col-sm-2 padding_zero">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -270,7 +270,7 @@
                 <div class="col-md-2 font_calvo_black">
                   <div class="row" >
                     <div class="col-sm-7 padding_zero">
-                      <a class="color_link close-nav" [routerLink]="['/atacado']">Atacado</a>
+                      <a class="color_link close-nav" [routerLink]="['/atacado']" routerLinkActive="active_link">Atacado</a>
                     </div>
                     <div class="campo-submenu col-sm-2 padding_zero">
                       <span  (click)="onClick_atacado()"  class="btn-invisivel">
@@ -296,7 +296,7 @@
                 <div class="col-md-2 font_calvo_black">
                   <div class="row" >
                     <div class="col-sm-8 padding_zero">
-                      <a class="color_link close-nav" [routerLink]="['/parceiros']">Parceiros</a>
+                      <a class="color_link close-nav" [routerLink]="['/parceiros']" routerLinkActive="active_link">Parceiros</a>
                     </div>
                     <div class="col-sm-2 padding_zero">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -306,7 +306,7 @@
                 <div class="font_calvo_black col-2">
                   <div class="row" >
                     <div class="col-sm-6">
-                      <a class="color_link close-nav" [routerLink]="['/jornal']">Jornal</a>
+                      <a class="color_link close-nav" [routerLink]="['/jornal']" routerLinkActive="active_link">Jornal</a>
                     </div>
                     <div class="col-sm-2">
                       <svg-icon [src]="setadow" [svgStyle]="{ 'width.px':30 }"></svg-icon>
@@ -316,7 +316,7 @@
                 <div class="font_calvo_black col-2">
                   <div class="row">
                     <div class="col-sm-7 padding_zero">
-                      <a class="color_link close-nav" [routerLink]="['/contato']">Contato</a>
+                      <a class="color_link close-nav" [routerLink]="['/contato']" routerLinkActive="active_link">Contato</a>
                     </div>
                     <div class="col-sm-2 padding_zero">
                       <span  (click)="onClick_contato()" class="btn-invisivel">
@@ -484,13 +484,13 @@
               <div class="col-3 offset-md-1 ">
                 <nav>
                   <ul>
-                    <li class="close-nav"><a class="link_footer" [routerLink]="'/home'">Home</a></li>
-                    <li class="close-nav"> <a class="link_footer" [routerLink]="'/empresa'">Empresa</a> </li>
-                    <li class="close-nav"><a class="link_footer" [routerLink]="'/atacado'">Atacado</a></li>
-                    <li class="close-nav"><a class="link_footer" [routerLink]="'/parceiros'">Parceiros</a></li>
-                    <li class="close-nav"><a class="link_footer" [routerLink]="'/jornal'">Jornal</a></li>
-                    <li class="close-nav"><a class="link_footer" [routerLink]="'/contato'">Contado</a></li>
-                    <li class="close-nav"><a class="link_footer" [routerLink]="'/newsletter'">Newsletter</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'home'">Home</a></li>
+                    <li class="close-nav"> <a class="link_footer" [routerLink]="'empresa'">Empresa</a> </li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'atacado'">Atacado</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'parceiros'">Parceiros</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'jornal'">Jornal</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'contato'">Contado</a></li>
+                    <li class="close-nav"><a class="link_footer" [routerLink]="'newsletter'">Newsletter</a></li>
                   </ul>
                 </nav>
               </div>

@@ -26,20 +26,20 @@ export class AppComponent implements OnInit {
   Footer = true;
 
 ngOnInit(){
-  var dropdown = document.getElementsByClassName("link_mob_btn");
-  var i;
+  // var dropdown = document.getElementsByClassName("link_mob_btn");
+  // var i;
 
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener('click', function() {
-    this.classList.toggle("active_mob");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-    dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-    })
-  }
+  // for (i = 0; i < dropdown.length; i++) {
+  //   dropdown[i].addEventListener('click', function() {
+  //   this.classList.toggle("active_mob");
+  //   var dropdownContent = this.nextElementSibling;
+  //   if (dropdownContent.style.display === "block") {
+  //   dropdownContent.style.display = "none";
+  //   } else {
+  //     dropdownContent.style.display = "block";
+  //   }
+  //   })
+  // }
   this.router.events
   .subscribe((event) => {
     if(event instanceof NavigationEnd) {
@@ -53,11 +53,11 @@ ngOnInit(){
     }
   });
 
-  $('.color_link').click(function(){
-  $('.color_link').removeClass('fixed_color');
-  $(this).addClass('fixed_color');
-  $('.color_link').val($(this)[0].innerText);
-  });
+  // $('.color_link').click(function(){
+  // $('.color_link').removeClass('fixed_color');
+  // $(this).addClass('fixed_color');
+  // $('.color_link').val($(this)[0].innerText);
+  // });
 
   this.registerForm = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],

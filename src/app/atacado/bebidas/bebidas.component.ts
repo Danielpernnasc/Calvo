@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalService } from './modal'
 import { Router } from '@angular/router';
 
-
-
+declare var $: any;
 @Component({
   selector: 'app-bebidas',
   templateUrl: './bebidas.component.html',
@@ -18,6 +17,7 @@ export class BebidasComponent implements OnInit {
 
 
   ngOnInit() {
+
   }
 
   openModal_bebida(id: string) {
@@ -58,6 +58,9 @@ export class BebidasComponent implements OnInit {
   }
   link_categorias_outros() {
     this.router.navigateByUrl('atacado/outros');
+  }
+  voltar() {
+    window.location.href='#backhere'
   }
   // openModal_bebida_1() {
   //   this.modalRef = this.modalService.show(ModalComponent);

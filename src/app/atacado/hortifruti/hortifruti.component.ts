@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalHortifrutiService } from './modal-hortifruti/modal-hortifruti.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,35 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./hortifruti.component.scss']
 })
 export class HortifrutiComponent implements OnInit {
-  name = 'Hortifruti';
-  page = 1;
-  pageSize = 1;
-  items = []
-  constructor(private modalService: ModalHortifrutiService, private router: Router) {
-    for(let i = 1; i <= 72; i++) {
-      this.items.push({ Name:  + i});
-    }
+  constructor(private router: Router) {}
+  ngOnInit() {
   }
 
-  ngOnInit() {
-      // $(function(){
-      //   $('.page').css('display', 'none');
-      //   $(".page#pag1").addClass('active_page');
-      //   $('.paginacao').on('click', function(e){
-      //     e.preventDefault();
-      //   $("div").removeClass("active_page");
-      //   var id = $(this).attr("href"); 
-      //   $("#"+id+"").addClass("active_page");
-      //   });
-      // })
-  }
-  
-  openModal(id: string) {
-    this.modalService.open(id);
-  }
-  closeModal(id: string) {
-    this.modalService.close(id)
-  }
   link_categorias_bebidas() {
     this.router.navigateByUrl('atacado/bebidas');
   }

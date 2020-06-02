@@ -503,8 +503,8 @@ $font-carousel_mob: 40px;
   padding-left:0;
 }
 .flex  {
-  display: -webkit- flex; /* Safari */
-  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  // display: -webkit- flex; /* Safari */
+  // -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   display: flex;
   justify-content: center;
 }
@@ -530,7 +530,7 @@ body {
   cursor: pointer;
 }
 .color_link:hover, .color_link:focus {
-  color: $link-calvo;
+color: $font_calvo_red;
 }
 
 
@@ -2353,9 +2353,9 @@ body.modal-open {
   color: #0072BB;
   text-decoration: underline;
 }
-.margin_container {
-  margin: 25px 0;
-}
+// .margin_container {
+//   margin: -100px 0;
+// }
 .tag_left > h5 {
   text-align: center;
 }
@@ -2833,4 +2833,30 @@ body.modal_campo {
 }
 .margin_top_20px_valor_mobile {
   margin-top:-20px
+}
+.produtos {
+  list-style: none;
+}
+
+.text_btn_lista {
+  margin: 12px 0;
+}
+.esconder_page {
+  display: none;
+}
+.link {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.link:hover {
+  background: $bg_calvo_red;
+  color: $branco_calvo;
+}
+.active_pag {
+  background: $bg_calvo_red;
+  color: $branco_calvo;
+}
+.active_link {
+  color: $font_calvo_red;
 }

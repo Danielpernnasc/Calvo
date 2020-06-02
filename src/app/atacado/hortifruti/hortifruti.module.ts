@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularSvgIconModule } from 'angular-svg-icon';
-import { ModalHortifrutiComponent } from './modal-hortifruti/modal-hortifruti.component';
+// import { ModalHortifrutiComponent } from './modal-hortifruti/modal-hortifruti.component';
 import { HortifrutiComponent } from './hortifruti.component';
+import { HortifrutiRoutingModule } from './hortifruti-rotuing.module';
 
 
 
@@ -10,10 +11,11 @@ import { HortifrutiComponent } from './hortifruti.component';
   imports: [
     CommonModule,
     AngularSvgIconModule,
+    HortifrutiRoutingModule
   ],
   declarations: [
     HortifrutiComponent,
-    ModalHortifrutiComponent
+    // ModalHortifrutiComponent
   ],
 })
 export class HortifrutiModule { }
