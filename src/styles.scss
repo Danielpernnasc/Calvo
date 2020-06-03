@@ -533,7 +533,6 @@ body {
 color: $font_calvo_red;
 }
 
-
 .color_link_sub {
   color: $link-calvo;
   font-size: 15px;
@@ -2859,4 +2858,7 @@ body.modal_campo {
 }
 .active_link {
   color: $font_calvo_red;
+}
+.border_campo_cadastro {
+  border: $border-gray;
 }

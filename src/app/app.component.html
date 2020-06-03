@@ -39,7 +39,7 @@
         </div>
         <div class="row menu_mobile">
           <div class="col-4">
-              <a class="close-nav" [routerLink]="'.'"><img class="logo_mobile" [src]="logo"></a>
+              <a [routerLink]="'.'"><img class="logo_mobile" [src]="logo"></a>
               <div id="mySidenav" class="sidenav">
                   <div class="row justify-content-center">
                     <div class="col-10">
@@ -60,7 +60,9 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                              <a class="close-nav" [routerLink]="'.'"><img class="logo" [src]="logo"></a>
+                              <span (click)="closeNav()"  [routerLink]="'.'">
+                                <img class="logo" [src]="logo">
+                              </span>
                             </div>
                         </div>
                         <div class="row">
@@ -81,7 +83,7 @@
                             Empresa
                         </span>
                       </a>
-                      <span class="link_mob_btn"  [routerLink]="['atacado']">Atacado
+                      <span class="link_mob_btn"  [routerLink]="['/atacado']">Atacado
                           <svg-icon [src]="seta_baixo" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                       </span> 
                       <div class="dropdown-container">
@@ -146,17 +148,17 @@
                             </span>
                           </a>
                       </div>
-                      <a class="link_mob" [routerLink]="['parceiros']">
+                      <a class="link_mob" [routerLink]="['/parceiros']">
                         <span (click)="closeNav()">
                           Parceiros
                         </span>
                       </a>
-                      <a href="" class="link_mob" [routerLink]="['jornal']">
+                      <a href="" class="link_mob" [routerLink]="['/jornal']">
                         <span (click)="closeNav()">
                           Jornal
                         </span>
                       </a>
-                      <span class="link_mob_btn"  [routerLink]="['contato']">Contato
+                      <span class="link_mob_btn"  [routerLink]="['/contato']">Contato
                           <svg-icon [src]="seta_baixo" [svgStyle]="{ 'width.px':30 }"></svg-icon>
                       </span>
                       <div class="dropdown-container">

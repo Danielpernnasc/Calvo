@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
 ngOnInit(){
   var dropdown = document.getElementsByClassName("link_mob_btn");
   var i;
-
   for (i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener('click', function() {
     this.classList.toggle("active_mob");

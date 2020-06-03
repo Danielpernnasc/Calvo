@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { ModalModule } from './modal';
 import { OrcamentoModule } from './orcamento';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { AtacadoModule } from './atacado';
 
 
 
@@ -25,10 +25,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ClickOutsideModule,
     ModalModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    AtacadoModule,
+
+  
   ],
       declarations: [  
         AppComponent,
+  
+  
       ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],

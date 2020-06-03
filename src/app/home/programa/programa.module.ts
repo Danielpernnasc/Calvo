@@ -12,6 +12,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     AngularSvgIconModule
   ],
   declarations: [ProgramaComponent],
+  exports: [ProgramaComponent]
 
 
 })
