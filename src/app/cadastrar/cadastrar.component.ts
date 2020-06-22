@@ -10,22 +10,34 @@ import { MustMatch } from '../validacao/validacao_cadatro';
   styleUrls: ['./cadastrar.component.scss']
 })
 export class CadastrarComponent implements OnInit {
-  productForm: FormGroup;
-  constructor(
-    private fb: FormBuilder,
-    private crudService: CrudService,
-    private router: Router) { 
-      this.productForm = this.fb.group({
+    registerForm: FormGroup;
+    constructor(
+        private fb: FormBuilder,
+        private crudService: CrudService,
+        private router: Router) {
+      this.registerForm = this.fb.group({
         nome: ['', Validators.required],
-        endereco: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        telefone: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
-        senha: ['', [Validators.required, Validators.minLength(6)]],
-        confirma: ['', Validators.required]
-      },{
-        validators: MustMatch('senha', 'confirma')
+        endereco: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(1000)])],
+        email: ['', Validators.compose([Validators.required])],
       });
-  }
+    }
+  
+  
+  // constructor(
+  //   private fb: FormBuilder,
+  //   private crudService: CrudService,
+  //   private router: Router) { 
+  //     this.form = this.fb.group({
+  //       nome: ['', Validators.required],
+  //       endereco: ['', Validators.required],
+  //       email: ['', [Validators.required, Validators.email]],
+  //       telefone: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
+  //       senha: ['', [Validators.required, Validators.minLength(6)]],
+  //       confirma: ['', Validators.required]
+  //     },{
+  //       validators: MustMatch('senha', 'confirma')
+  //     });
+  // }
 
   ngOnInit(): void {
   }
