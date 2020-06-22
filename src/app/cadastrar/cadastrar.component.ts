@@ -10,34 +10,22 @@ import { MustMatch } from '../validacao/validacao_cadatro';
   styleUrls: ['./cadastrar.component.scss']
 })
 export class CadastrarComponent implements OnInit {
-    registerForm: FormGroup;
-    constructor(
-        private fb: FormBuilder,
-        private crudService: CrudService,
-        private router: Router) {
-      this.registerForm = this.fb.group({
+  clientForm: FormGroup;
+  constructor(
+    private fb: FormBuilder,
+    private crudService: CrudService,
+    private router: Router) { 
+      this.clientForm = this.fb.group({
         nome: ['', Validators.required],
-        endereco: ['', Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(1000)])],
-        email: ['', Validators.compose([Validators.required])],
+        endereco: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        telefone: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
+        senha: ['', [Validators.required, Validators.minLength(6)]],
+        confirma: ['', Validators.required]
+      },{
+        validators: MustMatch('senha', 'confirma')
       });
-    }
-  
-  
-  // constructor(
-  //   private fb: FormBuilder,
-  //   private crudService: CrudService,
-  //   private router: Router) { 
-  //     this.form = this.fb.group({
-  //       nome: ['', Validators.required],
-  //       endereco: ['', Validators.required],
-  //       email: ['', [Validators.required, Validators.email]],
-  //       telefone: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
-  //       senha: ['', [Validators.required, Validators.minLength(6)]],
-  //       confirma: ['', Validators.required]
-  //     },{
-  //       validators: MustMatch('senha', 'confirma')
-  //     });
-  // }
+  }
 
   ngOnInit(): void {
   }
@@ -49,7 +37,14 @@ export class CadastrarComponent implements OnInit {
     clientData.append('email', values.email);
     clientData.append('telefone', values.telefone);
     clientData.append('senha', values.senha);
-    clientData.append('confirma', values.confirma)
+    clientData.append('confirma', values.confirma);
+    this.crudService.atualizarClient(clientData).subscribe(result => 
+  {
+    this.router.navigate(['']);
+  })
+  }
+  clearForm(form: FormGroup) {
+    form.reset();
   }
 
 }

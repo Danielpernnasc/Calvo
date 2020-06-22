@@ -35,53 +35,53 @@
             </div>
         </div>
         <div class="borda-bottom"></div>
-        <form [formGroup]="registerForm" (ngSubmit)="saveClientes()">
+        <form #Dados_cliente [formGroup]="clientForm" (ngSubmit)="saveClientes(clientForm.value)">
             <div class="form-group">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <br>
                         <label for="">Nome</label>
                         <input type="text" class="form-control" placeholder="Coloque o seu Nome" formControlName="nome" required>
-                        <div class="alert-danger" *ngIf="!productForm.controls['nome'].valid && (productForm.controls['nome'].touched)">
-                            <div [hidden]="!productForm.controls['nome'].errors.required">Por Favor, Digite o seu Nome!</div>
+                        <div class="alert-danger" *ngIf="!clientForm.controls['nome'].valid && (clientForm.controls['nome'].touched)">
+                            <div [hidden]="!clientForm.controls['nome'].errors.required">Por Favor, Digite o seu Nome!</div>
                         </div>
                         <br>
                         <label for="">Endereço</label>
                         <input type="text" class="form-control" placeholder="Coloque o seu Endereço" formControlName="endereco" required>
-                        <div class="alert-danger" *ngIf="!productForm.controls['endereco'].valid && (productForm.controls['endereco'].touched)">
-                            <div [hidden]="!productForm.controls['endereco'].errors.required">Por Favor, Digite o seu Endereço!</div>
+                        <div class="alert-danger" *ngIf="!clientForm.controls['endereco'].valid && (clientForm.controls['endereco'].touched)">
+                            <div [hidden]="!clientForm.controls['endereco'].errors.required">Por Favor, Digite o seu Endereço!</div>
                         </div>
                         <br>
                         <label for="">E-mail</label>
                         <input type="text" class="form-control" placeholder="Coloque o seu Endereço" formControlName="email" required>
-                        <div class="alert-danger" *ngIf="!productForm.controls['email'].valid && (productForm.controls['email'].touched)">
-                            <div [hidden]="!productForm.controls['email'].errors.required">Por Favor, Digite o seu Endereço!</div>
+                        <div class="alert-danger" *ngIf="!clientForm.controls['email'].valid && (clientForm.controls['email'].touched)">
+                            <div [hidden]="!clientForm.controls['email'].errors.required">Por Favor, Digite o seu Endereço!</div>
                         </div>
                         <br>
                         <label for="">Telefone</label>
                         <input type="text" class="form-control" placeholder="Coloque o seu Endereço" formControlName="telefone" required>
-                        <div class="alert-danger" *ngIf="!productForm.controls['telefone'].valid && (productForm.controls['telefone'].touched)">
-                            <div [hidden]="!productForm.controls['telefone'].errors.required">Por Favor, Digite o seu Telefone</div>
+                        <div class="alert-danger" *ngIf="!clientForm.controls['telefone'].valid && (clientForm.controls['telefone'].touched)">
+                            <div [hidden]="!clientForm.controls['telefone'].errors.required">Por Favor, Digite o seu Telefone</div>
                         </div>
                         <br>
                         <label for="">Senha</label>
                         <input type="password" class="form-control" placeholder="Coloque o seu Endereço" formControlName="senha" required>
-                        <div class="alert-danger" *ngIf="!productForm.controls['senha'].valid && (productForm.controls['senha'].touched)">
-                            <div [hidden]="!productForm.controls['senha'].errors.required">Por Favor, Sua senha precisa conter no mínimo 6 digitos</div>
+                        <div class="alert-danger" *ngIf="!clientForm.controls['senha'].valid && (clientForm.controls['senha'].touched)">
+                            <div [hidden]="!clientForm.controls['senha'].errors.required">Por Favor, Sua senha precisa conter no mínimo 6 digitos</div>
                         </div>
                         <br>
                         <label for="">Confirma</label>
                         <input type="password" class="form-control" placeholder="Redigite a Senha" formControlName="senha" required>
-                        <div class="alert-danger" *ngIf="!productForm.controls['senha'].valid && (productForm.controls['senha'].touched)">
-                            <div [hidden]="!productForm.controls['senha'].errors.required">Por Favor, Sua senha precisa conter no mínimo 6 digitos</div>
+                        <div class="alert-danger" *ngIf="!clientForm.controls['senha'].valid && (clientForm.controls['senha'].touched)">
+                            <div [hidden]="!clientForm.controls['senha'].errors.required">Por Favor, Sua senha precisa conter no mínimo 6 digitos</div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-2 offset-8">
-                                <button class="btn-enviar" type="submit" [disabled]="!productForm.valid">Enviar</button>
+                                <button class="btn-enviar" type="submit" [disabled]="!clientForm.valid">Enviar</button>
                             </div>
                             <div class="col-2">
-                                <button class="btn-enviar">Apagar</button>
+                                <button class="btn-enviar" (click)="clearForm(Dados_cliente)">Apagar</button>
                             </div>
                         </div>
                     </div>
