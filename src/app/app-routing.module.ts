@@ -11,6 +11,12 @@ import { OrcamentoComponent } from './orcamento';
 import { FaleComponent } from './contato/fale';
 import { TelevendasComponent } from './contato/televendas';
 import { TrabalheComponent } from './contato/trabalhe';
+import { ReadComponent } from './read';
+import { ClientesComponent } from './clientes';
+import { CadastrarComponent } from './cadastrar';
+import { AtualizarComponent } from './atualizar';
+
+
 
 
 
@@ -29,18 +35,6 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent },
   {path: 'empresa', component: EmpresaComponent },
   {path: 'atacado', component: AtacadoComponent },
-  // {path: 'atacado/bebidas', component: BebidasComponent},
-  // {path: 'atacado/carnes', component: AcogueComponent},
-  // {path: 'atacado/pereciveis', component: PereciveisComponent},
-  // {path: 'atacado/higiene', component: HigieneComponent},
-  // {path: 'atacado/limpeza', component: LimpezaComponent},
-  // {path: 'atacado/mercearia', component: MerceariaComponent},
-  // {path: 'atacado/hortifruti',loadChildren: () => import(`./atacado/hortifruti`).then(m => m.HortifrutiModule)},
-  // {path: 'atacado/institucional', component: InstitucionalComponent},
-  // {path: 'atacado/pet', component: PetComponent},
-  // {path: 'atacado/papelaria', component: PapelariaComponent},
-  // {path: 'atacado/outros', component: OutrosComponent},
-  // {path: 'atacado/lista', component: ListaComponent},
   {path: 'jornal', component: JornalComponent },
   {path: 'contato', component: ContatoComponent },
   {path: 'contato/fale-conosco', component: FaleComponent},
@@ -49,6 +43,12 @@ const routes: Routes = [
   {path: 'parceiros', component: ParceirosComponent},
   {path: 'newsletter', component: NewsletterComponent}, 
   {path: 'orcamento', component: OrcamentoComponent},
+
+  {path: 'cliente', component: ClientesComponent},
+  {path: 'cadastrar', component: CadastrarComponent},
+  {path: 'atualizar/:id', component: AtualizarComponent},
+  {path: 'cliente/:id', component: ReadComponent}
+
 ];
 
 @NgModule({

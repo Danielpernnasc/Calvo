@@ -1,0 +1,92 @@
+
+<div class="row justify-content-center">
+    <div class="col-8 desktop">
+        <div class="row linha-acima" >
+            <div class="font-gray-calvo">
+                <h5>Cliente</h5>
+            </div>
+            <div class="seta_right">
+                <span>></span>
+            </div>
+            <div class="font-red-calvo">
+                <h5>Cadastrar Cliente</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 margin_top_mobile mobile">
+        <div class="row justify-content-center linha-acima">
+            <div class="font-gray-calvo">
+                <h5>Cliente</h5>
+            </div>
+            <div class="seta_right">
+                <span>></span>
+            </div>
+            <div class="font-red-calvo">
+                <h5>Cadastrar Cliente</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center margin_linha">
+    <div class="col-8 titulo-parc padding_zero">
+        <div class="row margin_3px">
+            <div class="col-md-6 titulo-parc">
+                <h2>Cadastrar Cliente</h2>
+            </div>
+        </div>
+        <div class="borda-bottom"></div>
+        <form [formGroup]="productForm" (ngSubmit)="saveClientes(productForm.value)">
+            <div class="form-group">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <br>
+                        <label for="">Nome</label>
+                        <input type="text" class="form-control" placeholder="Coloque o seu Nome" formControlName="nome" required>
+                        <div class="alert-danger" *ngIf="!productForm.controls['nome'].valid && (productForm.controls['nome'].touched)">
+                            <div [hidden]="!productForm.controls['nome'].errors.required">Por Favor, Digite o seu Nome!</div>
+                        </div>
+                        <br>
+                        <label for="">Endereço</label>
+                        <input type="text" class="form-control" placeholder="Coloque o seu Endereço" formControlName="endereco" required>
+                        <div class="alert-danger" *ngIf="!productForm.controls['endereco'].valid && (productForm.controls['endereco'].touched)">
+                            <div [hidden]="!productForm.controls['endereco'].errors.required">Por Favor, Digite o seu Endereço!</div>
+                        </div>
+                        <br>
+                        <label for="">E-mail</label>
+                        <input type="text" class="form-control" placeholder="Coloque o seu Endereço" formControlName="email" required>
+                        <div class="alert-danger" *ngIf="!productForm.controls['email'].valid && (productForm.controls['email'].touched)">
+                            <div [hidden]="!productForm.controls['email'].errors.required">Por Favor, Digite o seu Endereço!</div>
+                        </div>
+                        <br>
+                        <label for="">Telefone</label>
+                        <input type="text" class="form-control" placeholder="Coloque o seu Endereço" formControlName="telefone" required>
+                        <div class="alert-danger" *ngIf="!productForm.controls['telefone'].valid && (productForm.controls['telefone'].touched)">
+                            <div [hidden]="!productForm.controls['telefone'].errors.required">Por Favor, Digite o seu Telefone</div>
+                        </div>
+                        <br>
+                        <label for="">Senha</label>
+                        <input type="password" class="form-control" placeholder="Coloque o seu Endereço" formControlName="senha" required>
+                        <div class="alert-danger" *ngIf="!productForm.controls['senha'].valid && (productForm.controls['senha'].touched)">
+                            <div [hidden]="!productForm.controls['senha'].errors.required">Por Favor, Sua senha precisa conter no mínimo 6 digitos</div>
+                        </div>
+                        <br>
+                        <label for="">Confirma</label>
+                        <input type="password" class="form-control" placeholder="Redigite a Senha" formControlName="senha" required>
+                        <div class="alert-danger" *ngIf="!productForm.controls['senha'].valid && (productForm.controls['senha'].touched)">
+                            <div [hidden]="!productForm.controls['senha'].errors.required">Por Favor, Sua senha precisa conter no mínimo 6 digitos</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-2 offset-8">
+                                <button class="btn-enviar" type="submit" [disabled]="!productForm.valid">Enviar</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn-enviar">Apagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -24,6 +24,7 @@ import { AtacadoModule } from './atacado';
     OrcamentoModule,
     ClickOutsideModule,
     ModalModule,
+    FormsModule,
     ReactiveFormsModule,
     NgbModule,
     AtacadoModule,

@@ -1,0 +1,111 @@
+
+<div class="row justify-content-center">
+    <div class="col-8 desktop">
+        <div class="row linha-acima" >
+            <div class="font-gray-calvo">
+                <h5>Contato</h5>
+            </div>
+            <div class="seta_right">
+                <span>></span>
+            </div>
+            <div class="font-red-calvo">
+                <h5>Dados do Cliente</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 margin_top_mobile mobile">
+        <div class="row justify-content-center linha-acima">
+            <div class="font-gray-calvo">
+                <h5>Contato</h5>
+            </div>
+            <div class="seta_right">
+                <span>></span>
+            </div>
+            <div class="font-red-calvo">
+                <h5>Dados do Cliente</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center margin_linha">
+    <div class="col-8 titulo-parc padding_zero">
+        <div class="row margin_3px">
+            <div class="col-md-6 titulo-parc">
+                <h2>Dados do Cliente</h2>
+            </div>
+        </div>
+        <div class="borda-bottom"></div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="row espaco_esquerda">
+            <div class="col-md-12 address-cont">
+                <h2>Dados do Cliente</h2>
+                <table #DadosCliente style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Nome</th>
+                            <th>Endereço</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let client of clientes; let i =index;">
+                            <td>{{i+1}}</td>
+                            <td>{{client.p_nome}}</td>
+                            <td>{{client.p_endereco}}</td>
+                            <td>{{client.p_email}}</td>
+                            <td>{{client.p_telefone}}</td>
+                            <td>
+                                <button class="btn-enviar" (click)="getNavigation('cliente', client.p_id)">Visualizar</button>
+                                <button class="btn-enviar" (click)="getNavigation('atualizar', client.p_id)">Atualizar</button>
+                                <button class="btn-enviar">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <!-- <div class="row padding_marg_cont" #DadosCliente>
+                    <div class="col-sm-12 box_input">
+                        <div *ngFor="let client of clientes; let i =index;" class="row margin_linha">
+                            <div class="col-3">
+                                <label for="">Nome</label><br>
+                                <div class="col-12 dados border">{{client.p_nome}}</div>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Endereço</label><br>
+                                <div class="col-12 dados border">{{client.p_endereco}}</div>
+                            </div>
+                            <div class="col-3">
+                                <label for="">e-mail</label>
+                                <div class="col-12 dados border">{{client.p_email}}</div>
+                            </div>
+                            <div class="col-3">
+                                <label for="">Telefone</label>
+                                <div class="col-12 dados border">{{telefone.p_telefone}}</div>
+                            </div>
+                        </div>
+                        <div class="row margin_linha">
+                            <div class="col-8 offset-4">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <button class="btn-enviar">Visualizar</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn-enviar">Atualizar</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn-enviar">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
