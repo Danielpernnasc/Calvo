@@ -11,13 +11,10 @@ import { OrcamentoComponent } from './orcamento';
 import { FaleComponent } from './contato/fale';
 import { TelevendasComponent } from './contato/televendas';
 import { TrabalheComponent } from './contato/trabalhe';
-import { ReadComponent } from './read';
-import { ClientesComponent } from './clientes';
-import { CadastrarComponent } from './cadastrar';
+import { ClienteComponent } from './cliente';
+import { CadastroComponent } from './cadastro';
 import { AtualizarComponent } from './atualizar';
-
-
-
+import { LeituraComponent } from './leitura';
 
 
 const routerOptions: ExtraOptions = {
@@ -43,11 +40,10 @@ const routes: Routes = [
   {path: 'parceiros', component: ParceirosComponent},
   {path: 'newsletter', component: NewsletterComponent}, 
   {path: 'orcamento', component: OrcamentoComponent},
-
-  {path: 'cliente', component: ClientesComponent},
-  {path: 'cadastrar', component: CadastrarComponent},
-  {path: 'atualizar/:id', component: AtualizarComponent},
-  {path: 'cliente/:id', component: ReadComponent}
+  {path: 'cliente', component: ClienteComponent},
+  {path: 'cadastro', component: CadastroComponent},
+  {path: 'editar/:id', component: AtualizarComponent},
+  {path: 'cliente/:id', component: LeituraComponent}
 
 ];
 

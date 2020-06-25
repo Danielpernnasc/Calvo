@@ -11,7 +11,10 @@ import { ModalModule } from './modal';
 import { OrcamentoModule } from './orcamento';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AtacadoModule } from './atacado';
-
+import { CadastroComponent } from './cadastro';
+import { ClienteComponent } from './cliente';
+import { LeituraComponent } from './leitura';
+import { AtualizarComponent } from './atualizar';
 
 
 @NgModule({
@@ -32,7 +35,7 @@ import { AtacadoModule } from './atacado';
   
   ],
       declarations: [  
-        AppComponent,
+        AppComponent, CadastroComponent, ClienteComponent, LeituraComponent, AtualizarComponent
   
   
       ],
