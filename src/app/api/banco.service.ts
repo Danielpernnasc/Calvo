@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BancoService {
-  public url = 'http://localhost/api_calvo/'
+  public url = 'http://localhost/novoapicalvo/'
   constructor(private http: HttpClient) { }
   getCliente(){
     return this.http.get(this.url + 'clientes.php');
@@ -17,7 +17,7 @@ export class BancoService {
     return this.http.post(this.url + 'cadastro.php', data);
   }
   updateCliente(data){
-    return this.http.post(this.url + 'atualizar.php', data)
+    return this.http.post(this.url + 'editar.php', data)
   }
   deleteCliente(id){
     return this.http.get(this.url + 'delete.php?id=' + id)

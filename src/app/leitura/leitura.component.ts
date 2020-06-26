@@ -24,7 +24,6 @@ export class LeituraComponent implements OnInit {
       this.clienteData = client;
     });
   }
-
   navigation(link){
     this.router.navigate([link]);
   }
