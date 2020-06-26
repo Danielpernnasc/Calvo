@@ -40,10 +40,31 @@
                     <table class="table table-striped">
                         <tr>
                             <td>Nome</td>
-                            <td>{{productData['p_nome']}}</td>
+                            <td>{{clienteData['p_nome']}}</td>
                         </tr>
-                        
+                        <tr>
+                            <td>Endereço</td>
+                            <td>{{clienteData['p_endereco']}}</td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td>{{clienteData['p_email']}}</td>
+                        </tr>
+                        <tr>
+                            <td>Telefone</td>
+                            <td>{{clienteData['p_telefone']}}</td>
+                        </tr>
+                        <tr>
+                            <td>Senha</td>
+                            <td>{{clienteData['p_senha']}}</td>
+                        </tr>
+                        <tr>
+                            <td>Confirma</td>
+                            <td>{{clienteData['p_confirma']}}</td>
+                        </tr>
                     </table>
+                    <br>
+                    <button class="btn btn-warning" (click)="navigation('cliente')">Voltar</button>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BancoService {
-  public url = 'http://localhost/API_Calvo/'
+  public url = 'http://localhost/api_calvo/'
   constructor(private http: HttpClient) { }
   getCliente(){
     return this.http.get(this.url + 'clientes.php');
