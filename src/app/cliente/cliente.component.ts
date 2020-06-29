@@ -23,8 +23,11 @@ export class ClienteComponent implements OnInit {
     this.bancoService.getCliente().subscribe(
       clienteData => {
         this.clientes = clienteData;
+
         this.dataTable = $(this.Table.nativeElement);
-        setTimeout(()=>{this.dataTable.DataTable();}, 2000);
+        setTimeout(()=>{
+          this.dataTable.DataTable();
+        }, 2000);
       },(err)=>{
       }, ()=>{
       }
@@ -38,7 +41,7 @@ export class ClienteComponent implements OnInit {
       this.router.navigate([link + '/' + id]);
     }
   }
-  RemoverCliente(pID) {
+  deleteCliente(pID) {
     this.bancoService.deleteCliente(pID).subscribe(data => {
     this.loadCliente();
     })
