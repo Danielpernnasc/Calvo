@@ -9,41 +9,34 @@ declare var $;
 })
 export class ClienteComponent implements OnInit {
   public clientes: any = [];
-  @ViewChild('clienteTable', {static: true}) Table;
+  @ViewChild('clienteTable') Table;
   public dataTable: any
   constructor(private bancoService: BancoService, private router: Router) { }
-
-  ngOnInit(): void {
-    this.loadCliente()
+  ngOnInit() {
+    this.loadclientes();
   }
-  loadCliente(){
-    if ($.fn.DataTable.isDataTable(this.Table.nativeElement)) {
-      $(this.Table.nativeElement).dataTable().fnDestroy();
-    }
-    this.bancoService.getCliente().subscribe(
-      clienteData => {
-        this.clientes = clienteData;
 
-        this.dataTable = $(this.Table.nativeElement);
-        setTimeout(()=>{
-          this.dataTable.DataTable();
-        }, 2000);
-      },(err)=>{
-      }, ()=>{
-      }
+  loadclientes(){
+    this.bancoService.getCliente().subscribe(
+        clientData => {
+          this.clientes = clientData;
+          this.dataTable = $(this.Table.nativeElement);
+          setTimeout(()=>{this.dataTable.DataTable();}, 2000);
+        }
     );
   }
- 
-  getNavigation(link, id) {
-    if(id === ''){
-        this.router.navigate([link]);
-    } else {
-      this.router.navigate([link + '/' + id]);
-    }
+
+  getNavigation(link, id){
+      if(id === ''){
+          this.router.navigate([link]);
+      } else {
+          this.router.navigate([link + '/' + id]);
+      }
   }
-  deleteCliente(pID) {
+  
+  deleteCliente(pID){
     this.bancoService.deleteCliente(pID).subscribe(data => {
-    this.loadCliente();
+    this.loadclientes();
     })
-    }
+  }
 }
