@@ -17,13 +17,18 @@ export class ClienteComponent implements OnInit {
     this.loadCliente()
   }
   loadCliente(){
+    if ($.fn.DataTable.isDataTable(this.Table.nativeElement)) {
+      $(this.Table.nativeElement).dataTable().fnDestroy();
+    }
     this.bancoService.getCliente().subscribe(
       clienteData => {
         this.clientes = clienteData;
         this.dataTable = $(this.Table.nativeElement);
         setTimeout(()=>{this.dataTable.DataTable();}, 2000);
+      },(err)=>{
+      }, ()=>{
       }
-    )
+    );
   }
  
   getNavigation(link, id) {
@@ -33,4 +38,9 @@ export class ClienteComponent implements OnInit {
       this.router.navigate([link + '/' + id]);
     }
   }
+  RemoverCliente(pID) {
+    this.bancoService.deleteCliente(pID).subscribe(data => {
+    this.loadCliente();
+    })
+    }
 }

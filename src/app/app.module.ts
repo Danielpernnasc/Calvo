@@ -27,12 +27,9 @@ import { AtualizarComponent } from './atualizar';
     OrcamentoModule,
     ClickOutsideModule,
     ModalModule,
-    FormsModule,
     ReactiveFormsModule,
     NgbModule,
     AtacadoModule,
-
-  
   ],
       declarations: [  
         AppComponent, CadastroComponent, ClienteComponent, LeituraComponent, AtualizarComponent

@@ -28,16 +28,18 @@ export class AtualizarComponent implements OnInit {
      }
 
   ngOnInit(): void {
+    this.clienteID = this.actRoute.snapshot.params['id'];
+    this.loadClientesDetail(this.clienteID);
   }
   loadClientesDetail(clienteID){
     this.bancoService.getClienteDetails(clienteID).subscribe(client => {
     this.clienteData = client;
     this.clienteForm.controls['nome'].setValue(this.clienteData['p_nome']);
-    this.clienteData.controls['endereco'].setValue(this.clienteData['p_endereco']);
-    this.clienteData.controls['email'].setValue(this.clienteData['p_email']);
-    this.clienteData.controls['telefone'].setValue(this.clienteData['p_telefone']);
-    this.clienteData.controls['senha'].setValue(this.clienteData['p_senha']);
-    this.clienteData.controls['confirma'].setValue(this.clienteData['p_confirma']);
+    this.clienteForm.controls['endereco'].setValue(this.clienteData['p_endereco']);
+    this.clienteForm.controls['email'].setValue(this.clienteData['p_email']);
+    this.clienteForm.controls['telefone'].setValue(this.clienteData['p_telefone']);
+    this.clienteForm.controls['senha'].setValue(this.clienteData['p_senha']);
+    this.clienteForm.controls['confirma'].setValue(this.clienteData['p_confirma']);
     });
   }
   atualizarClienteData(values){

@@ -46,16 +46,16 @@
                         </div>
                         <div class="form-group">
                             <label>Endereço</label>
-                            <input type="text" class="form-control" placeholder="Digite seu endereço" formControlName="endereco" required>
+                            <input type="text" class="form-control" placeholder="Digite seu endereço!" formControlName="endereco" required>
                             <div class="alert-danger" *ngIf="!clienteForm.controls['endereco'].valid && (clienteForm.controls['endereco'].touched)">
-                                <div [hidden]="!clienteForm.controls['endereco'].errors.required">Digite seu Endereço!</div>
+                                <div [hidden]="!clienteForm.controls['endereco'].errors.required" >Digite seu enderço</div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>E-mail</label>
-                            <input type="text" class="form-control" placeholder="Digite seu e-mail" formControlName="email" required>
+                            <input type="text" class="form-control" placeholder="Digite seu endereço!" formControlName="email" required>
                             <div class="alert-danger" *ngIf="!clienteForm.controls['email'].valid && (clienteForm.controls['email'].touched)">
-                                <div [hidden]="!clienteForm.controls['email'].errors.required">Digite sua e-mail!</div>
+                                <div [hidden]="!clienteForm.controls['email'].errors.required" >Digite seu enderço</div>
                             </div>
                         </div>
                         <div class="form-group">
