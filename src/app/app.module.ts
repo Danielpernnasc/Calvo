@@ -15,6 +15,7 @@ import { CadastroComponent } from './cadastro';
 import { ClienteComponent } from './cliente';
 import { LeituraComponent } from './leitura';
 import { AtualizarComponent } from './atualizar';
+import { TextMaskModule } from 'angular2-text-mask';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { AtualizarComponent } from './atualizar';
     ReactiveFormsModule,
     NgbModule,
     AtacadoModule,
+    TextMaskModule
   ],
       declarations: [  
         AppComponent, CadastroComponent, ClienteComponent, LeituraComponent, AtualizarComponent

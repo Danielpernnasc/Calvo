@@ -4,6 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MustMatch } from './validacao/validacao_cadatro';
 
+
 declare var $: any;
 
 @Component({
@@ -14,6 +15,8 @@ declare var $: any;
 })
 
 export class AppComponent implements OnInit {
+  public maskfone = ['(',/[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/,/\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  public maskcep = [/\d/,/\d/,/\d/,/\d/,/\d/,'-',/\d/,/\d/,/\d/];
   registerForm: FormGroup;
   registroFormu: FormGroup;
   registerFormLogin: FormGroup;
@@ -21,7 +24,14 @@ export class AppComponent implements OnInit {
   submittednews = false;
   submittedlogin = false;
 
+  UF: any = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']
 
+
+
+
+
+
+  // Estados: any = ['Acre', ]
   constructor(private modalService: ModalService, private router: Router, private formBuilder: FormBuilder) { };
   Footer = true;
 
@@ -65,23 +75,38 @@ ngOnInit(){
   });
   this.registroFormu = this.formBuilder.group({
     name: ['', Validators.required],
-    address: ['', Validators.required],
+    rua: ['', Validators.required],
+    numero: ['', Validators.required],
+    bairro: ['', Validators.required],
+    cidade: ['', Validators.required],
+    estado: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
+    telefone: ['', Validators.required],
+    cep: ['', Validators.required],
     password: ['', [Validators.required, Validators.minLength(6)]],
     confirmPassword: ['', Validators.required]
   },{
      validators: MustMatch('password', 'confirmPassword')
   });
   this.registerFormLogin = this.formBuilder.group({
-    login: ['', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, Validators.email]],
     senha: ['', Validators.required]
   }, {
      validators: MustMatch
   });
 }
+changeState(e) {
+  console.log(e.value)
+  this.estado.setValue(e.target.value), {
+    onlySelf: true
+  }
+}
 get f() { return this.registerForm.controls; }
 get g() { return this.registroFormu.controls; }
+get estado() { return this.registroFormu.get('estado'); }
 get h() { return this.registerFormLogin.controls; }
+
+
 
 onSubmit_newsletter() {
   this. submittednews = true;
@@ -91,11 +116,12 @@ onSubmit_newsletter() {
   document.getElementById('sucesso').classList.toggle("show_ok");
   document.getElementById('esconder_form').classList.toggle("form_esconder");
 }
+
 onSubmit() {
   this.submitted = true;
   if (this.registroFormu.invalid) {
     return;
-  }
+  } 
 }
 onSubmitLogin() {
   this.submittedlogin = true;
@@ -162,6 +188,19 @@ instagramsocial() {
   error = "e-mail inválido";
   sucess ="E-mail cadastrado com sucesso.";
   address_calvo = "Av. Rio das Pedras, 2118 - Jd. Aricanduva - PABX 2723-6000"
+  n ="Nome";
+  dn = "Digite seu Nome!";
+  end = "Endereço";
+  drua = "Digite a rua!";
+  em = "E-mail";
+  dem = "Digite seu e-mail!"
+  dvalem = "O precisa ser um e-mail válido como: 'email@email.com.br'";
+  tel = "Telefone";
+  dtel = "Digite seu Telefone de 9 dígitios";
+  ds = "Digite uma senha de 6 a 10 digítos";
+  dsseis = "A senha precisa ter no mínimo 6 caracteres";
+  cs = "Digite a senha novamente!";
+  spiden = "A senha precisa ser identica."
   
 
 }
