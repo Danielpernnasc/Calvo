@@ -26,12 +26,18 @@
               </div>
               <div class="col-4">
                 <div class="row">
-                  <div class="col-sm-4 right branco_calvo">
-                    <span class="btn_conta" (click)="openModal('custom-modal-1')">{{conta}}</span>
+                  <div class="col-sm-3 right branco_calvo">
+                    <span class="btn_conta"  (click)="openModal('custom-modal-1')">{{conta}}</span>
                   </div>
-                  <div class="col-sm-4 left yellow_calvo">
-                    <span class="btn_conta" (click)="openModal('custom-modal-2')" >Entrar</span>
+                  <div class="col-sm-3 left yellow_calvo">
+                    <span class="btn_conta"  (click)="openModal('custom-modal-2')">Entrar</span>
                   </div>
+                  <!-- <div class="col-sm-3 branco_calvo">
+                    <span class="btn_conta"  *ngIf="logoutbtn" (click)="logout()">Logout</span>
+                  </div> -->
+                  <!-- <div class="col-sm-3 branco_calvo">
+                    <span class="btn_conta" *ngIf="logoutbtn" routerLink="dashboard" routerLinkActive="active">Dashboard</span>
+                  </div> -->
                 </div>
               </div>  
           </div>  
@@ -369,7 +375,7 @@
             <div class="col-sm-4">
                 <div class="row">
                   <div class="col-sm-10">
-                    <form id="esconder_form" [formGroup]="registerForm" (ngSubmit)="onSubmit_newsletter()"> 
+                    <form id="esconder_form" [formGroup]="registerFormNews" (ngSubmit)="onSubmit_newsletter(registerFormNews.value)"> 
                         <div class="row">
                             <div class="col-sm-9">
                                 <input type="text" formControlName="email" class="formcontrol" [ngClass]="{'campo_invalido': submittednews && f.email.errors }"  />
@@ -607,161 +613,208 @@
         </div>
         <div class="row justify-content-center margin_linha">
           <div class="col-8">
-            <form [formGroup]="registroFormu" (ngSubmit)="onSubmit()">
-                <div class="row margin_linha box_gray_conta">
-                  <div class="col-sm-12 legenda_conta">
-                    <div class="row">
-                      <div class="col-sm-2 campo-legenda">
-                          <span>{{n}}</span>
-                      </div>
-                      <div class="col-sm-10">
-                        <div class="col-sm-9">
-                          <input class="campo-input" type="text" formControlName="name" [ngClass]="{'campo-invalido': submitted && g.name.errors}">
-                          <div *ngIf="submitted && g.name.errors" class="invalido_cadastro">
-                              <div *ngIf="g.name.errors.required">{{dn}}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row margin_linha box_gray_conta">
-                  <div class="col-sm-12 legenda_conta">
-                    <div class="row">
-                      <div class="col-sm-2 campo-legenda">
-                          <span>{{end}}</span>
-                      </div>
-                      <div class="col-sm-12">
-                          <div class="row">
-                            <div class="col-5">
-                                <input class="campo-input" type="text" formControlName="rua" placeholder="Rua" [ngClass]="{'campo-invalido': submitted && g.rua.errors}">
-                                <div *ngIf="submitted && g.rua.errors" class="invalido_cadastro" >
-                                    <div *ngIf="g.rua.errors.required">{{drua}}</div>
-                                </div>
-                            </div>
-                            <div class="col-1 padding_zero">
-                                <input type="text" placeholder="Nº" class="campo-input"> 
-
-                            </div>
-                            <div class="col-3">
-                               <input type="text" placeholder="complento" class="campo-input">
-                            </div>
-                            <div class="col-3">
-                              <input type="text" class="campo-input" type="text" formControlName="bairro" placeholder="Bairro" [ngClass]="{'campo-invalido': submitted && g.bairro.errors}">
-                              <div *ngIf="submitted && g.bairro.errors" class="invalido_cadastro">
-                                  <div *ngIf="g.bairro.errors.required">digite o Bairro!</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-5">
-                                  <input type="text" placeholder="cidade" class="campo-input" formControlName="cidade" [ngClass]="{'campo-invalido': submitted && g.cidade.errors}">
-                                  <div *ngIf="submitted && g.cidade.errors" class="invalido_cadastro">
-                                    <div *ngIf="g.cidade.errors.required">digite a Cidade!</div>
-                                  </div>
-                              </div>
-                              <div class="col-2 padding_zero">
-                                <select class="campo-input" (change)="changeState($event)" formControlName="estado" [ngClass]="{'campo-invalido': submitted && g.estado.errors}">
-                                  <option value="">UF</option>
-                                  <option *ngFor="let state of UF" [ngValue]="state">{{state}}</option>
-                                </select>
-                                  <div *ngIf="submitted && g.estado.errors" class="invalido_cadastro">
-                                    <div *ngIf="g.estado.errors.required">Coloque seu Estado!</div>
-                                  </div>
-                              </div>
-                              <div class="col-4">
-                                <input type="text" placeholder="CEP" [textMask]="{mask: maskcep}" class="campo-input" formControlName="cep" [ngClass]="{'campo-invalido': submitted && g.cep.errors}">
-                                <div *ngIf="submitted && g.cep.errors" class="invalido_cadastro">
-                                  <div *ngIf="g.cep.errors.required">Digite seu CEP!</div>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row margin_linha box_gray_conta">
-                  <div class="col-sm-12 legenda_conta">
-                    <div class="row">
-                      <div class="col-sm-2 campo-legenda">
-                          <span>{{em}}</span>
-                      </div>
-                      <div class="col-sm-10">
-                        <div class="col-sm-9">
-                          <input class="campo-input" type="text" formControlName="email" [ngClass]="{'campo-invalido': submitted && g.email.errors}">
-                          <div *ngIf="submitted && g.email.errors" class="invalido_cadastro">
-                              <div *ngIf="g.email.errors.required">{{dem}}</div>
-                              <div *ngIf="g.email.errors.email">{{dvalem}}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row margin_linha box_gray_conta">
-                  <div class="col-sm-12 legenda_conta">
-                    <div class="row">
-                      <div class="col-sm-2 campo-legenda">
-                        <span>{{tel}}</span>
-                      </div>
-                      <div class="col-sm-10">
-                        <div class="col-sm-9">
-                          <input class="campo-input" [textMask]="{mask: maskfone}" formControlName="telefone"  [ngClass]="{'campo-invalido': submitted && g.telefone.errors}" >
-                          <div *ngIf="submitted && g.telefone.errors" class="invalido_cadastro">
-                            <div *ngIf="g.telefone.errors.required">{{dtel}}</div>
-                            <div></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row margin_linha box_gray_conta">
-                  <div class="col-sm-12 legenda_conta">
-                    <div class="row">
-                      <div class="col-sm-2 campo-legenda">
-                          <span>{{s}}</span>
-                      </div>
-                      <div class="col-sm-10">
-                        <div class="col-sm-9">
-                          <input class="campo-input" type="password" maxlength="10" formControlName="password" [ngClass]="{'campo-invalido': submitted && g.password.errors}">
-                          <div *ngIf="submitted && g.password.errors" class="invalido_cadastro">
-                            <div *ngIf="g.password.errors.required">{{ds}}</div>
-                            <div *ngIf="g.password.errors.minlength">{{dsseis}}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row margin_linha box_gray_conta">
-                    <div class="col-sm-12 legenda_conta">
+            <form id="esconder_cadastro"  [formGroup]="clienteForm" (ngSubmit)="saveClientes(clienteForm.value)">
+                <div class="form-group">
+                    <div class="row margin_linha box_gray_conta">
+                      <div class="col-sm-12 legenda_conta">
                         <div class="row">
                           <div class="col-sm-2 campo-legenda">
-                              <span>{{rs}}</span>
+                              <label>{{n}}</label>
+                          </div>
+                          <div class="col-sm-4">
+                            <input class="campo-input" type="text" formControlName="nome" placeholder="Digite seu nome!" required>
+                            <div  *ngIf="!clienteForm.controls['nome'].valid && (clienteForm.controls['nome'].touched)" class="invalido_cadastro"> 
+                                <!-- [ngClass]="{'campo-invalido': submitted && g.nome.errors}"  -->
+                                <div *ngIf="g.nome.errors.required">{{dn}}</div>
+                            </div>
+                          </div>
+                          <div class="col-sm-2 campo-legenda">
+                            <label>{{sn}}</label>
+                          </div>
+                          <div class="col-sm-4">
+                            <input class="campo-input" type="text" formControlName="sobrenome" placeholder="Digite seu sobrenome!" required>
+                            <div class="invalido_cadastro" *ngIf="!clienteForm.controls['sobrenome'].valid && (clienteForm.controls['sobrenome'].touched)">
+                                <div *ngIf="g.sobrenome.errors.required">{{dsn}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row margin_linha box_gray_conta">
+                        <div class="col-sm-12 legenda_conta">
+                            <div class="row">
+                              <div class="col-sm-2 campo-legenda">
+                                <label>{{end}}</label>
+                              </div>
+                              <div class="col-sm-12">
+                                <div class="row margin_linha">
+                                  <div class="col-5">
+                                      <input class="campo-input" type="text" formControlName="rua" placeholder="Rua" required>
+                                      <!-- [ngClass]="{'campo-invalido': submitted && g.rua.errors}" -->
+                                      <div class="invalido_cadastro" *ngIf="!clienteForm.controls['rua'].valid && (clienteForm.controls['rua'].touched)">
+                                          <!-- *ngIf="submitted && g.rua.errors"  -->
+                                          <div *ngIf="g.rua.errors.required">{{drua}}</div>
+                                      </div>
+                                  </div>
+                                  <div class="col-1 padding_zero">
+                                      <input type="text" placeholder="Nº" formControlName="numero" class="campo-input"> 
+                                  </div>
+                                  <div class="col-3 padddin_zero">
+                                      <input type="text" placeholder="complemento" formControlName="complemento" class="campo-input">
+                                    </div>
+                                    <div class="col-3">
+                                      <input type="text" class="campo-input" type="text" formControlName="bairro" placeholder="Bairro" required>
+                                      <!-- [ngClass]="{'campo-invalido': submitted && g.bairro.errors}"  -->
+                                      <div *ngIf="!clienteForm.controls['bairro'].valid && (clienteForm.controls['bairro'].touched)" class="invalido_cadastro">
+                                            <!-- submitted && g.bairro.errors -->
+                                          <div *ngIf="g.bairro.errors.required">digite o Bairro!</div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row margin_linha">
+                                    <div class="col-4">
+                                      <input type="text" placeholder="CEP" [textMask]="{mask: maskcep}" class="campo-input" formControlName="cep" required>
+                                      <!-- [ngClass]="{'campo-invalido': submitted && g.cep.errors}" -->
+                                      <div *ngIf="!clienteForm.controls['cep'].valid && (clienteForm.controls['cep'].touched)" class="invalido_cadastro">
+                                          <!-- submitted && g.cep.errors -->
+                                        <div *ngIf="g.cep.errors.required">Digite seu CEP!</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" placeholder="cidade" class="campo-input" formControlName="cidade" required>
+                                        <!-- [ngClass]="{'campo-invalido': submitted && g.cidade.errors}" -->
+                                        <div *ngIf="!clienteForm.controls['cidade'].valid && (clienteForm.controls['cidade'].touched)" class="invalido_cadastro">
+                                            <!-- *ngIf="submitted && g.cidade.errors"  -->
+                                          <div *ngIf="g.cidade.errors.required">digite a Cidade!</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                      <select class="campo-input" (change)="changeState($event)" formControlName="uf" required>
+                                        <!-- [ngClass]="{'campo-invalido': submitted && g.uf.errors}" -->
+                                        <option value="">UF</option>
+                                        <option *ngFor="let state of UF" [ngValue]="state">{{state}}</option>
+                                      </select>
+                                      <div *ngIf="!clienteForm.controls['uf'].valid && (clienteForm.controls['uf'].touched)" class="invalido_cadastro">
+                                          <!-- *ngIf="submitted && g.uf.errors"  -->
+                                        <div *ngIf="g.uf.errors.required">Coloque seu Estado!</div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row margin_linha box_gray_conta">
+                      <div class="col-sm-12 legenda_conta">
+                        <div class="row">
+                          <div class="col-sm-2 campo-legenda">
+                              <label>{{em}}</label>
+                          </div>
+                          <div class="col-sm-10">
+                            <input class="campo-input" type="text" formControlName="email" required>
+                            <!-- [ngClass]="{'campo-invalido': submitted && g.email.errors}" -->
+                            <div *ngIf="!clienteForm.controls['email'].valid && (clienteForm.controls['email'].touched)" class="invalido_cadastro">
+                                <!-- submitted && g.email.errors -->
+                                <div *ngIf="g.email.errors.required">{{dem}}</div>
+                                <div *ngIf="g.email.errors.email">{{dvalem}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                          <label>{{tel}}</label>
+                        </div>
+                        <div class="col-sm-5">
+                          <input class="campo-input" [textMask]="{mask: maskfone}" formControlName="telefone" placeholder="Digite seu telefone celular" required>
+                          <!-- [ngClass]="{'campo-invalido': submitted && g.telefone.errors}"  -->
+                          <div *ngIf="!clienteForm.controls['telefone'].valid && (clienteForm.controls['telefone'].touched)" class="invalido_cadastro">
+                              <!-- submitted && g.telefone.errors -->
+                            <div *ngIf="g.telefone.errors.required">{{dtel}}</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <input class="campo-input" placeholder="Digite seu telefone fixo" formControlName="fixo" [textMask]="{mask: maskfixo}">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row margin_linha box_gray_conta">
+                    <div class="col-sm-12 legenda_conta">
+                      <div class="row">
+                        <div class="col-sm-2 campo-legenda">
+                            <label>{{s}}</label>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="col-sm-9">
+                            <input class="campo-input" type="password" maxlength="10" formControlName="senha" required>
+                            <!-- [ngClass]="{'campo-invalido': submitted && g.senha.errors}" -->
+                            <div *ngIf="!clienteForm.controls['senha'].valid && (clienteForm.controls['senha'].touched)" class="invalido_cadastro">
+                                <!-- submitted && g.senha.errors -->
+                              <div *ngIf="g.senha.errors.required">{{ds}}</div>
+                              <div *ngIf="g.senha.errors.minlength">{{dsseis}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row margin_linha box_gray_conta">
+                      <div class="col-sm-12 legenda_conta">
+                        <div class="row">
+                          <div class="col-sm-2 campo-legenda">
+                              <label>{{rs}}</label>
                           </div>
                           <div class="col-sm-10">
                             <div class="col-sm-9">
-                              <input class="campo-input" type="password" maxlength="10" formControlName="confirmPassword" [ngClass]="{'campo-invalido': submitted && g.confirmPassword.errors }">
-                              <div *ngIf="submitted && g.confirmPassword.errors" class="invalido_cadastro">
-                                  <div *ngIf="g.confirmPassword.errors.required">{{cs}}</div>
-                                  <div *ngIf="g.confirmPassword.errors.mustMatch">{{spiden}}</div>
+                              <input class="campo-input" type="password" maxlength="10" formControlName="confirma" required>
+                              <!-- [ngClass]="{'campo-invalido': submitted && g.confirma.errors }" -->
+                              <div *ngIf="!clienteForm.controls['confirma'].valid && (clienteForm.controls['confirma'].touched)" class="invalido_cadastro">
+                                  <!-- submitted && g.confirma.errors -->
+                                  <div *ngIf="g.confirma.errors.required">{{cs}}</div>
+                                  <div *ngIf="g.confirma.errors.mustMatch">{{spiden}}</div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                  </div>
                 </div>
                 <div class="row justify-content-center margin_linha">
                   <div class="col-9">
                       <div class="row justify-content-center">
                         <div class="col-sm-6">
-                          <button class="btn-enviar_login">ENVIAR</button>
+                          <button class="btn-enviar_login" (click)="clearForm(clienteForm)">APAGAR</button>
+                        </div>
+                        <div class="col-sm-6">
+                          <button type="submit" class="btn-enviar_login" [disabled]="!clienteForm.valid">ENVIAR</button>
                         </div>
                       </div>
                   </div>
                 </div>
             </form> 
+            <div class="row margin_linha">
+              <div  id="sucesso_dados" class="col-sm-11 sucesso_dados">
+                  <span>
+                      <svg-icon [src]="ok" [svgStyle]="{ 'width.px':35}"></svg-icon>
+                  </span>
+                  &nbsp;
+                  <span>{{sucess_dados}}<br>{{validar}}</span>
+              </div>
+            </div> 
           </div>
         </div>
     </div>
@@ -808,7 +861,7 @@
       </div>
       <div class="row justify-content-center margin_linha">
           <div class="col-6">
-            <form [formGroup]="registerFormLogin" (ngSubmit)="onSubmitLogin()" autocomplete="off">
+            <form [formGroup]="registerFormLogin"  (ngSubmit)="onSubmitLogin()">
                 <div class="row margin_linha box_gray_conta">
                   <div class="col-sm-12 legenda_conta">
                     <div class="row">
@@ -816,10 +869,11 @@
                           <span>{{l}}</span>
                       </div>
                       <div class="col-sm-10">
-                        <input class="campo-input" type="text" formControlName="email" autocomplete="off" [ngClass]="{'campo-invalido': submittedlogin && h.email.errors}">
-                          <div *ngIf="submittedlogin && h.email.errors" class="invalido_cadastro">
-                            <div *ngIf="h.email.errors.required">Digite o Login!</div>
-                          </div>
+                        <!-- <input class="campo-input_login" type="email" name="email" formControlName="login"  autocomplete="off" placeholder="Digite seu e-mail"> -->
+                        <input class="campo-input" type="text" formControlName="login" [ngClass]="{'campo-invalido': submittedlogin && h.login.errors}">
+                        <div *ngIf="submittedlogin && h.login.errors" class="invalido_cadastro">
+                          <div *ngIf="h.login.errors.required">Digite o Login!</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -831,7 +885,11 @@
                           <span>{{s}}</span>
                       </div>
                       <div class="col-sm-10">
-                        <input class="campo-input" type="password" maxlength="10" formControlName="senha" autocomplete="off">
+                          <!-- <input class="campo-input_login" type="password" name="senha" formControlName="senha"  autocomplete="off" placeholder="Digite sua senha"> -->
+                        <input class="campo-input" type="password" formControlName="senha" [ngClass]="{'campo-invalido': submittedlogin && h.senha.errors}">
+                        <div *ngIf="submittedlogin && h.senha.errors" class="invalido_cadastro">
+                            <div *ngIf="h.senha.errors.required">Digite sua senha!</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -840,7 +898,7 @@
                   <div class="col-9">
                       <div class="row justify-content-center">
                         <div class="col-sm-6">
-                          <button class="btn-enviar_login" [routerLink]="['cliente_calvo']">ENTRAR</button>
+                          <button type="sbumit" class="btn-enviar_login">ENTRAR</button>
                         </div>
                       </div>
                   </div>

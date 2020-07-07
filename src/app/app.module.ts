@@ -11,11 +11,14 @@ import { ModalModule } from './modal';
 import { OrcamentoModule } from './orcamento';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AtacadoModule } from './atacado';
-import { CadastroComponent } from './cadastro';
-import { ClienteComponent } from './cliente';
-import { LeituraComponent } from './leitura';
-import { AtualizarComponent } from './atualizar';
+// import { CadastroComponent } from './cadastro';
+
 import { TextMaskModule } from 'angular2-text-mask';
+import { LeituraComponent } from './leitura';
+import { CadastroComponent } from './cadastro';
+import { AtualizarComponent } from './atualizar';
+import { ClienteComponent } from './cliente';
+
 
 
 @NgModule({
@@ -34,9 +37,13 @@ import { TextMaskModule } from 'angular2-text-mask';
     TextMaskModule
   ],
       declarations: [  
-        AppComponent, CadastroComponent, ClienteComponent, LeituraComponent, AtualizarComponent
-  
-  
+        AppComponent, 
+        CadastroComponent,
+        LeituraComponent,
+        AtualizarComponent,
+        ClienteComponent
+     
+
       ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],

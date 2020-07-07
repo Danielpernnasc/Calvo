@@ -3,6 +3,8 @@ import { ModalService } from './modal/modal.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MustMatch } from './validacao/validacao_cadatro';
+import { BancoService } from './api';
+
 
 
 declare var $: any;
@@ -16,24 +18,49 @@ declare var $: any;
 
 export class AppComponent implements OnInit {
   public maskfone = ['(',/[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/,/\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  public maskfixo = ['(',/[1-8]/, /\d/, ')', ' ', /\d/,/\d/,/\d/,/\d/,'-',/\d/,/\d/,/\d/,/\d/];
   public maskcep = [/\d/,/\d/,/\d/,/\d/,/\d/,'-',/\d/,/\d/,/\d/];
-  registerForm: FormGroup;
+  registerFormNews: FormGroup;
   registroFormu: FormGroup;
   registerFormLogin: FormGroup;
+  clienteForm: FormGroup;
   submitted = false;
   submittednews = false;
+  loginbtn: boolean;
+  logoutbtn: boolean;
   submittedlogin = false;
 
   UF: any = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']
 
+  constructor(private modalService: ModalService, private bancoService: BancoService, private router: Router, private fbnew: FormBuilder, private fbregister: FormBuilder, private fblogin: FormBuilder, private fb: FormBuilder) 
+  {
+    this.clienteForm = this.fb.group({
+      nome: ['', Validators.required],
+      sobrenome: ['', Validators.required],
+      rua: ['', Validators.required],
+      numero: [''],
+      complemento: [''],
+      bairro:['', Validators.required],
+      cep: ['', Validators.required],
+      fixo: [''],
+      cidade: ['', Validators.required],
+      uf: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      telefone: ['', Validators.required],
+      senha: ['', [Validators.required, Validators.minLength(6)]],
+      confirma: ['', Validators.required]
+    },{
+      validators: MustMatch('senha', 'confirma')
+    });
+    this.registerFormNews = this.fbnew.group({
+      email: ['', [Validators.required, Validators.email]],
+    }, {
+      validators: MustMatch
+    });
+    }
 
 
-
-
-
-  // Estados: any = ['Acre', ]
-  constructor(private modalService: ModalService, private router: Router, private formBuilder: FormBuilder) { };
-  Footer = true;
+Footer = true;
 
 ngOnInit(){
   var dropdown = document.getElementsByClassName("link_mob_btn");
@@ -62,102 +89,127 @@ ngOnInit(){
     }
   });
 
-  // $('.color_link').click(function(){
-  // $('.color_link').removeClass('fixed_color');
-  // $(this).addClass('fixed_color');
-  // $('.color_link').val($(this)[0].innerText);
-  // });
-
-  this.registerForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-  }, {
-    validators: MustMatch
-  });
-  this.registroFormu = this.formBuilder.group({
-    name: ['', Validators.required],
-    rua: ['', Validators.required],
-    numero: ['', Validators.required],
-    bairro: ['', Validators.required],
-    cidade: ['', Validators.required],
-    estado: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    telefone: ['', Validators.required],
-    cep: ['', Validators.required],
-    password: ['', [Validators.required, Validators.minLength(6)]],
-    confirmPassword: ['', Validators.required]
-  },{
-     validators: MustMatch('password', 'confirmPassword')
-  });
-  this.registerFormLogin = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
+  this.registerFormLogin = this.fblogin.group({
+    login: ['', [Validators.required, Validators.email]],
     senha: ['', Validators.required]
-  }, {
-     validators: MustMatch
   });
+}
+
+
+get f() { return this.registerFormNews.controls; }
+get g() { return this.clienteForm.controls; }
+get uf() { return this.clienteForm.get('uf'); }
+get h() { return this.registerFormLogin.controls; }
+
+saveClientes(values){
+  const clienteData = new FormData();
+  clienteData.append('nome', values.nome);
+  clienteData.append('sobrenome', values.sobrenome);
+  clienteData.append('rua', values.rua);
+  clienteData.append('numero', values.numero);
+  clienteData.append('complemento', values.complemento);
+  clienteData.append('bairro',values.bairro);
+  clienteData.append('cep', values.cep);
+  clienteData.append('cidade',values.cidade);
+  clienteData.append('uf', values.uf);
+  clienteData.append('email', values.email);
+  clienteData.append('telefone', values.telefone);
+  clienteData.append('fixo', values.fixo);
+  clienteData.append('senha', values.senha);
+  clienteData.append('confirma', values.confirma);
+  this.bancoService.createClient(clienteData).subscribe(result => 
+  {
+    this.router.navigate(['']);
+  });
+    this.submitted = true;
+      if (this.clienteForm.invalid) {
+        return;
+      } 
+      document.getElementById('sucesso_dados').classList.toggle("show_ok");
+      document.getElementById('esconder_cadastro').classList.toggle("esconder_form_conta");
+}
+clearForm(form: FormGroup) {
+  form.reset();
 }
 changeState(e) {
   console.log(e.value)
-  this.estado.setValue(e.target.value), {
+  this.uf.setValue(e.target.value), {
     onlySelf: true
   }
 }
-get f() { return this.registerForm.controls; }
-get g() { return this.registroFormu.controls; }
-get estado() { return this.registroFormu.get('estado'); }
-get h() { return this.registerFormLogin.controls; }
-
-
-
-onSubmit_newsletter() {
+onSubmit_newsletter(values) {
+  const newsData = new FormData();
+  newsData.append('email', values.email);
+  this.bancoService.createNews(newsData).subscribe(result => 
+  {
+    this.router.navigate(['']);
+  });
   this. submittednews = true;
-  if (this.registerForm.invalid) {
+  if (this.registerFormNews.invalid) {
     return;
   }
   document.getElementById('sucesso').classList.toggle("show_ok");
   document.getElementById('esconder_form').classList.toggle("form_esconder");
 }
 
-onSubmit() {
-  this.submitted = true;
-  if (this.registroFormu.invalid) {
-    return;
-  } 
-}
+
+
+
 onSubmitLogin() {
+  // this.bancoservicecalvo.userlogin(registerFormLogin1.value.login,registerFormLogin1.value.password)
+  //   .pipe(first())
+  //   .subscribe(
+  //   data => {
+  //     const redirect = this.bancoservicecalvo.redirectUrl? this.bancoservicecalvo.redirectUrl : '/dashboard';
+  //     this.router.navigate([redirect]);
+  //   },
+  //   error => {
+  //     alert("Usuario ou senha está incorreto")
+  //   });
   this.submittedlogin = true;
   if (this.registerFormLogin.invalid) {
     return;
   }
 }
+// get login() { return this.registerFormLogin.get('login'); } 
+// get senha() { return this.registerFormLogin.get ('senha'); }
 
-  openModal(id: string) {
-    this.modalService.open(id);
-  }
+openModal(id: string) {
+  this.modalService.open(id);
+}
 
-  closeModal (id: string) {
-    this.modalService.close(id);
-  }
-  onClick_atacado(){
-    document.getElementById("myDropdown_atacado").classList.toggle("show");
-  };
-  onClick_contato(){
-    document.getElementById("myDropdown_contato").classList.toggle("show");
-  };
-  orcamento_produtos() {
-    this.router.navigateByUrl('orcamento');
-  }
- whatsapp_btn() {
-   window.open('https://web.whatsapp.com/send?phone=5511985960096&text=')
- }
- openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
- }
- closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
- }
- facebooksocial() {
+closeModal (id: string) {
+  this.modalService.close(id);
+}
+
+onClick_atacado(){
+  document.getElementById("myDropdown_atacado").classList.toggle("show");
+};
+
+onClick_contato(){
+  document.getElementById("myDropdown_contato").classList.toggle("show");
+};
+
+orcamento_produtos() {
+this.router.navigateByUrl('orcamento');
+}
+
+whatsapp_btn() {
+  window.open('https://web.whatsapp.com/send?phone=5511985960096&text=')
+}
+
+openNav() {
+document.getElementById("mySidenav").style.width = "200px";
+}
+
+closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+
+facebooksocial() {
   window.open('https://www.facebook.com/calvoatac')
 }
+
 instagramsocial() {
   window.open('https://www.instagram.com/calvoatacadista/')
 }
@@ -185,11 +237,13 @@ instagramsocial() {
   cr = 'CRIE sua conta ou REGISTRE-SE';
   CN = 'Cadastre-se em nossa Newsletter';
   need = "Digite seu e-mail";
-  error = "e-mail inválido";
+  error = "O e-mail está inválido";
   sucess ="E-mail cadastrado com sucesso.";
   address_calvo = "Av. Rio das Pedras, 2118 - Jd. Aricanduva - PABX 2723-6000"
   n ="Nome";
+  sn = "Sobrenome"
   dn = "Digite seu Nome!";
+  dsn = "Digite seu Sobrenome!";
   end = "Endereço";
   drua = "Digite a rua!";
   em = "E-mail";
@@ -201,7 +255,8 @@ instagramsocial() {
   dsseis = "A senha precisa ter no mínimo 6 caracteres";
   cs = "Digite a senha novamente!";
   spiden = "A senha precisa ser identica."
-  
+  sucess_dados = "Dados enviado com sucesso."
+  validar = "Entre no seu e-mail cadastrado para validar o cadastro."
 
 }
 

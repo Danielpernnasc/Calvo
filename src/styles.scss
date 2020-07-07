@@ -995,7 +995,7 @@ width: 100%;
   height: 40px;
   background: $btn_calvo;
   font-weight: bold;
-  font-weight: bold;
+  border: solid;
   font-size: 12px;
   margin: 17% 0;
   padding:0;
@@ -1868,6 +1868,7 @@ app-modal, modal-carne, modal-frios, modal-higiene, modal-limp, modal-merc, moda
 }
 label {
 color: #a9abae;
+font-weight: bolder;
 }
 
 .padding_cont {
@@ -1985,7 +1986,7 @@ modal-conta {
       padding: 10px 20px;
       text-align: left;
     }
-    .campo-input {
+    .campo-input, .campo-input_login, .campo-input_register {
       width: 100%;
       border: 0;
       background: 0;
@@ -2167,6 +2168,11 @@ body.modal-open {
   color: $branco_calvo;
   display: none;
 }
+.sucesso_dados {
+  color: $font_calvo_red;
+  display: none;
+  text-align: center;
+}
 .show_sucess{
   display: block;
 }
@@ -2180,6 +2186,10 @@ body.modal-open {
 .form_esconder {
   display: none;
 }
+.esconder_form_conta {
+  display: none
+}
+
 .alert_left {
   padding: 0 10px;
 }
@@ -2861,4 +2871,21 @@ body.modal_campo {
 }
 .border_campo_cadastro {
   border: $border-gray;
+}
+.box_gray_conta {
+  background: #E5E6E8;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+ .campo-input_register {
+  width: 100%;
+  border: 1px solid;
+  background: 0;
+  color: #B4B4BC;
+  padding: 10px 5px;
+}
+.campo-legenda {
+  padding: 10px 35px;
+  text-align: left;
+  color: $gray_calvo;
 }

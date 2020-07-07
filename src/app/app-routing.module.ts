@@ -17,6 +17,10 @@ import { AtualizarComponent } from './atualizar';
 import { LeituraComponent } from './leitura';
 
 
+
+
+
+
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -40,6 +44,9 @@ const routes: Routes = [
   {path: 'parceiros', component: ParceirosComponent},
   {path: 'newsletter', component: NewsletterComponent}, 
   {path: 'orcamento', component: OrcamentoComponent},
+
+
+  //teste
   {path: 'cliente', component: ClienteComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'editar/:id', component: AtualizarComponent},
