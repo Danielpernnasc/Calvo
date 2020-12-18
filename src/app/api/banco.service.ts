@@ -25,6 +25,7 @@ export class BancoService {
   createNews(data){
     return this.http.post(this.url + 'newsletter.php', data);
   }
+  
   getCliente(){
     return this.http.get(this.url_teste + 'clientes.php');
   }
